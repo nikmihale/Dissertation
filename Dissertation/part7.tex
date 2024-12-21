@@ -1,0 +1,172 @@
+\chapter{Аналог квантовых бильярдных книжек с одномерными листами.}\label{ch:ch7}
+
+\section{Полупрозрачные условия ветвления для графа-трилистника с ветвлением в одной вершине.}\label{sec:ch7/sect1}
+Пространство $\Gamma = \cup_j \Gamma_j$ используем как в \label{ch:ch4}: $\Gamma_j = [0, l_j]$.
+
+Для каждого $\Gamma_j$ решением уравнения $\Delta u_j + k^2 u_j = 0$ являются функции 
+$u_j(x) = A_j e^{i k x} + B_j e^{-i k x}$. 
+
+В терминах решений нестационарного уравнений Шрёдингера $i h \frac{\partial }{\partial t} u = k^2 u$
+решение $u(x,t) = A e^{-i k (\frac{\hbar k t}{2m} - x)} +  B e^{-i k (\frac{\hbar k t}{2m} + x)}$ представляет собой волны,  "распространяющиеся вперед" и "распространяющиеся назад".
+\textcolor{red}{возможно, я перепутал терминологию местами}
+
+Попробуем "срастить" распространяющиеся в противоположные стороны волны на $\Gamma$ следующим образом:
+"распространяющаяся назад" (т.е. к вершине $\{x=0\}$) волна на $\Gamma_j$ переходит в "распространяющуюся вперед" (т.е. от вершины $\{x=0\}$) волну на $\Gamma_{j+1}$, где $j=1,2$.  Аналогичное условие связывает возвращающуюся к вершине волну на $\Gamma_3$ с идущей от вершины волной на $\Gamma_1$.
+
+Это можно записать в виде $B_1=A_2, \ B_2 = A_3, \ B_3 = A_1.$ В терминах $u'_j(x),u_j(x)$ условие выглядит следующим образом:
+\begin{equation}
+\begin{pmatrix}
+0	&	1	&	1	\\
+1	&	0	&	1	\\
+1	&	1	&	0	
+\end{pmatrix}
+\begin{pmatrix}
+u'_1(0)	\\	
+u'_2(0)	\\	
+u'_3(0)
+\end{pmatrix}
++ i k
+\begin{pmatrix}
+0	&	-1	&	1	\\
+1	&	0	&	-1	\\
+-1	&	1	&	0	
+\end{pmatrix}
+\begin{pmatrix}
+u_1(0)	\\	
+u_2(0)	\\	
+u_3(0)
+\end{pmatrix}
+=
+\begin{pmatrix}
+0	\\
+0	\\
+0
+\end{pmatrix}.
+\label{eq:quantumBookCondition1D}
+\end{equation}
+Нетрудно проверить, что $A Z^* = Z A^*$, то есть матрицы задают самосопряженное расширение оператора $\Delta$ на $\Gamma$.
+Остается лишь добавить условие $u_j(l_j)=0$, откуда $B_j = - A_j e^{2 i k l_j}$. С учетом условий $B_1=A_2, \ B_2 = A_3, \ B_3 = A_1$, получаем систему линейных уравнений 
+\begin{equation}
+\begin{pmatrix}
+1			&	0			&	0		&	0	&	0	&	-1	\\
+0			&	1			&	0		&	-1	&	0	&	0	\\
+0			&	0			&	1		&	0	&	-1	&	0	\\
+e^{2 i k l_1}	&	0			&	0		&	1	&	0	&	0	\\
+0			&	e^{2 i k l_2}	&	0		&	0	&	1	&	0	\\
+0			&	0			&e^{2 i k l_3}	&	0	&	0	&	1
+\end{pmatrix}
+\begin{pmatrix}
+A_1 \\ A_2 \\ A_3 \\ B_1 \\ B_2 \\ B_3
+\end{pmatrix}=
+\begin{pmatrix}
+0	\\	0	\\	0	\\	0	\\	0	\\	0
+\end{pmatrix}.
+\label{eq:6by6matrix}
+\end{equation}
+Система имеет нетривиальное решение при нулевом определителе матрицы, то есть когда 
+$0=1 + e^{2 i k (l_1+l_2+l_3)}$. Следовательно,
+$$ k = \frac{\frac{\pi}{2} + \pi m}{l_1+l_2+l_3}.$$
+
+\begin{statement}
+Несмотря на то, что гауссовский пакет $f(x)$ собственной функцией не является, система \eqref{eq:quantumBookCondition1D} с заменой $k$ на $\sqrt{ \int_0^{x_1} f''(x) \overline{f(x)}\, dx}$ в вольфраме получается что-то сносное: пакет бегает с ребра на ребро как и хотелось видеть на бильярдной книжке, размазываясь с течением времени. Очень красиво.
+\end{statement}
+
+\section{Полупрозрачные условия ветвления для ветвящихся многообразий.}\label{sec:ch7/sect2}
+\section{Трилистник из прямоугольников.}\label{sec:ch7/sect2/subsect1}
+Обратимся к примеру \ref{sec:ch5/sect3/subsect1}, рассматривалось стационарное уравнение Шрёдингера $\Delta u + \varkappa^2 u = 0$ на $\Gamma = \cup_j \Gamma_j, \ j=1,2,3$, где $\Gamma_j= [0,x_j] \times [0,y_0]$. 
+Напомним, что на множестве точек ветвления $\{x=0\}$ требовалось выполнение условий Кирхгофа \eqref{eq:rectanglesKirchhoffCondition}. 
+В силу расщепления уравнения в декартовых координатах $(x,y)$ задачу можно было свести к одномерной \ref{sec:ch4/sect3/subsect1} с теми же условиями в вершине ветвления. 
+
+Как нетрудно заметить, при замене в примере \ref{sec:ch5/sect3/subsect1} матриц, соответствующих условиям Кирхгофа на матрицы \label{eq:quantumBookCondition1D}, задача на $\Gamma$ сводится к одномерной задаче \ref{sec:ch7/sect1}.
+Таким образом, задача $\Delta u + \varkappa^2 u = 0$ на $\Gamma$ в разложении $u(x,y) = \xi(x) \zeta(y)$ принимает вид
+\begin{equation}
+\left\{
+\begin{array}{lll}
+\dfrac{\partial^2 \xi_j}{\partial x^2}  + \nu^2 \xi_j = 0 , & \xi_j(x_j) = 0, & j=1,2,3; 	\\
+\dfrac{\partial^2 \zeta_j}{\partial y^2}  + \mu^2 \zeta_j = 0 , & \zeta_j(y_0) = \zeta_j(0) = 0, & j=1,2,3,
+\end{array}
+\right.
+\end{equation}
+\begin{equation}
+\begin{pmatrix}
+0	&	1	&	1	\\
+1	&	0	&	1	\\
+1	&	1	&	0	
+
+\end{pmatrix}
+\begin{pmatrix}
+\xi_1' (0) \\
+\xi_2' (0) \\
+\xi_3' (0)
+\end{pmatrix} 
++ i \nu
+\begin{pmatrix}
+0	&	-1	&	1	\\
+1	&	0	&	-1	\\
+-1	&	1	&	0	
+\end{pmatrix} 
+\begin{pmatrix}
+\xi_1(0) \\
+\xi_2(0) \\
+\xi_3(0) 
+\end{pmatrix} = 
+\begin{pmatrix}
+0	\\	0	\\	0
+\end{pmatrix}.
+\label{eq:rectanglesBookCondition2D}
+\end{equation}
+В силу соображений из \ref{sec:ch7/sect1} справедливо будет
+\begin{statement}
+Для собственных значений $\varkappa^2$ справедливо выражение
+$$\varkappa^2 = \nu^2+\mu^2 = \left( \frac{\frac{\pi}{2} + \pi n}{x_1+x_2+x_3} \right)^2 + \left( \frac{\pi m}{y_0} \right)^2, \ m,n \in \mathbb{N}.$$
+\end{statement}
+
+\section{Трилистник из ограниченных софокусными квадриками плоских листов.}\label{sec:ch7/sect2/subsect2}
+Обратимся к примеру \ref{sec:ch5/sect3/subsect1}, рассматривалось стационарное уравнение Шрёдингера $\Delta u + \varkappa^2 u = 0$ на $\Gamma = \cup_j \Gamma_j, \ j=1,2,3$, где $\Gamma_j= [0,x_j] \times [0,y_0]$. 
+Напомним, что на множестве точек ветвления $\{x=0\}$ требовалось выполнение условий Кирхгофа \eqref{eq:rectanglesKirchhoffCondition}. 
+В силу расщепления уравнения в декартовых координатах $(x,y)$ задачу можно было свести к одномерной \ref{sec:ch4/sect3/subsect1} с теми же условиями в вершине ветвления. 
+
+Как нетрудно заметить, при замене в примере \ref{sec:ch5/sect3/subsect1} матриц, соответствующих условиям Кирхгофа на матрицы \label{eq:quantumBookCondition1D}, задача на $\Gamma$ сводится к одномерной задаче \ref{sec:ch7/sect1}.
+Таким образом, задача $\Delta u + \varkappa^2 u = 0$ на $\Gamma$ в разложении $u(x,y) = \xi(x) \zeta(y)$ принимает вид
+\begin{equation}
+\left\{
+\begin{array}{lll}
+\dfrac{\partial^2 \xi_j}{\partial x^2}  + \nu^2 \xi_j = 0 , & \xi_j(x_j) = 0, & j=1,2,3; 	\\
+\dfrac{\partial^2 \zeta_j}{\partial y^2}  + \mu^2 \zeta_j = 0 , & \zeta_j(y_0) = \zeta_j(0) = 0, & j=1,2,3,
+\end{array}
+\right.
+\end{equation}
+\begin{equation}
+\begin{pmatrix}
+0	&	1	&	1	\\
+1	&	0	&	1	\\
+1	&	1	&	0	
+\end{pmatrix}
+\begin{pmatrix}
+\xi_1' (0) \\
+\xi_2' (0) \\
+\xi_3' (0)
+\end{pmatrix} 
++ i \nu
+\begin{pmatrix}
+0	&	-1	&	1	\\
+1	&	0	&	-1	\\
+-1	&	1	&	0	
+\end{pmatrix} 
+\begin{pmatrix}
+\xi_1(0) \\
+\xi_2(0) \\
+\xi_3(0) 
+\end{pmatrix} = 
+\begin{pmatrix}
+0	\\	0	\\	0
+\end{pmatrix}.
+\label{eq:rectanglesBookCondition2D}
+\end{equation}
+В силу соображений из \ref{sec:ch7/sect1} справедливо будет
+\begin{statement}
+Для собственных значений $\varkappa^2$ справедливо выражение
+$$\varkappa^2 = \nu^2+\mu^2 = \left( \frac{\frac{\pi}{2} + \pi n}{x_1+x_2+x_3} \right)^2 + \left( \frac{\pi m}{y_0} \right)^2, \ m,n \in \mathbb{N}.$$
+\end{statement}
+
+\clearpage

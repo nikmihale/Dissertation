@@ -1,643 +1,180 @@
-\chapter{Оформление различных элементов}\label{ch:ch1}
+\chapter{Модельные задачи}\label{ch:ch1}
 
-\section{Форматирование текста}\label{sec:ch1/sec1}
+\section{Предварительные сведения}\label{sec:ch1/sec1}
+Пусть $\Omega$ --- область, ограниченная координатными линиями в полярной системе координат $(x, y) = (r \cos \phi, r \sin \phi)$. В $\Omega$ рассмотрим стационарное уравнение Шредингера.
+\begin{equation*}
+\hat{H}\psi = \left( \frac{-\hbar^2}{2M}\nabla^2 + V(r)\right) \psi = E\psi,
+%\label{eq:schrodinger}
+\end{equation*}
+где потенциал $V(r)$ внутри области $\Omega$ равен нулю, а вне ее обращается в бесконечность. Такая задача равносильна поиску собственных функций и собственных значений оператора Лапласа в области $\Omega$ для функций, обращающихся в нуль на границе $\Omega$. Заметим, что при обозначении $\varkappa^2 = \frac{2 M E}{\hbar^2}$ уравнение Шредингера можно записать в виде $\nabla^2  = -\varkappa^2 \psi.$
 
-Мы можем сделать \textbf{жирный текст} и \textit{курсив}.
-
-\section{Ссылки}\label{sec:ch1/sec2}
-
-Сошлёмся на библиографию.
-Одна ссылка: \cite[с.~54]{Sokolov}\cite[с.~36]{Gaidaenko}.
-Две ссылки: \cite{Sokolov,Gaidaenko}.
-Ссылка на собственные работы: \cite{vakbib1, confbib2}.
-Много ссылок: %\cite[с.~54]{Lermontov,Management,Borozda} % такой «фокус»
-%вызывает biblatex warning относительно опции sortcites, потому что неясно, к
-%какому источнику относится уточнение о страницах, а bibtex об этой проблеме
-%даже не предупреждает
-\cite{Lermontov, Management, Borozda, Marketing, Constitution, FamilyCode,
-    Gost.7.0.53, Razumovski, Lagkueva, Pokrovski, Methodology, Berestova,
-    Kriger}%
-\ifnumequal{\value{bibliosel}}{0}{% Примеры для bibtex8
-    \cite{Sirotko, Lukina, Encyclopedia, Nasirova}%
-}{% Примеры для biblatex через движок biber
-    \cite{Sirotko2, Lukina2, Encyclopedia2, Nasirova2}%
-}%
-.
-И~ещё немного ссылок:~\cite{Article,Book,Booklet,Conference,Inbook,Incollection,Manual,Mastersthesis,
-    Misc,Phdthesis,Proceedings,Techreport,Unpublished}
-% Следует обратить внимание, что пробел после запятой внутри \cite{}
-% обрабатывается ожидаемо, а пробел перед запятой, может вызывать проблемы при
-% обработке ссылок.
-\cite{medvedev2006jelektronnye, CEAT:CEAT581, doi:10.1080/01932691.2010.513279,
-    Gosele1999161,Li2007StressAnalysis, Shoji199895, test:eisner-sample,
-    test:eisner-sample-shorted, AB_patent_Pomerantz_1968, iofis_patent1960}%
-\ifnumequal{\value{bibliosel}}{0}{% Примеры для bibtex8
-}{% Примеры для biblatex через движок biber
-    \cite{patent2h, patent3h, patent2}%
-}%
-.
-
-\ifnumequal{\value{bibliosel}}{0}{% Примеры для bibtex8
-Попытка реализовать несколько ссылок на конкретные страницы
-для \texttt{bibtex} реализации библиографии:
-[\citenum{Sokolov}, с.~54; \citenum{Gaidaenko}, с.~36].
-}{% Примеры для biblatex через движок biber
-Несколько источников (мультицитата):
-% Тут специально написано по-разному тире, для демонстрации, что
-% применение специальных тире в настоящий момент в biblatex приводит к непоказу
-% "с.".
-\cites[vii--x, 5, 7]{Sokolov}[v"--~x, 25, 526]{Gaidaenko}[vii--x, 5, 7]{Techreport},
-работает только в \texttt{biblatex} реализации библиографии.
-}%
-
-Ссылки на собственные работы:~\cite{vakbib1, confbib1}.
-
-Сошлёмся на приложения: Приложение~\cref{app:A}, Приложение~\cref{app:B2}.
-
-Сошлёмся на формулу: формула~\cref{eq:equation1}.
-
-Сошлёмся на изображение: рисунок~\cref{fig:knuth}.
-
-Стандартной практикой является добавление к ссылкам префикса, характеризующего тип элемента.
-Это не является строгим требованием, но~позволяет лучше ориентироваться в документах большого размера.
-Например, для ссылок на~рисунки используется префикс \textit{fig},
-для ссылки на~таблицу "--- \textit{tab}.
-
-В таблице \cref{tab:tab_pref} приложения~\cref{app:B4} приведён список рекомендуемых
-к использованию стандартных префиксов.
-
-В некоторых ситуациях возникает необходимость отойти от требований ГОСТ по оформлению ссылок на
-литературу.
-В таком случае можно воспользоваться дополнительными опциями пакета \verb+biblatex+.
-
-Например, в ссылке на книгу~\cite{sobenin_kdv} использование опции \verb+maxnames=4+ позволяет
-вывести имена всех четырёх авторов.
-По ГОСТ имена последних трёх авторов опускаются.
-
-Кроме того, часто возникают проблемы с транслитерованными инициалами. Некоторые буквы русского
-алфавита по правилам транслитерации записываются двумя буквами латинского алфавита (ю-yu, ё-yo и
-т.д.).
-Такие инициалы \verb+biblatex+ будет сокращать до одной буквы, что неверно.
-Поправить его работу можно использовав опцию \verb+giveninits=false+.
-Пример использования этой опции можно видеть в ссылке~\cite{initials}.
-
-\section{Формулы}\label{sec:ch1/sec3}
-
-Благодаря пакету \textit{icomma}, \LaTeX~одинаково хорошо воспринимает
-в~качестве десятичного разделителя и запятую (\(3,1415\)), и точку (\(3.1415\)).
-
-\subsection{Ненумерованные одиночные формулы}\label{subsec:ch1/sec3/sub1}
-
-Вот так может выглядеть формула, которую необходимо вставить в~строку
-по~тексту: \(x \approx \sin x\) при \(x \to 0\).
-
-А вот так выглядит ненумерованная отдельностоящая формула c подстрочными
-и надстрочными индексами:
-\[
-    (x_1+x_2)^2 = x_1^2 + 2 x_1 x_2 + x_2^2
-\]
-
-Формула с неопределенным интегралом:
-\[
-    \int f(\alpha+x)=\sum\beta
-\]
-
-При использовании дробей формулы могут получаться очень высокие:
-\[
-    \frac{1}{\sqrt{2}+
-        \displaystyle\frac{1}{\sqrt{2}+
-            \displaystyle\frac{1}{\sqrt{2}+\cdots}}}
-\]
-
-В формулах можно использовать греческие буквы:
-%Все \original... команды заранее, ради этого примера, определены в Dissertation\userstyles.tex
-\[
-    \alpha\beta\gamma\delta\originalepsilon\epsilon\zeta\eta\theta%
-    \vartheta\iota\kappa\varkappa\lambda\mu\nu\xi\pi\varpi\rho\varrho%
-    \sigma\varsigma\tau\upsilon\originalphi\phi\chi\psi\omega\Gamma\Delta%
-    \Theta\Lambda\Xi\Pi\Sigma\Upsilon\Phi\Psi\Omega
-\]
-\[%https://texfaq.org/FAQ-boldgreek
-    \boldsymbol{\alpha\beta\gamma\delta\originalepsilon\epsilon\zeta\eta%
-        \theta\vartheta\iota\kappa\varkappa\lambda\mu\nu\xi\pi\varpi\rho%
-        \varrho\sigma\varsigma\tau\upsilon\originalphi\phi\chi\psi\omega\Gamma%
-        \Delta\Theta\Lambda\Xi\Pi\Sigma\Upsilon\Phi\Psi\Omega}
-\]
-
-Для добавления формул можно использовать пары \verb+$+\dots\verb+$+ и \verb+$$+\dots\verb+$$+,
-но~они считаются устаревшими.
-Лучше использовать их функциональные аналоги \verb+\(+\dots\verb+\)+ и \verb+\[+\dots\verb+\]+.
-
-\subsection{Ненумерованные многострочные формулы}\label{subsec:ch1/sec3/sub2}
-
-Вот так можно написать две формулы, не нумеруя их, чтобы знаки <<равно>> были
-строго друг под другом:
-\begin{align}
-    f_W & =  \min \left( 1, \max \left( 0, \frac{W_{soil} / W_{max}}{W_{crit}} \right)  \right), \nonumber \\
-    f_T & =  \min \left( 1, \max \left( 0, \frac{T_s / T_{melt}}{T_{crit}} \right)  \right), \nonumber
-\end{align}
-
-Выровнять систему ещё и по переменной \( x \) можно, используя окружение
-\verb|alignedat| из пакета \verb|amsmath|. Вот так:
-\[
-|x| = \left\{
-\begin{alignedat}{2}
-     &   & x, \quad & \text{eсли } x\geqslant 0 \\
-     & - & x, \quad & \text{eсли } x<0
-\end{alignedat}
+\subsection{Стационарное уравнение Шредингера в полярных координатах}\label{subsec:ch1/sec1/sub1}
+В полярной системе координат $(x, y) = (r\cos \phi, r\sin \phi)$ оператор Гамильтона внутри области $\Omega$ имеет вид:
+\begin{equation*}
+\hat{H} = \frac{-\hbar^2}{2M} \nabla^2  + V(x, y) = 
+\frac{-\hbar^2}{2M} \left(\frac{1}{r^2}\frac{\partial^2}{\partial \phi^2} + \frac{1}{r}\frac{\partial}{\partial r} + \frac{\partial^2}{\partial r^2}\right) 
+%\label{eq:polarSchrodinger}
+\end{equation*}
+Запишем функцию $\psi$ в виде $\psi(r, \phi) = R(r)\Phi(\phi)$, и пусть $E$ -- ее собственное значение. Тогда положим $\varkappa^2 = \frac{2M E}{\hbar^2}$, и уравнение $(\nabla^2  + \varkappa^2) \psi=0$ примет вид 
+$$ \frac{R}{r^2}\frac{\partial^2\Phi}{\partial\phi^2} + \frac{\Phi}{r}\frac{\partial R}{\partial r} + \Phi  +\varkappa^2R\Phi = 0.$$
+Обе части уравнения умножим на $\frac{r^2}{R\Phi}$:
+$$ \frac{1}{\Phi}\frac{\partial^2\Phi}{\partial\phi^2} + \frac{r}{R}\frac{\partial R}{\partial r} + \frac{r^2}{R}\frac{\partial^2 R}{\partial r^2} + \varkappa^2r^2 = 0.$$
+Введем разделяющий параметр $\lambda$, что позволяет рассмотреть исходное уравнение на $\psi(r, \phi) = R(r)\Phi(\phi)$, как систему из двух обыкновенных дифференциальных уравнений:
+\begin{equation*}
+\left\{\begin{array}{rcll}
+    \dfrac{\Phi''}{\Phi} &=&-\lambda^2, \\
+    \dfrac{rR'}{R} + \dfrac{r^2R''}{R} + \varkappa^2r^2 &=& \lambda^2  \quad 	 &\textit{   (уравнение Бесселя)}. \\
+\end{array}
 \right.
-\]
-Здесь первый амперсанд (в исходном \LaTeX\ описании формулы) означает
-выравнивание по~левому краю, второй "--- по~\( x \), а~третий "--- по~слову
-<<если>>. Команда \verb|\quad| делает большой горизонтальный пробел.
+%\label{eq:polarSystem}
+\end{equation*}
+решениями последнего уравнения являются функции Бесселя первого и второго рода $J_\lambda(\varkappa r)$ и $Y_\lambda(\varkappa r)$, соответственно. 
 
-Ещё вариант:
+
+\subsection{Функции Бесселя}\label{subsec:ch1/sec1/sub2}
+Функция Бесселя первого рода $J_\alpha(x)$ является решением дифференциального уравнения второго порядка
+$$x^2\frac{d^2y}{dx^2} + x\frac{dy}{dx} + (x^2 - \alpha^2)y=0,$$
+где параметр $\alpha$ выбирается так, что разложение $J_\alpha(x)$ в точке $x=0$ имеет вид
+$$J_\alpha(x) = \sum_{r=0}^\infty \frac{(-1)^r (\frac{x}{2})^{\alpha + 2r}}{r! \Gamma(\alpha+r+1)}.$$
+Главная ветвь $J_\alpha(x)$ соответствует главному значению функции $(\frac{x}{2})^{\alpha + 2r}$ и является аналитической функцией в комплексной плоскости с вырезом вдоль интервала $(-\infty, 0]$. 
+При $\alpha \in \mathbb{Z}$ функция $J_\alpha(x)$ является целой для $x \in \mathbb{C}$, причем $J_{-n}(x) = (-1)^nJ_n(x)$. Если $\alpha \notin \mathbb{Z}$, то функции $J_\alpha$ и $J_{-\alpha}$ линейно независимы.
+Если $\alpha \in \mathbb{R}$, то функции Бесселя $J_\alpha(x)$ имеют счетное число положительных вещественных нулей $\{ j_{\alpha, k} \}_{k=1}^\infty$. Традиционно их нумеруют по возрастанию 
+$$j_{\alpha, 1} < j_{\alpha, 2} < j_{\alpha, 3} < ...$$
+Для функций Бесселя справедливы связующие соотношения:
+$$Y_\alpha(x) = \frac{J_\alpha(x) \cos \pi \alpha - J_{-\alpha}(x)}{\sin \pi \alpha}$$ и рекуррентные соотношения, справедливые для $F=J$ и $F=Y$.
+$$ \frac{2\alpha}{x}F_\alpha(x) = F_{\alpha-1}(x)+F_{\alpha+1}(x), \quad 
+2\frac{d F_\alpha(x)}{d x} = F_{\alpha-1}(x)-F_{\alpha+1}(x).$$ 
+Также существуют (см. \cite[\S~10.19]{wref5} асимптотики функций Бесселя для больших аргументов и для больших значений порядка $\alpha$:
+$$J_\alpha(x) \approx \sqrt{2 \over \pi x}\left( \cos(x - \frac{\alpha \pi}{2} - \frac{\pi}{4} \right), \quad J_\alpha(x) \approx \sqrt{1 \over 2 \pi \alpha}\left(e x  \over 2 \alpha\right)^\alpha.$$
+
+Для нулей $j_{\alpha, m}, \quad y_{\alpha, m}$ функций Бесселя первого и второго рода выведена~\cite{wref3} их асимптотика при $m \to \infty$:
+$$j_{\alpha, m}, y_{\alpha, m} \approx a - {\mu - 1 \over 8 a} - {4(\mu - 1)(7\mu - 31) \over 3(8a)^3} - {32(\mu - 1)(83\mu^2 - 982\mu + 3779 \over 15(8a)^5}+\dots,$$
+где $\mu = 4 \alpha^2$, $a=(m+{1\over2}\alpha - {1\over4})\pi$ для $j_{\alpha, m}$ или $a=(m+{1\over2}\alpha - {3\over4})\pi$ для $y_{\alpha, m}$.
+Для произведений функций Бесселя вида $Y_\nu(x) J_\nu(\lambda x) - Y_\nu(\lambda x) J_\nu(x)$ асимптотика $m$-го положительного нуля $\alpha_{\nu, m}$ также известна  \cite[\S\ 9, с.~358]{wref2}:
+ $$\alpha_{\nu, m} = \sigma + \frac{\chi}{\sigma} + \frac{\omega-\chi^2}{\sigma^3} + \frac{\eta-4\chi \omega +2\chi^3}{\sigma^5} + \dots,$$
+ где $\mu=4\nu^2$,
+$\sigma=\frac{\pi m}{\lambda - 1}$,
+ $\chi = \frac{\mu - 1}{8 \lambda}$,
+ $\omega = \frac{(\mu-1)(\mu-25)(\lambda^3 - 1)}{6(4\lambda)^3(\lambda-1)}$,
+ $\eta = \frac{(\mu-1)(\mu^2-114\mu+1073)(\lambda^5-1)}{5(4\lambda)^5(\lambda-1)}$.
+
+\section{Квантовый биллиард в круге}\label{sec:ch1/sec2}
+
+Рассмотрим квантовую частицу, свободно перемещающуюся в круге $D^2$ радиуса $\rho_0$. Для этой системы гамильтониан в декартовых координатах записывается следующим образом:
+$$\hat{H} = \frac{\hat{p}^2}{2M} + V(x, y) = \frac{-\hbar^2}{2M}\left(\frac{\partial^2 }{\partial x^2} + \frac{\partial^2}{\partial y^2}\right)  + V(x, y) = \frac{-\hbar^2}{2M} \nabla^2  + V(x, y), $$
+где $\rho_0$ - радиус круга $D^2$, и потенциал $V(x,y)$ определяется как
 \[
-    |x|=
-    \begin{cases}
-        \phantom{-}x, \text{если } x \geqslant 0 \\
-        -x, \text{если } x<0
-    \end{cases}
-\]
+    V(x, y) = 
+    \Bigg\{
+    \begin{array}{cc}
+        0, \sqrt{x^2+y^2} < \rho_0 \\
+        \infty, \sqrt{x^2+y^2} \geq \rho_0. \\
+    \end{array}
+\] 
+Задача равносильна поиску собственных функций и собственных значений оператора Лапласа в области $\Omega$ с условием, что  функции обращаются в нуль на границе $\Omega$.
+\begin{statement}
+В области $D^2$ собственные функции $\psi_{k, m}(r, \phi)$ и собственные значения $E_{k,m}$ оператора $\hat{H}$ имеют вид 
+$$\psi_{k, m}(r, \phi) = J_k\left(\frac{\alpha_{k, m}r}{\rho_0}\right)\sin{k \phi}, \hspace{15pt} E_{k,m} = \frac{\hbar^2 \alpha_{k, m}^2}{2M\rho_0^2}, \hspace{15pt} k, m \in \mathbb{Z},$$
+где $\alpha_{k, m}$ - $m$-тый ноль функции Бесселя первого рода $J_k(x)$.
+\label{st:sec1_stat1}
+\end{statement}
+\begin{remark}
+Вместо $\sin$ можно использовать $\cos$.
+\end{remark}
+\begin{proof}
+Для $r < \rho_0$ получаем дифференциальное уравнение второго порядка в частных производных $(\nabla^2 + \varkappa^2)\psi = 0$, где $\varkappa^2 = \frac{2M E}{\hbar^2}$. Запишем искомую функцию в виде $\psi(r, \phi) = R(r)\Phi(\phi)$. Тогда, в силу соображений из подраздела \ref{subsec:ch1/sec1/sub1}, $\Phi(\phi) = A\cos{k\phi} + B\sin{k\phi}$ и $R(r) = J_k(\varkappa r)$, где $J_k(x)$ - функция Бесселя первого рода. Таким образом, $\psi(r, \phi) = J_k(\varkappa r) (\widetilde{A}\cos{k\phi} + \widetilde{B}\sin{k\phi} )$.
 
-Кроме того, для  нумерованных формул \verb|alignedat| делает вертикальное
-выравнивание номера формулы по центру формулы. Например, выравнивание
-компонент вектора:
-\begin{equation}
-    \label{eq:2p3}
-    \begin{alignedat}{2}
-        {\mathbf{N}}_{o1n}^{(j)} = \,{\sin} \phi\,n\!\left(n+1\right)
-        {\sin}\theta\,
-        \pi_n\!\left({\cos} \theta\right)
-        \frac{
-        z_n^{(j)}\!\left( \rho \right)
-        }{\rho}\,
-         & {\boldsymbol{\hat{\mathrm e}}}_{r}\,+      \\
-        +\,
-        {\sin} \phi\,
-        \tau_n\!\left({\cos} \theta\right)
-        \frac{
-        \left[\rho z_n^{(j)}\!\left( \rho \right)\right]^{\prime}
-        }{\rho}\,
-         & {\boldsymbol{\hat{\mathrm e}}}_{\theta}\,+ \\
-        +\,
-        {\cos} \phi\,
-        \pi_n\!\left({\cos} \theta\right)
-        \frac{
-        \left[\rho z_n^{(j)}\!\left( \rho \right)\right]^{\prime}
-        }{\rho}\,
-         & {\boldsymbol{\hat{\mathrm e}}}_{\phi}\:.
-    \end{alignedat}
-\end{equation}
+Из граничного условия заметим, что $$\psi(r, \phi) |_{\partial D^2} = 0 \implies J_k(\varkappa r)|_{r=\rho_0} = 0 \implies \varkappa \rho_0 \in \{\alpha: J_k(\alpha) = 0\},$$
+откуда допустимые значения $\varkappa \in \{ \frac{\alpha}{\rho_0} : J_k(\alpha)=0 \}$. Значения $k$ должны быть такими, чтоы выполнялось равенство $\Phi(\phi) = \Phi(\phi+2\pi)$, справедливое при условии $k \in \mathbb{Z}$. Учитывая также, что $\varkappa^2 = \frac{2M E}{\hbar^2}$, допустимыми значениями $E$ являются
+$$E = \frac{\hbar^2\varkappa^2}{2M} \in \left\{ \frac{\hbar^2\alpha^2}{2M\rho_0^2}: J_k(\alpha)=0 \right\}, k \in \mathbb{Z}.$$
 
-Ещё об отступах. Иногда для лучшей <<читаемости>> формул полезно
-немного исправить стандартные интервалы \LaTeX\ с учётом логической
-структуры самой формулы. Например в формуле~\cref{eq:2p3} добавлен
-небольшой отступ \verb+\,+ между основными сомножителями, ниже
-результат применения всех вариантов отступа:
-\begin{align*}
-    \backslash!             & \quad f(x) = x^2\! +3x\! +2         \\
-    \mbox{по-умолчанию}     & \quad f(x) = x^2+3x+2               \\
-    \backslash,             & \quad f(x) = x^2\, +3x\, +2         \\
-    \backslash{:}           & \quad f(x) = x^2\: +3x\: +2         \\
-    \backslash;             & \quad f(x) = x^2\; +3x\; +2         \\
-    \backslash \mbox{space} & \quad f(x) = x^2\ +3x\ +2           \\
-    \backslash \mbox{quad}  & \quad f(x) = x^2\quad +3x\quad +2   \\
-    \backslash \mbox{qquad} & \quad f(x) = x^2\qquad +3x\qquad +2
-\end{align*}
+Тогда, выбирая из множества $\alpha$ один конкретный $\alpha_{k, m}$ для некоторого $m \in \mathbb{N}$, получим вид собственных функций системы (с точностью до умножения на константу) 
+$$\psi_{k, m}(r, \phi) = J_k\left(\frac{\alpha_{k, m}r}{\rho_0}\right) \sin{k\phi},$$
+и их собственными значениями будут
+$$E_{k, m} = \frac{\hbar^2\alpha_{k, m}^2}{2M\rho_0^2}, \hspace{15pt} k, m \in \mathbb{Z},$$
+где $\alpha_{k, m}$ - $m$-ый ноль функции $J_k(x)$.
+\end{proof}
 
-Можно использовать разные математические алфавиты:
-\begin{align}
-    \mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber  \\
-    \mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber \\
-    \mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber
-\end{align}
+\section{Квантовый биллиард в круговом кольце и накрытии кругового кольца}\label{sec:ch1/sec3}
+Пусть  $\Omega$ --- область, $p$-листно накрывающая кольцо, 
+ограниченное двумя концентрическими окружностями радиусов $0 < r_0 < r_1$. Случай $p=1$ относится к классической теории колебаний (см. \cite{wref11}). Будем считать, что обе окружности имеют центр в начале координат.
+В  области $\Omega$ удобно рассматривать аналог полярных координат --- расстояние $r$ до начала координат и угол $\phi$, определенный  $\mod 2\pi p$. 
+В $\Omega$ рассмотрим стационарное уравнение Шрёдингера
+$$\hat{H}\psi = \left(\frac{-\hbar^2}{2M} \nabla^2  + V(r)\right)\psi = E\psi,$$здесь потенциал $V(r)$ внутри области $\Omega$ равен нулю, а вне ее обращается в бесконечность. Задача равносильна поиску собственных функций и собственных значений оператора Лапласа в области $\Omega$ для функций, обращающихся в нуль на границе $\Omega$.
+Положим  $\varkappa^2 = \frac{2 M E}{\hbar^2}$. Далее $J_\nu$  и $Y_\nu$ --- функции Бесселя первого и  второго рода соответственно.
 
-Посмотрим на систему уравнений на примере аттрактора Лоренца:
+\begin{theorem}{\normalfont (для $p=1$ см. \cite[с.~165.]{wref10})}.
 
+В  области $\Omega$ ($p$-листном накрытии кругового кольца)  собственные функции $\psi_{k,m}(r,\phi)$ и собственные значения $E_{k,m}$ оператора $\hat{H}$ имеют вид
+\begin{multline*}
+\psi_{k,m}(r,\phi) = \biggl[ Y_\nu(\alpha_{\nu, m}) J_\nu\biggl(\frac{\alpha_{\nu, m}r}{r_0}\biggr) - Y_\nu\biggl(\frac{\alpha_{\nu, m}r}{r_0}\biggr) J_\nu(\alpha_{\nu, m}) \biggr] \cos{(\nu \phi+\phi_0)}, \\
+\quad E_{k,m}= \frac{\varkappa^2_{k,m}\hbar^2}{2M},
+\end{multline*}
+где 
+$\nu=\frac{k}{p}$,  $\lambda = \frac{r_1}{r_0}$,
+$\varkappa^2_{k,m}=\frac{\alpha_{\nu, m}^2}{r_0^2},  k, m \in \mathbb{N}$, $\alpha_{\nu, m}$ --- $m$-ый нуль функции $f(x) = Y_\nu(x) J_\nu(\lambda x) - Y_\nu(\lambda x) J_\nu(x)$.
+\label{th:sect1_theorem1}
+\end{theorem}
+\begin{proof}
+Запишем искомую функцию в виде $\psi(r, \phi) = R(r)\Phi(\phi)$, тогда уравнение $(\nabla^2 + \varkappa^2)\psi = 0$ приобретет вид
+$ \frac{R(r)\Phi''(\phi)}{r^2} + \frac{R'(r)\Phi(\phi)}{r} + \Phi(\phi) R''(r) +\varkappa^2R(r)\Phi(\phi) = 0$. Умножим обе части уравнения на $\frac{r^2}{R(r)\Phi(\phi)}$:
+$$\frac{\Phi''(\phi)}{\Phi(\phi)} + \frac{rR'(r)}{R(r)} + \frac{r^2R''(r)}{R(r)} + \varkappa^2r^2 = 0.$$
+
+Введем разделяющий параметр  $\nu$ и получим два уравнения (далее переменные явно не указываем, подразумевая, что $\Phi = \Phi(\phi), R=R(r)$):
 \[
-\left\{
-\begin{array}{rl}
-    \dot x = & \sigma (y-x)  \\
-    \dot y = & x (r - z) - y \\
-    \dot z = & xy - bz
+\left\{\begin{array}{cc}
+    \dfrac{\Phi''}{\Phi} =-\nu^2, \\[10pt]
+    \dfrac{rR'}{R} + \dfrac{r^2R''}{R} + \varkappa^2r^2 = \nu^2.
 \end{array}
 \right.
 \]
 
-А для вёрстки матриц удобно использовать многоточия:
+Решением углового уравнения является функция $\Phi(\phi)  = \cos{(\nu \phi + \phi_0)}$ для некоторого вещественного значения $\phi_0$. Из условия периодичности $\Phi(0) = \Phi(2\pi p)$ следует, что 
+$\nu = \frac{k}{p}$, где $k$ --- произвольное неотрицательное целое число. 
+
+Решение радиального уравнения ищется в виде линейной  комбинации функций Бесселя первого и второго рода \cite[\S\ 9, с.~358]{wref2}:
+$$R(r) = A J_\nu(\varkappa r) +B Y_\nu(\varkappa r).$$
+Из граничного условия $R(r_0) = 0$ установим значения констант: $A = Y_\nu(\varkappa r_0), B = -J_\nu(\varkappa r_0)$ (либо пропорциональные им). 
+
+Теперь рассмотрим функцию  $f(x)=Y_\nu(x) J_\nu(\lambda x) - Y_\nu(\lambda x) J_\nu(x)$, где $\lambda = \frac{r_1}{r_0}$.
+Тогда граничное условие $R(r_1) = Y_\nu(\varkappa r_0) J_\nu(\varkappa r_1) -J_\nu(\varkappa r_0) Y_\nu(\varkappa r_1) =0$ можно записать в виде
+$f(\varkappa r_0)=0$.
+Обозначим $m$-й положительный нуль этой функции через $\alpha_{\nu, m}$. Тогда  $\varkappa r_0 = \alpha_{\nu, m} $ для какого-то значения $m$,
+откуда следует, что $\varkappa$ может принимать только значения $\varkappa^2_{k,m}$, приведенные в формулировке теоремы \ref{th:sect1_theorem1}.
+\end{proof}
+
+\section{Квантовый биллиард в секторе круга $D^2: \phi \in (0, \theta)$}\label{sec:markup}
+Зафиксируем угол $\theta \in (0, 2\pi)$ и в полярных координатах $(r, \phi)$ рассмотрим область 
+$S^2 = \{r, \phi : 0 \leq r \leq \rho_0 , 0 \leq \phi \leq \theta\}$.
+\begin{statement} \cite[p.~4]{wref13}
+В области $S^2$ собственные функции $\psi_{k, m}(r, \phi)$ и собственные значения $E_{k, m}$ оператора $\hat{H}$ имеют вид 
+$$\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{\rho_0}\right)\sin{\lambda\phi}, \hspace{15pt} E_{k, m} = \frac{\hbar^2 \alpha_{\lambda, m}^2}{2M\rho_0^2}, \hspace{15pt} k, m \in \mathbb{Z},$$
+где $\lambda = \frac{\pi k}{\theta}$, $\alpha_{\lambda, m}$ - $m$-ый ноль функции Бесселя первого рода $J_\lambda(x)$.
+\label{st:sect1_stat1}
+\end{statement}
+\begin{proof}
+Ищем решение в виде $\psi(r, \phi) = R(r)\Phi(\phi)$. Повторяя соображения из предыдущего пункта, получим систему дифференциальных уравнений для биллиарда в круге 
 \[
-    \left(
-        \begin{array}{ccc}
-            a_{11} & \ldots & a_{1n} \\
-            \vdots & \ddots & \vdots \\
-            a_{n1} & \ldots & a_{nn} \\
-        \end{array}
-    \right)
+\left\{\begin{array}{cc}
+    \dfrac{\Phi''}{\Phi} =-\lambda^2, \\
+    \dfrac{rR'}{R} + \dfrac{r^2R''}{R} + \varkappa^2r^2 = \lambda^2,
+\end{array}
+\right.
 \]
+решение которой должно удовлетворять новому граничному условию $\Phi(0)=\Phi(\theta)=0$. Поэтому $\Phi(\theta) = \sin(\lambda \theta) \in \{\pi k, k \in \mathbb{Z}\} \implies \lambda = \frac{\pi k}{\theta}, k \in \mathbb{Z}$.
 
-\subsection{Нумерованные формулы}\label{subsec:ch1/sec3/sub3}
+В силу соображений из предыдущего пункта, решение системы дифференциальных уравнений имеет вид:
+$$\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{\rho_0}\right)\sin{\lambda\phi} , \quad \lambda=\frac{\pi k}{\theta}.$$
+Аналогичными рассуждениями можно обнаружить, что собственные значения в этом случае принимают вид 
+$E_{k, m} = \frac{\hbar^2 \alpha_{\lambda, m}^2}{2M\rho_0^2}$ для $\lambda=\frac{\pi k}{\theta}.$
+\end{proof}
 
-А вот так пишется нумерованная формула:
-\begin{equation}
-    \label{eq:equation1}
-    e = \lim_{n \to \infty} \left( 1+\frac{1}{n} \right) ^n
-\end{equation}
-
-Нумерованных формул может быть несколько:
-\begin{equation}
-    \label{eq:equation2}
-    \lim_{n \to \infty} \sum_{k=1}^n \frac{1}{k^2} = \frac{\pi^2}{6}
-\end{equation}
-
-Впоследствии на формулы~\cref{eq:equation1, eq:equation2} можно ссылаться.
-
-Сделать так, чтобы номер формулы стоял напротив средней строки, можно,
-используя окружение \verb|multlined| (пакет \verb|mathtools|) вместо
-\verb|multline| внутри окружения \verb|equation|. Вот так:
-\begin{equation} % \tag{S} % tag - вписывает свой текст
-    \label{eq:equation3}
-    \begin{multlined}
-        1+ 2+3+4+5+6+7+\dots + \\
-        + 50+51+52+53+54+55+56+57 + \dots + \\
-        + 96+97+98+99+100=5050
-    \end{multlined}
-\end{equation}
-
-Уравнения~\cref{eq:subeq_1,eq:subeq_2} демонстрируют возможности
-окружения \verb|subequations| (пакет \verb|amsmath|).
-\begin{subequations}
-    \label{eq:subeq_1}
-    \begin{gather}
-        y = x^2 + 1 \label{eq:subeq_1-1} \\
-        y = 2 x^2 - x + 1 \label{eq:subeq_1-2}
-    \end{gather}
-\end{subequations}
-Ссылки на отдельные уравнения~\cref{eq:subeq_1-1,eq:subeq_1-2,eq:subeq_2-1}.
-\begin{subequations}
-    \label{eq:subeq_2}
-    \begin{align}
-        y & = x^3 + x^2 + x + 1 \label{eq:subeq_2-1} \\
-        y & = x^2
-    \end{align}
-\end{subequations}
-
-\subsection{Форматирование чисел и размерностей величин}\label{sec:units}
-
-Числа форматируются при помощи команды \verb|\num|:
-\num{5,3};
-\num{2,3e8};
-\num{12345,67890};
-\num{2,6 d4};
-\num{1+-2i};
-\num{.3e45};
-\num[exponent-base=2]{5 e64};
-\num[exponent-base=2,exponent-to-prefix]{5 e64};
-\num{1.654 x 2.34 x 3.430}
-\num{1 2 x 3 / 4}.
-Для написания последовательности чисел можно использовать команды \verb|\numlist| и \verb|\numrange|:
-\numlist{10;30;50;70}; \numrange{10}{30}.
-Значения углов можно форматировать при помощи команды \verb|\ang|:
-\ang{2.67};
-\ang{30,3};
-\ang{-1;;};
-\ang{;-2;};
-\ang{;;-3};
-\ang{300;10;1}.
-
-Обратите внимание, что ГОСТ запрещает использование знака <<->> для обозначения отрицательных чисел
-за исключением формул, таблиц и~рисунков.
-Вместо него следует использовать слово <<минус>>.
-
-Размерности можно записывать при помощи команд \verb|\si| и \verb|\SI|:
-\si{\farad\squared\lumen\candela};
-\si{\joule\per\mole\per\kelvin};
-\si[per-mode = symbol-or-fraction]{\joule\per\mole\per\kelvin};
-\si{\metre\per\second\squared};
-\SI{0.10(5)}{\neper};
-\SI{1.2-3i e5}{\joule\per\mole\per\kelvin};
-\SIlist{1;2;3;4}{\tesla};
-\SIrange{50}{100}{\volt}.
-Список единиц измерений приведён в таблицах~\cref{tab:unit:base,
-    tab:unit:derived,tab:unit:accepted,tab:unit:physical,tab:unit:other}.
-Приставки единиц приведены в~таблице~\cref{tab:unit:prefix}.
-
-С дополнительными опциями форматирования можно ознакомиться в~описании пакета \texttt{siunitx};
-изменить или добавить единицы измерений можно в~файле \texttt{siunitx.cfg}.
-
-\begin{table}
-    \centering
-    \captionsetup{justification=centering} % выравнивание подписи по-центру
-    \caption{Основные величины СИ}\label{tab:unit:base}
-    \begin{tabular}{llc}
-        \toprule
-        Название  & Команда          & Символ         \\
-        \midrule
-        Ампер     & \verb|\ampere|   & \si{\ampere}   \\
-        Кандела   & \verb|\candela|  & \si{\candela}  \\
-        Кельвин   & \verb|\kelvin|   & \si{\kelvin}   \\
-        Килограмм & \verb|\kilogram| & \si{\kilogram} \\
-        Метр      & \verb|\metre|    & \si{\metre}    \\
-        Моль      & \verb|\mole|     & \si{\mole}     \\
-        Секунда   & \verb|\second|   & \si{\second}   \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}
-    \small
-    \centering
-    \begin{threeparttable}% выравнивание подписи по границам таблицы
-        \caption{Производные единицы СИ}\label{tab:unit:derived}
-        \begin{tabular}{llc|llc}
-            \toprule
-            Название       & Команда               & Символ              & Название & Команда & Символ \\
-            \midrule
-            Беккерель      & \verb|\becquerel|     & \si{\becquerel}     &
-            Ньютон         & \verb|\newton|        & \si{\newton}                                      \\
-            Градус Цельсия & \verb|\degreeCelsius| & \si{\degreeCelsius} &
-            Ом             & \verb|\ohm|           & \si{\ohm}                                         \\
-            Кулон          & \verb|\coulomb|       & \si{\coulomb}       &
-            Паскаль        & \verb|\pascal|        & \si{\pascal}                                      \\
-            Фарад          & \verb|\farad|         & \si{\farad}         &
-            Радиан         & \verb|\radian|        & \si{\radian}                                      \\
-            Грей           & \verb|\gray|          & \si{\gray}          &
-            Сименс         & \verb|\siemens|       & \si{\siemens}                                     \\
-            Герц           & \verb|\hertz|         & \si{\hertz}         &
-            Зиверт         & \verb|\sievert|       & \si{\sievert}                                     \\
-            Генри          & \verb|\henry|         & \si{\henry}         &
-            Стерадиан      & \verb|\steradian|     & \si{\steradian}                                   \\
-            Джоуль         & \verb|\joule|         & \si{\joule}         &
-            Тесла          & \verb|\tesla|         & \si{\tesla}                                       \\
-            Катал          & \verb|\katal|         & \si{\katal}         &
-            Вольт          & \verb|\volt|          & \si{\volt}                                        \\
-            Люмен          & \verb|\lumen|         & \si{\lumen}         &
-            Ватт           & \verb|\watt|          & \si{\watt}                                        \\
-            Люкс           & \verb|\lux|           & \si{\lux}           &
-            Вебер          & \verb|\weber|         & \si{\weber}                                       \\
-            \bottomrule
-        \end{tabular}
-    \end{threeparttable}
-\end{table}
-
-\begin{table}
-    \centering
-    \begin{threeparttable}% выравнивание подписи по границам таблицы
-        \caption{Внесистемные единицы}\label{tab:unit:accepted}
-
-        \begin{tabular}{llc}
-            \toprule
-            Название        & Команда           & Символ          \\
-            \midrule
-            День            & \verb|\day|       & \si{\day}       \\
-            Градус          & \verb|\degree|    & \si{\degree}    \\
-            Гектар          & \verb|\hectare|   & \si{\hectare}   \\
-            Час             & \verb|\hour|      & \si{\hour}      \\
-            Литр            & \verb|\litre|     & \si{\litre}     \\
-            Угловая минута  & \verb|\arcminute| & \si{\arcminute} \\
-            Угловая секунда & \verb|\arcsecond| & \si{\arcsecond} \\ %
-            Минута          & \verb|\minute|    & \si{\minute}    \\
-            Тонна           & \verb|\tonne|     & \si{\tonne}     \\
-            \bottomrule
-        \end{tabular}
-    \end{threeparttable}
-\end{table}
-
-\begin{table}
-    \centering
-    \captionsetup{justification=centering}
-    \caption{Внесистемные единицы, получаемые из эксперимента}\label{tab:unit:physical}
-    \begin{tabular}{llc}
-        \toprule
-        Название                & Команда                  & Символ                 \\
-        \midrule
-        Астрономическая единица & \verb|\astronomicalunit| & \si{\astronomicalunit} \\
-        Атомная единица массы   & \verb|\atomicmassunit|   & \si{\atomicmassunit}   \\
-        Боровский радиус        & \verb|\bohr|             & \si{\bohr}             \\
-        Скорость света          & \verb|\clight|           & \si{\clight}           \\
-        Дальтон                 & \verb|\dalton|           & \si{\dalton}           \\
-        Масса электрона         & \verb|\electronmass|     & \si{\electronmass}     \\
-        Электрон Вольт          & \verb|\electronvolt|     & \si{\electronvolt}     \\
-        Элементарный заряд      & \verb|\elementarycharge| & \si{\elementarycharge} \\
-        Энергия Хартри          & \verb|\hartree|          & \si{\hartree}          \\
-        Постоянная Планка       & \verb|\planckbar|        & \si{\planckbar}        \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}
-    \centering
-    \begin{threeparttable}% выравнивание подписи по границам таблицы
-        \caption{Другие внесистемные единицы}\label{tab:unit:other}
-        \begin{tabular}{llc}
-            \toprule
-            Название                  & Команда              & Символ             \\
-            \midrule
-            Ангстрем                  & \verb|\angstrom|     & \si{\angstrom}     \\
-            Бар                       & \verb|\bar|          & \si{\bar}          \\
-            Барн                      & \verb|\barn|         & \si{\barn}         \\
-            Бел                       & \verb|\bel|          & \si{\bel}          \\
-            Децибел                   & \verb|\decibel|      & \si{\decibel}      \\
-            Узел                      & \verb|\knot|         & \si{\knot}         \\
-            Миллиметр ртутного столба & \verb|\mmHg|         & \si{\mmHg}         \\
-            Морская миля              & \verb|\nauticalmile| & \si{\nauticalmile} \\
-            Непер                     & \verb|\neper|        & \si{\neper}        \\
-            \bottomrule
-        \end{tabular}
-    \end{threeparttable}
-\end{table}
-
-\begin{table}
-    \small
-    \centering
-    \begin{threeparttable}% выравнивание подписи по границам таблицы
-        \caption{Приставки СИ}\label{tab:unit:prefix}
-        \begin{tabular}{llcc|llcc}
-            \toprule
-            Приставка & Команда       & Символ      & Степень      &
-            Приставка & Команда       & Символ      & Степень        \\
-            \midrule
-            Иокто     & \verb|\yocto| & \si{\yocto} & \textminus24 &
-            Дека      & \verb|\deca|  & \si{\deca}  & 1              \\
-            Зепто     & \verb|\zepto| & \si{\zepto} & \textminus21 &
-            Гекто     & \verb|\hecto| & \si{\hecto} & 2              \\
-            Атто      & \verb|\atto|  & \si{\atto}  & \textminus18 &
-            Кило      & \verb|\kilo|  & \si{\kilo}  & 3              \\
-            Фемто     & \verb|\femto| & \si{\femto} & \textminus15 &
-            Мега      & \verb|\mega|  & \si{\mega}  & 6              \\
-            Пико      & \verb|\pico|  & \si{\pico}  & \textminus12 &
-            Гига      & \verb|\giga|  & \si{\giga}  & 9              \\
-            Нано      & \verb|\nano|  & \si{\nano}  & \textminus9  &
-            Терра     & \verb|\tera|  & \si{\tera}  & 12             \\
-            Микро     & \verb|\micro| & \si{\micro} & \textminus6  &
-            Пета      & \verb|\peta|  & \si{\peta}  & 15             \\
-            Милли     & \verb|\milli| & \si{\milli} & \textminus3  &
-            Екса      & \verb|\exa|   & \si{\exa}   & 18             \\
-            Санти     & \verb|\centi| & \si{\centi} & \textminus2  &
-            Зетта     & \verb|\zetta| & \si{\zetta} & 21             \\
-            Деци      & \verb|\deci|  & \si{\deci}  & \textminus1  &
-            Иотта     & \verb|\yotta| & \si{\yotta} & 24             \\
-            \bottomrule
-        \end{tabular}
-    \end{threeparttable}
-\end{table}
-
-\subsection{Заголовки с формулами: \texorpdfstring{\(a^2 + b^2 = c^2\)}{%
-        a\texttwosuperior\ + b\texttwosuperior\ = c\texttwosuperior},
-    \texorpdfstring{\(\left\vert\textrm{{Im}}\Sigma\left(
-            \protect\varepsilon\right)\right\vert\approx const\)}{|ImΣ (ε)| ≈ const},
-    \texorpdfstring{\(\sigma_{xx}^{(1)}\)}{σ\_\{xx\}\textasciicircum\{(1)\}}
-}\label{subsec:with_math}
-
-Пакет \texttt{hyperref} берёт текст для закладок в pdf-файле из~аргументов
-команд типа \verb|\section|, которые могут содержать математические формулы,
-а~также изменения цвета текста или шрифта, которые не отображаются в~закладках.
-Чтобы использование формул в заголовках не вызывало в~логе компиляции появление
-предупреждений типа <<\texttt{Token not allowed in~a~PDF string
-    (Unicode):(hyperref) removing...}>>, следует использовать конструкцию
-\verb|\texorpdfstring{}{}|, где в~первых фигурных скобках указывается
-формула, а~во~вторых "--- запись формулы для закладок.
-
-\section{Рецензирование текста}\label{sec:markup}
-
-В шаблоне для диссертации и автореферата заданы команды рецензирования.
-Они видны при компиляции шаблона в режиме черновика или при установке
-соответствующей настройки (\verb+showmarkup+) в~файле \verb+common/setup.tex+.
-
-Команда \verb+\todo+ отмечает текст красным цветом.
-\todo{Например, так.}
-
-Команда \verb+\note+ позволяет выбрать цвет текста.
-\note{Чёрный, } \note[red]{красный, } \note[green]{зелёный, }
-\note[blue]{синий.} \note[orange]{Обратите внимание на ширину и расстановку
-    формирующихся пробелов, в~результате приведённой записи (зависит также
-    от~применяемого компилятора).}
-
-Окружение \verb+commentbox+ также позволяет выбрать цвет.
-
-\begin{commentbox}[red]
-    Красный текст.
-
-    Несколько параграфов красного текста.
-\end{commentbox}
-
-\begin{commentbox}[blue]
-    Синяя формула.
-
-    \begin{equation}
-        \alpha + \beta = \gamma
-    \end{equation}
-\end{commentbox}
-
-\verb+commentbox+ позволяет закомментировать участок кода в~режиме чистовика.
-Чтобы убрать кусок кода для всех режимов, можно использовать окружение
-\verb+comment+.
-
-\begin{comment}
-Этот текст всегда скрыт.
-\end{comment}
-
-\section{Работа со списком сокращений и~условных обозначений}\label{sec:acronyms}
-
-С помощью пакета \texttt{nomencl} можно создавать удобный сортированный список
-сокращений и условных обозначений во время написания текста. Вызов
-\verb+\nomenclature+ добавляет нужный символ или сокращение с~описанием
-в~список, который затем печатается вызовом \verb+\printnomenclature+
-в~соответствующем разделе.
-Для того, чтобы эти операции прошли, потребуется дополнительный вызов
-\verb+makeindex -s nomencl.ist -o %.nls %.nlo+ в~командной строке, где вместо
-\verb+%+ следует подставить имя главного файла проекта (\verb+dissertation+
-для этого шаблона).
-Затем потребуется один или два дополнительных вызова компилятора проекта.
-\begin{equation}
-    \omega = c k,
-\end{equation}
-где \( \omega \) "--- частота света, \( c \) "--- скорость света, \( k \) "---
-модуль волнового вектора.
-\nomenclature{\(\omega\)}{частота света\nomrefeq}
-\nomenclature{\(c\)}{скорость света\nomrefpage}
-\nomenclature{\(k\)}{модуль волнового вектора\nomrefeqpage}
-Использование
-\begin{verbatim}
-\nomenclature{\(\omega\)}{частота света\nomrefeq}
-\nomenclature{\(c\)}{скорость света\nomrefpage}
-\nomenclature{\(k\)}{модуль волнового вектора\nomrefeqpage}
-\end{verbatim}
-после уравнения добавит в список условных обозначений три записи.
-Ссылки \verb+\nomrefeq+ на последнее уравнение, \verb+\nomrefpage+ "--- на
-страницу, \verb+\nomrefeqpage+ "--- сразу на~последнее уравнение и~на~страницу,
-можно опускать и~не~использовать.
-
-Группировкой и сортировкой пунктов в списке можно управлять с~помощью указания
-дополнительных аргументов к команде \verb+nomenclature+.
-Например, при вызове
-\begin{verbatim}
-\nomenclature[03]{\( \hbar \)}{постоянная Планка}
-\nomenclature[01]{\( G \)}{гравитационная постоянная}
-\end{verbatim}
-\( G \) будет стоять в списке выше, чем \( \hbar \).
-Для корректных вертикальных отступов между строками в описании лучше
-не~использовать многострочные формулы в~списке обозначений.
-
-\nomenclature{%
-    \( \begin{rcases}
-        a_n \\
-        b_n
-    \end{rcases} \)%
-}{коэффициенты разложения Ми в дальнем поле соответствующие электрическим и
-    магнитным мультиполям}
-\nomenclature[a\( e \)]{\( {\boldsymbol{\hat{\mathrm e}}} \)}{единичный вектор}
-\nomenclature{\( E_0 \)}{амплитуда падающего поля}
-\nomenclature{\( j \)}{тип функции Бесселя}
-\nomenclature{\( k \)}{волновой вектор падающей волны}
-\nomenclature{%
-    \( \begin{rcases}
-        a_n \\
-        b_n
-    \end{rcases} \)%
-}{и снова коэффициенты разложения Ми в дальнем поле соответствующие
-    электрическим и магнитным мультиполям. Добавлено много текста, так что
-    описание группы условных обозначений значительно превысило высоту этой
-    группы...}
-\nomenclature{\( L \)}{общее число слоёв}
-\nomenclature{\( l \)}{номер слоя внутри стратифицированной сферы}
-\nomenclature{\( \lambda \)}{длина волны электромагнитного излучения в вакууме}
-\nomenclature{\( n \)}{порядок мультиполя}
-\nomenclature{%
-    \( \begin{rcases}
-        {\mathbf{N}}_{e1n}^{(j)} & {\mathbf{N}}_{o1n}^{(j)} \\
-        {\mathbf{M}_{o1n}^{(j)}} & {\mathbf{M}_{e1n}^{(j)}}
-    \end{rcases} \)%
-}{сферические векторные гармоники}
-\nomenclature{\( \mu \)}{магнитная проницаемость в вакууме}
-\nomenclature{\( r, \theta, \phi \)}{полярные координаты}
-\nomenclature{\( \omega \)}{частота падающей волны}
-
-С помощью \verb+nomenclature+ можно включать в~список сокращения,
-не~используя их~в~тексте.
-% запись сокращения в список происходит командой \nomenclature,
-% а не употреблением самого сокращения
-\nomenclature{FEM}{finite element method, метод конечных элементов}
-\nomenclature{FIT}{finite integration technique, метод конечных интегралов}
-\nomenclature{FMM}{fast multipole method, быстрый метод многополюсника}
-\nomenclature{FVTD}{finite volume time-domain, метод конечных объёмов
-    во~временной области}
-\nomenclature{MLFMA}{multilevel fast multipole algorithm, многоуровневый
-    быстрый алгоритм многополюсника}
-\nomenclature{BEM}{boundary element method, метод граничных элементов}
-\nomenclature{CST MWS}{Computer Simulation Technology Microwave Studio
-    программа для компьютерного моделирования уравнен Максвелла}
-\nomenclature{DDA}{discrete dipole approximation, приближение дискретиных
-    диполей}
-\nomenclature{FDFD}{finite difference frequency domain, метод конечных
-    разностей в~частотной области}
-\nomenclature{FDTD}{finite difference time domain, метод конечных разностей
-    во~временной области}
-\nomenclature{MoM}{method of moments, метод моментов}
-\nomenclature{MSTM}{multiple sphere T-Matrix, метод Т-матриц для множества
-    сфер}
-\nomenclature{PSTD}{pseudospectral time domain method, псевдоспектральный метод
-    во~временной области}
-\nomenclature{TLM}{transmission line matrix method, метод матриц линий передач}
-
+\begin{consequence} \cite[p.~4]{wref13}
+Нетрудно заметить, что индексы $\lambda_m = \frac{m \pi}{\theta}$, соответствующие сектору $0 \leq \phi \leq \theta$ связаны с индексами $\mu_n = \frac{n \pi}{2\pi - \theta}$ ($\mu_n$ соответствуют решениям в дополнении сектора, т.е. для $\theta \leq \phi \leq 2\pi$) следующим образом:
+$$\lambda_m = \frac{\mu_n}{2\mu_n - n}m, \hspace{15pt} \mu_n = \frac{\lambda_m}{2\lambda_m - m}n$$
+\end{consequence}
+\begin{proof}
+Действительно, имеем 
+$\frac{n \pi}{2\pi - \theta} = \mu_n$, $\frac{m \pi}{\theta} = \lambda_m$, тогда из равенства $2\pi = \theta + (2\pi - \theta) = \frac{m \pi}{\lambda_m} + \frac{n \pi}{\mu_n}$ получаются равенства из утверждения \ref{st:sect1_stat1}.
+\end{proof}
 \FloatBarrier

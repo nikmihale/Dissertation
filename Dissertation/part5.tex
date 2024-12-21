@@ -1,0 +1,221 @@
+\chapter{Самосопряженные расширения оператора Лапласа на ветвящихся многообразиях.}\label{ch:ch5}
+
+\section{Введение.}\label{sec:ch5/sect1}
+Будем называть $\Gamma$ ветвящимся многообразием, если $\Gamma$ определяется как объединение $N$ областей $\Gamma_j, j \in \{1, 2, \ldots, N\}$: $\Gamma = \cup_{j=1}^N \Gamma_j$. Предполагается, что для каждого $j$ область $\Gamma_j$ является $d_j$--мерной ограниченной областью в пространстве $\mathbb{R}^{d_j}$ с гладкой границей $\eta_j$ размерности $d_j-1$. Граница многообразия $\Gamma$ определяется как объединение $N$ границ составляющих областей $\partial \Gamma = \eta = \cup_{j=1}^N\eta_j$, где $\eta_j = \partial \Gamma_j$. 
+
+Здесь и далее будем использовать запись 
+$\left. u \right|_\eta = 
+\begin{pmatrix}
+\left. u_1 \right|_{\eta_1} \\
+\ldots \\
+\left. u_N \right|_{\eta_N}
+\end{pmatrix}
+$ для функции $u$ на границе $\eta$ и 
+
+$\left. \frac{\partial u}{\partial n} \right|_\eta = 
+\begin{pmatrix}
+\left. \frac{\partial u_1}{\partial n_1} \right|_{\eta_1} \\
+\ldots \\
+\left. \frac{\partial u_N}{\partial n_N} \right|_{\eta_N}
+\end{pmatrix}
+$ для значения нормальной производной функции $u$, где $\left. \frac{\partial u_j}{\partial n_j} \right|_{\eta_j}$ -- производная в направлении внешней относительно $\Gamma_j$ нормали $n_j$ к границе $\eta_j$.
+
+
+\section{Условия самосопряженности оператора Лапласа на ветвящихся многообразиях.}\label{sec:ch5/sect2}
+Введем Гильбертово пространство $$h = L_2(\Gamma) = \bigoplus L_2(\Gamma_j)$$.
+Положим пространство граничных значений $G = h^\frac{3}{2} \oplus h^\frac{1}{2}$, где 
+$ h^\frac{3}{2} = \oplus_{j=1}^N W_2^\frac{3}{2}(\eta_j)$ и $ h^\frac{1}{2} = \oplus_{j=1}^N W_2^\frac{1}{2}(\eta_j)$.
+Граничное значение $\left. u \right|_\eta$ функции $u \in W_2^2(\Gamma)$ является элементом пространства $h^\frac{3}{2}$ \cite{Jakovlev_1967}, в то же время граничное значение нормальной производной $\left. \frac{\partial u}{\partial n} \right|_\eta$ принадлежит пространству $h^\frac{1}{2}$. 
+
+\begin{theorem}
+Пусть $A$ -- линейный оператор на пространстве $h$ с плотной областью определения $h^\frac{3}{2}$ с множеством значений в линейном многообразии $h^\frac{1}{2}$. Пусть $D_A$ -- линейное многообразие функций $u \in W_2^2(\Gamma)$ и значения функции $u$ на границе $\eta$ связаны с значениями нормальной производной $u$ соотношением 
+$$\left. \frac{\partial u}{\partial n} \right|_\eta = A \left. u \right|_\eta.$$
+Тогда для самосопряженности оператора $\mathbf{L}_A = \left. ( \mathbf{L}_0^* ) \right|_{D_A}$ необходимо и достаточно выполнение равенства $A=A^*$.
+\end{theorem}
+\begin{proof}
+Пусть $ u \in D(\mathbf{L}_A)$ и $ v \in D(\mathbf{L}_0^*)$, тогда справедливо равенство
+$$\left( \mathbf{L}_A u , \ v \right)_h - \left(  u , \  \mathbf{L}_0^* v \right)_h  = 
+\left( 
+\left. u \right|_\eta , \ A^* \left. v \right|_\eta - \left. \frac{\partial v}{\partial n} \right|_\eta 
+\right).$$
+В силу произвольности  $\left. u \right|_\eta$, равенство $\left. \frac{\partial v}{\partial n} \right|_\eta = A^* \left. v \right|_\eta$ является необходимым и достаточным условием для включения $v \in D(\mathbf{L}_A^*)$. Поскольку область определения оператора $\mathbf{L}^A$ задана уравнением $\left. \frac{\partial u}{\partial n} \right|_\eta = A \left. u \right|_\eta$, тогда самосопряженность оператора $\mathbf{L}_A = \mathbf{L}_A^*$ равносильна тождеству $A=A^*$.
+\end{proof}
+
+\begin{theorem}
+Пусть область определения оператора $\mathbf{L}$ задается соотношением $Z \left. \frac{\partial u}{\partial n} \right|_\eta + A \left. u \right|_\eta = 0$. Тогда оператор $\mathbf{L}$ самосопряжен тогда и только тогда, когда $A \ Z^* =Z \ A^*$.
+\end{theorem} 
+\begin{proof}
+Запишем решения системы $Z \left. \frac{\partial u}{\partial n} \right|_\eta + A \left. u \right|_\eta = 0$ в следующем виде:
+\begin{equation*}
+\begin{pmatrix}
+\left. u \right|_\eta \\
+\left. \frac{\partial u}{\partial n} \right|_\eta 
+\end{pmatrix}_{2n \times 1} = \Phi_{2n \times n} \xi_{n\times 1},
+\end{equation*}
+где $\Phi$ -- фундаментальная матрица системы, $\xi$ -- элемент пространства граничных значений $G$. 
+Из граничных значений получим условие $\left( A \ Z \right) \Phi_{2n \times n} = 0_{n \times n}$ или, что эквивалентно, 
+\begin{equation}
+\Phi_{n \times 2n}^T \begin{pmatrix}
+A^T \\
+Z^T
+\end{pmatrix}_{2n \times n} = 0_{n \times n}.
+\label{eq:ch5:boundaryCond}
+\end{equation}
+Для элементов $u \in D(\mathbf{L})$ и $v \in D(\mathbf{L}_0^*)$ выполняется равенство
+\begin{multline}
+\left( L u, \ v \right) - \left( x, \ (\mathbf{L}_0^*) v \right) = 
+\left( \left. \frac{\partial u}{\partial n} \right|_\eta ,\ \left. v \right|_\eta \right) - 
+\left( \left. u \right|_\eta, \ \left. \frac{\partial v}{\partial n} \right|_\eta \right) =  \\ 
+\left(
+\begin{pmatrix}
+	\left. u \right|_\eta \\
+	\left. \frac{\partial u}{\partial n} \right|_\eta
+\end{pmatrix}, \ 
+\begin{pmatrix}
+	0	& -1 \\
+	1	& 0
+\end{pmatrix}
+\begin{pmatrix}
+	\left. v \right|_\eta \\
+	\left. \frac{\partial v}{\partial n} \right|_\eta
+\end{pmatrix} 
+\right) = 
+\left( \Phi_{2n\times n} \xi_{n \times 1} , \ 
+\begin{pmatrix}
+	0	& -1 \\
+	1	& 0
+\end{pmatrix}
+\begin{pmatrix}
+	\left. v \right|_\eta \\
+	\left. \frac{\partial v}{\partial n} \right|_\eta
+\end{pmatrix} 
+\right) = \\
+\left( \xi, \ \Phi_{n\times 2n}^T 
+\begin{pmatrix}
+	0	& -1 \\
+	1	& 0
+\end{pmatrix}
+\begin{pmatrix}
+	\left. v \right|_\eta \\
+	\left. \frac{\partial v}{\partial n} \right|_\eta
+\end{pmatrix} 
+\right)
+\label{eq:ch5:branchingAZ}
+\end{multline}
+
+Поскольку $v \in D(\mathbf{L}_0^*)$, должно выполняться равенство 
+\begin{equation}
+\left( \mathbf{L} u, \ v \right) - \left(u, \   \mathbf{L}_0^* v \right) = 0,
+\label{eq:ch5:adjointV}
+\end{equation}
+справедливое в том числе для базисных элементов $v$ из $D(\mathbf{L}_0^*)$.
+Положим $V = 
+\begin{pmatrix}
+	\left. v_1 \right|_\eta					   	& \ldots	& \left. v_N \right|_\eta	\\
+	\left. \frac{\partial v_1}{\partial n} \right|_\eta.	& \ldots	& \left. \frac{\partial v_N}{\partial n} \right|_\eta
+\end{pmatrix}$ -- матрица, в которой по столбцам записаны базисные элементы линейного $G$, тогда 
+из \eqref{eq:ch5:branchingAZ}, \eqref{eq:ch5:adjointV} получаем
+$$\Phi^T \begin{pmatrix}
+			0	&	-1	\\
+			1	&	0
+		\end{pmatrix}
+	V_{2n \times n} = 0_{n \times n}.$$
+В силу равенства \eqref{eq:ch5:boundaryCond} заключаем, что матрицу $\mathbf{V}$ можно выбрать в виде
+$$V = \begin{pmatrix}
+-Z^* \\
+A^*
+\end{pmatrix}.$$
+\textcolor{red}{мне что-то сомневательно от доказательства, но я не знаю что меня смущает в нем}
+\end{proof}
+
+\section{Спектр оператора Лапласа на ветвящихся многообразиях.}\label{sec:ch5/sect3}
+Как описать в общем случае -- я не знаю. Только в общих чертах если уравнение расщепляется, то могу повертеть руками и пару слов сказать, но в более сложных ситуациях спектр непонятно как описать. Рассмотрим примеры начиная с трилистника из прямоугольников.
+\subsection{Пример: трилистник из прямоугольников}\label{sec:ch5/sect3/subsect1}
+Положим $\Gamma = \Gamma_1 \cup \Gamma_2 \cup \Gamma_3$ -- ветвящееся многообразие, образованное прямоугольниками $\Gamma_j = [0, x_j] \times [0, y_0]$, соединенными по ребру $\{x=0\} \times [0, y_0]$.
+
+На каждом $\Gamma_j$ уравнение на собственные функции оператора Лапласа $\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \varkappa^2 u=0$ расщепляется в декартовых координатах $(x, y)$, а граница $\eta_j$ представляет собой объединение координатных линий $\{x=x_j\} \cup \{y=y_0\} \cup \{x=0\} \cup \{y=0\}$. Следовательно, для $u(x,y) = \xi(x) \zeta(y)$ поиск обращающихся в нуль на $\eta = \partial \Gamma = \cup_j \left\{ \eta_j \setminus \{x=0\} \right\}$ собственных функций сводится к решению системы дифференциальных уравнений 
+\begin{equation}
+\left\{
+\begin{array}{lll}
+\dfrac{\partial^2 \xi_j}{\partial x^2}  + \nu^2 \xi_j = 0 , & \xi_j(x_j) = 0, & j=1,2,3; 	\\
+\dfrac{\partial^2 \zeta_j}{\partial y^2}  + \mu^2 \zeta_j = 0 , & \zeta_j(y_0) = \zeta_j(0) = 0, & j=1,2,3,
+\end{array}
+\right.
+\label{eq:rectangularSystem}
+\end{equation}
+где $\xi_j(x) = \left. \xi(x) \right|_{\Gamma_j}$, $\zeta_j(x) = \left. \zeta(x) \right|_{\Gamma_j}$, $\nu^2 + \mu^2 = \varkappa^2$.
+На общем сегменте границы $\{x=0\}$ потребуем, чтобы выполнялось условие вида  $Z \left. \frac{\partial u}{\partial n} \right|_\eta + A \left. u \right|_\eta = 0$, а именно потребуем выполнения \textit{условий Кирхгофа}:
+\begin{equation}
+\begin{pmatrix}
+0	&	0	&	0	\\
+0	&	0	&	0	\\
+1	&	1	&	1
+\end{pmatrix} 
+\begin{pmatrix}
+-\xi_1' (0)	\zeta_1(y) \\
+-\xi_2' (0)	\zeta_2(y) \\
+-\xi_3' (0)	\zeta_3(y) 
+\end{pmatrix} + 
+\begin{pmatrix}
+1	&	-1	&	0	\\
+0	&	1	&	-1	\\
+0	&	0	&	0
+\end{pmatrix} 
+\begin{pmatrix}
+\xi_1(0)	\zeta_1(y) \\
+\xi_2(0)	\zeta_2(y) \\
+\xi_3(0)	\zeta_3(y) 
+\end{pmatrix} = 
+\begin{pmatrix}
+0	\\	0	\\	0
+\end{pmatrix} 
+\label{eq:rectanglesKirchhoffCondition}
+\end{equation}
+
+Решениями системы уравнений без учета условия \eqref{eq:rectanglesKirchhoffCondition} являются функции $\xi_j(x) = \alpha_j \sin \nu (x-x_j) \zeta_j(y) = \beta_j \sin \mu y$, где $\mu = \dfrac{\pi m}{y_0}, m \in \mathbb{N}$. 
+Заметим, что функции $\zeta_j(y)$ отличаются друг от друга только постоянным множителем $\beta_j$, который мы можем учесть в $\alpha_j$. 
+Также поскольку $\zeta(y)$ не является тождественно нулевым решением, условие \eqref{eq:rectanglesKirchhoffCondition} может быть записано без общего множителя $\zeta(y)$. 
+Таким образом, задача поиска $\xi(x)$ сводится к задаче на графе с одной точкой ветвления \eqref{sec:ch4/sect3}. Как следует из примера \eqref{sec:ch4/sect3/subsect1}, собственные значения $\nu^2$ являются нулями функции $F(\nu) = \nu \left( \sin{\nu x_1} \sin{\nu x_2} \cos{\nu x_3} +  \sin{\nu x_1} \cos{\nu x_2} \sin{\nu x_3} +  \cos{\nu x_1} \sin{\nu x_2} \sin{\nu x_3} \right)$
+
+Таким образом, мы доказали следующее
+\begin{statement}
+Собственными значениями оператора Лапласа на ветвящемся многообразии $\Gamma$ являются $\varkappa^2 = \mu^2 + \nu^2$, где $\mu = \frac{\pi m}{y_0}, m \in \mathbb{N}$, а $\nu$ --- $n$-ый нуль функции 
+\begin{equation*}
+F(\nu) = \nu \left( \sin{\nu x_1} \sin{\nu x_2} \cos{\nu x_3} + \sin{\nu x_1} \cos{\nu x_2} \sin{\nu x_3} +  \cos{\nu x_1} \sin{\nu x_2} \sin{\nu x_3} \right).
+\end{equation*}
+Более того, если $x_1=x_2=x_3=x_0$, выражение для $\varkappa^2$ записывается в явном виде как
+$$\varkappa^2 = \frac{\pi^2 m^2}{y_0^2} + \frac{\pi^2 n^2}{4x_0^2}, \  m, n \in \mathbb{N}.$$
+\end{statement}
+
+\subsection{Пример для частного случая вложения трилистника из прямоугольников}\label{sec:ch5/sect3/subsect2}
+Рассмотрим задачу из предыдущего примера для конкретного вложения  $\Gamma$ в $\mathbb{R}^3$ и потребуем выполнение условия компланарности векторов $\left. \frac{\partial u}{\partial n_j} \right|_\eta, \ j = 1,2,3$ на множестве точек ветвления.
+
+По аналогии с примером \eqref{sec:ch4/sect3/subsect2} предположим, что  $\Gamma$ (определение см. \eqref{sec:ch5/sect3/subsect1}) вложен в $\mathbb{R}^3$ таким образом, что 
+$$
+\angle( \Gamma_1, \Gamma_2) = \alpha, \quad
+\angle( \Gamma_2, \Gamma_3) = \beta, \quad
+\angle( \Gamma_3, \Gamma_1) = \gamma,
+$$
+где под $\angle( \Gamma_i, \Gamma_j)$ понимается двугранный угол между соответствующими многообразиями.
+
+Повторяя соображения \eqref{sec:ch5/sect3/subsect1} получим, что искомые решения $u(x,y)$ уравнения $\Delta u + \varkappa^2 u=0$ на $\Gamma$ получаются решением системы \eqref{eq:rectangularSystem}. При этом двугранные углы между $\Gamma_i$ и $\Gamma_j$ будут иметь ту же величину, что и плоский угол, образованный векторами внешних нормалей $n_i$ и $n_j$. Таким образом 
+ уравнение системы для $\xi(x)$ с учетом двугранных углов повторяет условие одномерной задачи из примера \eqref{sec:ch4/sect3/subsect2} с теми же величинами углов $\alpha, \beta, \gamma$. 
+ 
+Следовательно, для решения уравнения $\Delta \xi + \nu^2 \xi = 0$ справедливо утверждение \ref{stat:1dimAnglesSpectrum}.
+Повторяя соображения из предыдущего примера для $\Delta \zeta + \mu^2 \zeta = 0$, получим следующее:
+\begin{statement}
+Собственными значениями $\varkappa^2$ сформулированной задачи получаются как
+$\varkappa^2 = \nu^2 + \mu^2$, где $\mu =  \frac{\pi m}{y_0}$, а $\nu$ является $n$--ым нулем функции
+\begin{multline*}
+F(\nu)=\nu \left(
+\sin{\alpha} \sin{\nu x_1} \sin{\nu x_2} \cos{\nu x_3} + 
+\sin{\gamma} \sin{\nu x_1} \cos{\nu x_2} \sin{\nu x_3} 
+\right. \\ \left. + 
+\sin{\beta} \cos{\nu x_1} \sin{\nu x_2} \sin{\nu x_3} 
+ \right),
+ \end{multline*}
+\end{statement}
+
+В случае $x_1=x_2=x_3=x_0$ имеем $$F(\nu) = \nu \cos \nu x_0 \sin^2(\nu x_0) \left(\sin \alpha + \sin \beta + \sin \gamma \right),$$ тогда $\varkappa^2 = \frac{\pi^2 m^2}{y_0^2} + \frac{\pi^2 n^2}{4x_0^2}, \ m,n \in \mathbb{N}$.
+
+\clearpage
