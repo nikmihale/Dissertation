@@ -1,11 +1,11 @@
-\section{Задача Б.}\label{s3}
+\section{Задача Б.}\label{sec:ch4/sec3}
 %\section{Случай с преломлением по двум пересекающимся в точке квадрикам}\label{s3}
 
-\subsection{Постановка задачи}\label{s3.1}
+\subsection{Постановка задачи}\label{sec:ch4/sec3/subsec1}
 Пусть область $\Omega$ --- пересечение кольца $\{r_0^2 \leq x^2 + y^2 \leq r_2^2\}$ с правой полуплоскостью $\{x\geq 0\}$. Область $\Omega$ разбита на две части $\Omega_1$ и $\Omega_2$ дугой  $EF$ окружности радиуса $r_1$, где $r_0  < r_1 <r_2$ и сегментом  $FG$ горизонтального диаметра (см. рис. \ref{fig:pt10:_domain}). Зафиксируем показатели преломления: $n_1$ для области $\Omega_1$ и $n_2$ --- для  $\Omega_2$.
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.3]{images/section3_circular/domain.pdf}
+\includegraphics[scale=0.3]{images/ch4/section3_circular/domain.pdf}
     \caption{Область $\Omega$ представляет собой объединение 2 областей.}
     \label{fig:pt10:_domain}
 \end{figure}
@@ -18,7 +18,7 @@
 Величина $\rho^2$ является функцией положения и скорости материальной точки и задается формулой $$\rho^2(x,y,v_x,v_y) = a^2 - \Lambda(x, y, v_x, v_y) = \frac{(x v_y - y v_x)^2}{v_x^2 + v_y^2}.$$
 Для классического бильярда в круге  функция $\rho^2$ является первым интегралом, не зависящим от полной энергии.
 
-\subsection{Интеграл $\rho^2$. Условия полного внутреннего отражения}\label{s3.2}
+\subsection{Интеграл $\rho^2$. Условия полного внутреннего отражения}\label{sec:ch4/sec3/subsec2}
 Общая граница областей $\Omega_1$ и $\Omega_2$ состоит из двух кривых: из сегмента окружности $EF$ и отрезка прямой $FG$. 
 Пусть материальная точка двигается с вектором скорости $(v_x, v_y)$ в области $\Omega_1$ и в точке с координатами $(x,y) \in EF \cup FG$ преломляется, после чего продолжает движение в области $\Omega_2$ с вектором скорости $(w_x, w_y)$. 
 
@@ -83,7 +83,6 @@ $\bullet$ При $\frac{1}{\rho_1^2} < \frac{1}{r_2^2}$ ни в одной то�
 Аналогично выделяются случаи, в которых определен $\cos \theta_2$. 
 Таким образом, бильярдная траектория преломляется в любой точке $FG$ при $\max( \rho_1, \rho_2) < r_1$. При $r_1 < \max( \rho_1, \rho_2)$ траектория может преломиться в точках $(x,0) \in FG$, где $\max( \rho_1, \rho_2)  <x < r_2$. 
 
-\qed
 \end{proof}
 
 \begin{remark}
@@ -158,7 +157,6 @@ $\bullet$ При $\frac{1}{\rho_1^2} < \frac{1}{r_2^2}$ ни в одной то�
 Следовательно, $\Xi_k = \Xi_{k+1}  +r_1^2 (n_1^2 - n_2^2 )$.
 
 Аналогично рассматривается случай, когда траектория переходит из области $\Omega_2$ в $\Omega_1$, преломляясь на дуге $EF$. Получим $\Xi_k = \Xi_{k+1}  - r_1^2 (n_1^2 - n_2^2 )$.
-\qed
 \end{proof}
 
 
@@ -239,13 +237,13 @@ $$\gamma = r_1^2 (n_1^2 - n_2^2) = r_1^2 \left( \frac{1}{\cos \theta} -  \frac{1
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=5cm]{images/section3_circular/n1gtn2.png}
+\includegraphics[width=5cm]{images/ch4/section3_circular/n1gtn2.png}
     \caption{Направление роста $\Xi$ при $n_1 > n_2$.}
     \label{fig:n1gtn2_Xi_growth}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=5cm]{images/section3_circular/n1ltn2.png}
+\includegraphics[width=5cm]{images/ch4/section3_circular/n1ltn2.png}
     \caption{Направление роста $\Xi$ при $n_1 < n_2$.}
     \label{fig:n1ltn2_Xi_growth}
 \endminipage\hfill
@@ -263,7 +261,7 @@ $$\gamma = r_1^2 (n_1^2 - n_2^2) = r_1^2 \left( \frac{1}{\cos \theta} -  \frac{1
 \begin{figure}[!htb]
     \begin{minipage}[c]{0.4\textwidth}
 \centering
-\includegraphics[scale=0.07]{images/section3_circular/line_domains_simple.pdf}
+\includegraphics[scale=0.07]{images/ch4/section3_circular/line_domains_simple.pdf}
     \caption{Области $\left\{\xi< L_1\right\}$ и $\left\{\xi > L_1\right\}$.}
     \label{fig:pt10:_lineDomains_simple}
      \end{minipage}
@@ -281,7 +279,7 @@ $$\gamma = r_1^2 (n_1^2 - n_2^2) = r_1^2 \left( \frac{1}{\cos \theta} -  \frac{1
 
 %Приведем соображения, специфичные для случая $\left\{\xi < L_1\right\}$. 
 
-\subsection{Случай $\left\{\xi < L_1\right\}$}\label{s3.3}
+\subsection{Случай $\left\{\xi < L_1\right\}$}\label{sec:ch4/sec3/subsec3}
 
 В область $\{ \xi < L_1\}$ попадают точки, соответствующие таким и только таким фрагментам бильярдных траекторий, которые хотя бы в одной точке попадают на дугу $EF$. 
 При этом любым двум соседним фрагментам $T_m, T_{m+1}$ таких траекторий на прямой $L$ соответствуют такие точки $P(\Xi_m), P(\Xi_{m+1}) = P(\Xi_m \pm \gamma)$, которые соединяются вектором $\gamma_L$.
@@ -340,7 +338,6 @@ $$\frac{||L_1||}{\gamma} = \frac{r_1^2}{\sin \theta} \frac{\sin \theta \cos \the
 где из равенства $\tg \theta = \frac{n_1^2}{n_2^2}$ получим $\frac{||L_1||}{\gamma} = \frac{n_2^2}{n_2^2-n_1^2}$. Целая часть от левой части равенства совпадает с $k$.
 
 Для $n_1>n_2$ нужно рассуждать аналогичным образом, с учетом того, что в этом случае $L_1 = P(\frac{r_1^2}{\cos \theta})$ и $\gamma = r_1^2 \left( \frac{1}{\cos \theta} - \frac{1}{\sin \theta}  \right)$ (см. зам. \ref{rem:L0_L1_def}).
-\qed
 \end{proof}
 
 Объединим множества $\widetilde{C}_k$ по всевозможным прямым $L$ \eqref{eq:lineL}, определенным всевозможными отношениями $\frac{n_1^2}{n_2^2}$. Аналогичным образом объединим $\widetilde{C}_{k+1}$ по всевозможным прямым $L$. Эти объединения будем обозначать $C_k$ и $C_{k+1}$, соответственно.
@@ -360,13 +357,13 @@ I = \{ ||L_1|| = m \gamma \}_{m \geq 2}, \ II = \{ \xi = m \gamma\}_{m \geq 1}, 
 %\begin{figure}[!htb]
 %%\minipage{0.45\textwidth}
 %\centering
-%\includegraphics[scale=0.1]{images/section3_circular/line_domains.pdf}
+%\includegraphics[scale=0.1]{images/ch4/section3_circular/line_domains.pdf}
 %    \caption{Области возможного движения бильярдной траектории.}
 %    \label{fig:pt10:_lineDomains}
 %%\endminipage\hfill
 %%\minipage{0.45\textwidth}
 %%\centering
-%%\includegraphics[scale=0.1]{images/section3_circular/problemAbifurcations.pdf}
+%%\includegraphics[scale=0.1]{images/ch4/section3_circular/problemAbifurcations.pdf}
 %%    \caption{Возможные типы каустик в $\Omega_{in}$ и $\Omega_{out}$. Жирным выделены особые значения для $\alpha_{in}$, $\alpha_{out}$. См. также замечание \ref{rem:remark1}}
 %%    \label{fig:pt10:_problemAbifurcations}
 %%\endminipage\hfill
@@ -461,7 +458,7 @@ $$\left\lfloor \frac{\xi}{\gamma} \right\rfloor \gamma < \xi < \varepsilon + \le
 
 %Теперь можем рассмотреть выражения кривых всех трех семейств в декартовых координатах $(x,y) = (\rho_1^2, \rho_2^2)$. 
 
-\subsection{Уравнения кривых, разделяющих множества $C_k$}\label{s3.5}
+\subsection{Уравнения кривых, разделяющих множества $C_k$}\label{sec:ch4/sec3/subsec4}
 Ранее мы определили $\theta = \arctg \frac{n_1^2}{n_2^2}$. В то же время, для любой точки  листа однозначности $\Omega$ функции $\Xi$ выполняется равенство $\rho_1^2 n_1^2 = \rho_2^2 n_2^2$, где $(\rho_1^2, \rho_2^2)$ --- декартовы координаты точки.
 Тогда можем считать $\theta = \arctg \frac{\rho_2^2}{\rho_1^2}$. Для удобства будем писать $x = \rho_1^2$ и $y=\rho_2^2$. 
 
@@ -501,10 +498,9 @@ $$x y = r_1^2 (x-y) \left(  m + \left\{ \frac{x}{x-y} \right\} \right), \ m\geq 
 
 Случай $n_1^2 > n_2^2$ рассматривается аналогично. Отличаться будут лишь определения величин:
 $||L_1|| = \frac{r_1^2}{\cos \theta}$, $\gamma = r_1^2 \left( \frac{1}{\cos \theta} - \frac{1}{\sin \theta} \right)$. 
-\qed
 \end{proof}
 
-\subsection{<<Решетка>> областей случая $\left\{\xi < L_1\right\}$}\label{s3.6}
+\subsection{<<Решетка>> областей случая $\left\{\xi < L_1\right\}$}\label{sec:ch4/sec3/subsec5}
 На рис. \ref{fig:pt10:_B1_lattice} в области $\left\{\xi < L_1\right\}$ штриховкой выделены области $\left\{ \frac{\xi}{\gamma} \right\} < \frac{\varepsilon}{\gamma}$. 
 Также изображены несколько кривых семейств $I, \ldots, III$ (черные сплошные кривые соответствуют случаю $n_1^2 < n_2^2$, пунктирные --- случаю $n_1^2 > n_2^2$), разделяющих классы $C_k$. 
 На рис. \ref{fig:pt10:_B1_lattice}, \ref{fig:pt10:_B1_lattice_labeled} есть продолжения кривых вне области $\left\{\xi < L_1\right\}$ --- это сделано только для наглядности, для нас смысл имеют только кривые в области $\left\{\xi < L_1\right\}$.
@@ -513,13 +509,13 @@ $||L_1|| = \frac{r_1^2}{\cos \theta}$, $\gamma = r_1^2 \left( \frac{1}{\cos \the
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=6cm]{images/section3_circular/B1_lattice.png}
+\includegraphics[width=6cm]{images/ch4/section3_circular/B1_lattice.png}
     \caption{Области $\left\{ \frac{\xi}{\gamma} \right\} < \frac{\varepsilon}{\gamma}$ (без штриховки) и  $\left\{ \frac{\xi}{\gamma} \right\} > \frac{\varepsilon}{\gamma}$ .}
     \label{fig:pt10:_B1_lattice}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=6cm]{images/section3_circular/B1_lattice_labeled.pdf}
+\includegraphics[width=6cm]{images/ch4/section3_circular/B1_lattice_labeled.pdf}
     \caption{Области с обозначениями некоторых граничных кривых.}
     \label{fig:pt10:_B1_lattice_labeled}
 \endminipage\hfill
@@ -556,7 +552,7 @@ $III_m$ 		&	$x y = r_1^2 (x-y) \left( m + \left\{\frac{x}{x-y}\right\}\right)$  
 Фрагмент диаграммы  \ref{fig:pt10:_B1_lattice} для $n_1 < n_2$ в новой системе координат изображен на рис. \ref{fig:pt10:_B1_lattice_straight}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=10cm]{images/section3_circular/B1_lattice_straight.pdf}
+\includegraphics[width=10cm]{images/ch4/section3_circular/B1_lattice_straight.pdf}
     \caption{}
     \label{fig:pt10:_B1_lattice_straight}
 \end{figure}
@@ -598,7 +594,7 @@ $\quad $(2b) При пересечении $EF$ в сторону увеличе
 Для наглядности кривые показанына рис. \ref{fig:pt10:_B1_lattice_straight_with_line}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=4cm]{images/section3_circular/B1_lattice_straight_with_line.pdf}
+\includegraphics[width=4cm]{images/ch4/section3_circular/B1_lattice_straight_with_line.pdf}
     \caption{Кривые $II_1$ и $\widehat{III}$.}
     \label{fig:pt10:_B1_lattice_straight_with_line}
 \end{figure}
@@ -620,7 +616,6 @@ $\quad $(2b) При пересечении $EF$ в сторону увеличе
 %$$\frac{\rho_1^2}{\cos \theta} > \frac{r_1^2}{\sin \theta} - \left( \frac{r_1^2}{\sin \theta} - \frac{r_1^2}{\cos \theta} \right) =  \frac{r_1^2}{\cos \theta},$$
 %следовательно $\rho_1^2 > r_1^2$, поскольку $\cos \theta > 0$. Для траектории это означает, что траектория в области $\Omega_1$ лежит снаружи окружности, содержащей ребро $EF$ и не сможет его пересечь. 
 %Пример траектории при $\rho_1 < r_2$ изображен на рис. \ref{fig:pt10:_terminal_max_domain}.
-%\qed
 %\end{proof}
 
 Кривые $II_1$ и $\widehat{III}$ разбивают диаграмму, изображенную на рис. \ref{fig:pt10:_B1_lattice_straight_with_line} на четыре части.
@@ -644,7 +639,7 @@ $\bullet$ Тогда для точек правее $IV_0$ соответств�
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=7cm]{images/section3_circular/B1Prime_lattice.pdf}
+\includegraphics[width=7cm]{images/ch4/section3_circular/B1Prime_lattice.pdf}
     \caption{Прямая, соответствующая прямой $\rho_1^2 = r_2^2$.}
     \label{fig:pt10:_B1Prime_lattice}
 \end{figure}
@@ -673,25 +668,25 @@ $\bullet$ изображенную на рис.  \ref{fig:pt10:_C1_domainPrime},
 \begin{figure}[!htb]
 \minipage{0.25\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/branching/terminal_min.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/branching/terminal_min.pdf}
     \caption{\textbf{левее} $II_1$ и \textbf{левее} $\widehat{III}$.}
     \label{fig:pt10:_terminal_min_domain}
 \endminipage\hfill
 \minipage{0.25\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/branching/branching_domain.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/branching/branching_domain.pdf}
     \caption{\textbf{правее} $II_1$ и \textbf{левее} $\widehat{III}$.}
     \label{fig:pt10:_branching_domain}
 \endminipage\hfill
 \minipage{0.25\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/branching/terminal_max.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/branching/terminal_max.pdf}
     \caption{\textbf{правее} $II_1, \widehat{III}$ и \textbf{левее} $IV_0$.}
     \label{fig:pt10:_terminal_max_domain}
 \endminipage\hfill
 \minipage{0.25\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/branching/sect3_C1_domain.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/branching/sect3_C1_domain.pdf}
     \caption{\textbf{левее} $II_1, IV_0$, \textbf{правее} $\widehat{III}$.}
     \label{fig:pt10:_C1_domain}
 \endminipage\hfill
@@ -700,13 +695,13 @@ $\bullet$ изображенную на рис.  \ref{fig:pt10:_C1_domainPrime},
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/branching/B1Prime_max_domain.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/branching/B1Prime_max_domain.pdf}
     \caption{\textbf{правее} $II_1$ и $IV_0$.}
     \label{fig:pt10:_terminal_max_domain_B1Prime}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/branching/sect3_C1_domain_prime.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/branching/sect3_C1_domain_prime.pdf}
     \caption{\textbf{левее} $II_1$ и  \textbf{правее} $IV_0$.}
     \label{fig:pt10:_C1_domainPrime}
 \endminipage\hfill
@@ -727,8 +722,8 @@ $\bullet$ изображенную на рис.  \ref{fig:pt10:_C1_domainPrime},
 \end{remark}
 
 
-\subsection{Неособые поверхности для случая $\left\{\xi < L_1\right\}$}\label{s3.8}
-\subsubsection{Случай $n_1^2<n_2^2$}\label{s3.8.1}
+\subsection{Неособые поверхности для случая $\left\{\xi < L_1\right\}$}\label{sec:ch4/sec3/subsec8}
+\subsubsection{Случай $n_1^2<n_2^2$}\label{sec:ch4/sec3/subsec8/subsec1}
 На рис. \ref{fig:pt10:_B1Prime_lattice} отрезок $IV_0$ в $(\widetilde{x}, \widetilde{y})$
 пересекает по одной области, относящейся к классам $C_1, \ldots, C_k, C_{k+1}$, где $k = \left \lfloor \frac{r_2^2}{r_2^2 - r_1^2} \right \rfloor$. 
 Для каждой области  $C_i$, пересеченной отрезком $IV_0$ выделим ту часть, что находится по правую часть от $IV_0$  в отдельный класс $C_i'$.
@@ -742,7 +737,7 @@ IV_m =  \left\{ \widetilde{y} = (\widetilde{x} + m) \frac{r_1^2}{r_2^2} + 1 \rig
 %соответствующий координатной линии $\rho_1^2 = r_2^2$, проходит через несколько множеств $C_m$. Для удобства формулировки следующего утверждения выделим из $C_m$ классы $C_m'$, лежащие под указанной прямой $IV_0$ или ее сдвинутыми копиями $IV_m, m>0$, то есть в закрашенной серым области на рис. \ref{fig:pt10:_C_kPrime_definitions}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=7cm]{images/section3_circular/atoms/branching/C_kPrime_definitions.pdf}
+\includegraphics[width=7cm]{images/ch4/section3_circular/atoms/branching/C_kPrime_definitions.pdf}
     \caption{Область $C_m'$ --- это часть $C_m$; область $C_m'$ выделена серым.}
     \label{fig:pt10:_C_kPrime_definitions}
 \end{figure}
@@ -819,21 +814,21 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 \begin{figure}[!htb]
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[scale=0.1]{images/section3_circular/atoms/branching/terminal_min_transformed.pdf}
+\includegraphics[scale=0.1]{images/ch4/section3_circular/atoms/branching/terminal_min_transformed.pdf}
 %\caption{Преобразование рис. \ref{fig:pt10:_terminal_min_domain}}
 \caption{}
     \label{fig:pt10:_terminal_min_domain_transformed}
 \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[scale=0.1]{images/section3_circular/atoms/branching/branching_domain_transformed.pdf}
+\includegraphics[scale=0.1]{images/ch4/section3_circular/atoms/branching/branching_domain_transformed.pdf}
 %    \caption{Преобразование рис. \ref{fig:pt10:_branching_domain}}
 \caption{}
     \label{fig:pt10:_branching_domain_transformed}
 \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[scale=0.1]{images/section3_circular/atoms/branching/terminal_max_transformed.pdf}
+\includegraphics[scale=0.1]{images/ch4/section3_circular/atoms/branching/terminal_max_transformed.pdf}
 %    \caption{Преобразование рис. \ref{fig:pt10:_terminal_max_domain}}
 \caption{}
     \label{fig:pt10:_terminal_max_domain_transformed}
@@ -850,7 +845,7 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 Результат склейки $\widetilde{\Omega}$ листов вдоль дуг $\beta_1, \ldots, \beta_{k-1}$ показан на рис.    \ref{fig:pt10:_big_domain_transformed}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=9cm]{images/section3_circular/atoms/branching/big_domain_transformed.pdf}
+\includegraphics[width=9cm]{images/ch4/section3_circular/atoms/branching/big_domain_transformed.pdf}
 %    \caption{Склейка большого листа $\widetilde{\Omega}$.}
     \caption{Область $\widetilde{\Omega}$.}
     \label{fig:pt10:_big_domain_transformed}
@@ -873,10 +868,9 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 Чтобы получить поверхность $S_\Xi$, рассмотрим листы склейки $\widetilde\Omega_1, \ldots, \widetilde\Omega_4$ (каждый имеет вид изображенный как на рис. \ref{fig:pt10:_C1_domain}). Нумерация листов та же, что в \eqref{eq:foc_numeration_circle}. Склейка двух областей $\widetilde{\Omega}_1 \cup \widetilde{\Omega}_4$ по правилу склейки $r$ является сферой с тремя дырками, аналогично для склейки $\widetilde{\Omega}_2 \cup \widetilde{\Omega}_3$. Склейка двух сфер с тремя дырками  по соответствующим границам дырок  является сферой с двумя ручками.
 
 \textit{Случай $C_1'$} рассматривается аналогично. Бильярдная траектория  путешествует по одному листу $\Omega$, изображенному на  рис. \ref{fig:pt10:_C1_domainPrime}. Повтор изложенных выше соображений позволяет заключить, что поверхность в этом случае является тором.
-\qed
 \end{proof}
 
-\subsubsection{Случай $n_1^2 > n_2^2$}\label{s3.8.2}
+\subsubsection{Случай $n_1^2 > n_2^2$}\label{sec:ch4/sec3/subsec8/subsec2}
 Напомним, что согласно замечанию \ref{rem:diagram_reuse} диаграмма, изображенная на рис. \ref{fig:pt10:_C_kPrime_definitions} имеет смысл и для  случая $n_1^2 > n_2^2$. Классы $C_m$ и $C_m'$ (см. рис. \ref{fig:pt10:_C_kPrime_definitions}) отличаются друг от друга тем, какое неравенство выполняется листе склейки с наибольшим значением интеграла $\rho_1^2 < r_1^2 < \rho_2^2 < r_2^2$ для класса $C_m$ и $\rho_1^2 < r_1^2 < r_2^2 < \rho_2^2$ для $C_m'$.
 \begin{theorem}
 В области $\left\{\xi < L_1\right\}$ поверхности $S_\Xi$ являются сферами с $2m+1$ ручками, если $P(\Xi) \in C_m$ и сферами с $2m$ ручками, если $P(\Xi) \in C_m'$ и $m \leq \left\lfloor \frac{r_2^2}{r_2^2-r_1^2} \right\rfloor$. 
@@ -900,30 +894,30 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 \begin{figure}[!htb]
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[scale=0.1]{images/section3_circular/atoms/branching/terminal_min_transformed_2.pdf}
+\includegraphics[scale=0.1]{images/ch4/section3_circular/atoms/branching/terminal_min_transformed_2.pdf}
     \caption{Для $Q$ \textbf{левее} $II_1$ и \textbf{левее} $\widehat{III}$.}
     \label{fig:pt10:_terminal_min_domain_2}
 \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[scale=0.1]{images/section3_circular/atoms/branching/branching_domain_transformed_2.pdf}
+\includegraphics[scale=0.1]{images/ch4/section3_circular/atoms/branching/branching_domain_transformed_2.pdf}
     \caption{Для $Q$ \textbf{правее} $II_1$ и \textbf{левее} $\widehat{III}$.}
     \label{fig:pt10:_branching_domain_2}
 \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[scale=0.1]{images/section3_circular/atoms/branching/terminal_max_transformed_2.pdf}
+\includegraphics[scale=0.1]{images/ch4/section3_circular/atoms/branching/terminal_max_transformed_2.pdf}
     \caption{Для $Q$ \textbf{правее} $II_1, \widehat{III}$ и \textbf{левее} $IV_0$.}
     \label{fig:pt10:_terminal_max_domain_2}
 \endminipage\hfill
 \end{figure}
 
 Далее доказательство проводится так же, как в теореме \ref{th:pt10:th1}. Поверхность $S_\Xi$ склеивается из четырех копий области $\widetilde{\Omega}$, показанной на рис. \ref{fig:pt10:_big_domain_transformed_2}. 
-Для класса $C_k, k \geq 2$ каждый большой лист получается склейкой изображенных на рис. \ref{fig:pt10:_terminal_min_domain_2}--\ref{fig:pt10:_terminal_min_domain_2} листов вдоль одноименных склеек $\beta_1, \ldots, \beta_{k-1}$ (см. рис. \ref{fig:pt10:_big_domain_transformed_2}).
+Для класса $C_k, k \geq 2$ каждый большой лист получается склейкой изображенных на рис. \ref{fig:pt10:_terminal_min_domain_2}--\ref{fig:pt10:_terminal_max_domain_2} листов вдоль одноименных склеек $\beta_1, \ldots, \beta_{k-1}$ (см. рис. \ref{fig:pt10:_big_domain_transformed_2}).
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=9cm]{images/section3_circular/atoms/branching/big_domain_transformed_2.pdf}
+\includegraphics[width=9cm]{images/ch4/section3_circular/atoms/branching/big_domain_transformed_2.pdf}
 %    \caption{Склейка большого листа $\widetilde{\Omega}$.}
     \caption{}
 
@@ -940,19 +934,19 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 \begin{figure}[!htb]
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/branching/sect3_Ck_prime_domain.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/branching/sect3_Ck_prime_domain.pdf}
     \caption{Склейка листа $\widetilde{\Omega}$ для случая $C_k'$.}
     \label{fig:pt10:_Ck_prime_domain}
     \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/branching/sect3_C1_domain_2.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/branching/sect3_C1_domain_2.pdf}
     \caption{Склейка листа $\widetilde{\Omega}$ для случая $C_1$. Определения $r$ и $c$ см. \eqref{eq:RCrules_circle}.}
     \label{fig:pt10:_C1_domain_2}
     \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/branching/sect3_C1Prime_domain_2.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/branching/sect3_C1Prime_domain_2.pdf}
     \caption{Склейка листа $\widetilde{\Omega}$ для случая $C_1'$. Определения $r$ и $c$ см. \eqref{eq:RCrules_circle}.}
     \label{fig:pt10:_C1_prime_domain_2}
 \endminipage\hfill
@@ -962,10 +956,9 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 Определим векторы скорости как в \eqref{eq:foc_numeration_circle}. Склейка двух областей $\widetilde{\Omega}_1 \cup \widetilde{\Omega}_4$ по правилу склейки $r$ является сферой с четырьмя дырками, аналогично для склейки $\widetilde{\Omega}_2 \cup \widetilde{\Omega}_3$. Склейка двух сфер с четырьмя дырками является сферой с тремя ручками.
 
 \textit{Случай $C_1'$.} Траектория <<путешествует>> по одному листу $\Omega$, изображенному на рис. \ref{fig:pt10:_C1_prime_domain_2}. Тогда $\widetilde{\Omega}_1 \cup \widetilde{\Omega}_4$ является сферой с тремя дырками. Следовательно, вся поверхность является сферой с двумя ручками.
-\qed
 \end{proof}
 
-\subsection{Неособые поверхности для случая $\left\{\xi > L_1\right\}$}\label{s3.9}
+\subsection{Неособые поверхности для случая $\left\{\xi > L_1\right\}$}\label{sec:ch4/sec3/subsec9}
 Этот случай существенно проще предыдущего, поскольку в этом случае дополнительный интеграл $\Xi$ однозначен. Поэтому бильярдные траектории лежат на поверхностях уровня дополнительного интеграла $\Xi=\const$.
 %В области $\left\{\xi > L_1\right\}$ поверхности соответствуют уровням интеграла 
 
@@ -973,24 +966,24 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 Область $\left\{\xi > L_1 \right\}$ (см. рис. \ref{fig:pt10:_lineDomains_simple}) разбивается  на четыре области, показанные на рис. \ref{fig:pt10:_xiL1_subdivision}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=6cm]{images/section3_circular/sect3_xiL1_subdivision.pdf}
+\includegraphics[width=6cm]{images/ch4/section3_circular/sect3_xiL1_subdivision.pdf}
     \caption{Разбиение области $\left\{\xi > L_1\right\}$.}
     \label{fig:pt10:_xiL1_subdivision}
 \end{figure}
 
 %Область, соответствующая случаю $B_2$, ограничивается координатными линиями $r_1^2 \leq \rho_1^2 \leq \rho_2^2 , r_1^2 \leq \rho_2^2 \leq \rho_2^2$. 
-\subsubsection{Случай $r_2^2 > \rho_1^2 > \rho_2^2 > r_1^2$}\label{s3.9.1}
+\subsubsection{Случай $r_2^2 > \rho_1^2 > \rho_2^2 > r_1^2$}\label{sec:ch4/sec3/subsec9/subsec1}
 Траектория в области $\Omega_1$ касается окружности радиуса $\rho_1 < r_2$, а в области $\Omega_2$ --- окружности радиуса $r_1 < \rho_2$. Проекция бильярдной траектории заметает область $\widetilde{\Omega} = (\Omega_1 \setminus B_{\rho_1}) \cup (\Omega_2 \setminus B_{\rho_2})$, где $B_r$ обозначает диск радиуса $r$ с радиусом в нуле. Область $\widetilde{\Omega}$ изображена на рис. \ref{fig:pt10:_B2_domain_1}. Пунктиром изображена дуга $EF$ окружности радиуса $r_1$. 
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/sect3_B2_domain_1.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/sect3_B2_domain_1.pdf}
     \caption{Область, заметаемая траекторией для случая $\xi > L_1$ при $r_2^2 > \rho_1^2 > \rho_2^2 > r_1^2$.}
     \label{fig:pt10:_B2_domain_1}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/sect3_B2_domain_2.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/sect3_B2_domain_2.pdf}
     \caption{Область, заметаемая траекторией для случая $\xi > L_1$ при $r_2^2 > \rho_2^2 > \rho_1^2 > r_1^2$.}
         \label{fig:pt10:_B2_domain_2}
 \endminipage\hfill
@@ -999,21 +992,21 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 Определим векторы скоростей $v_1, \ldots, v_4$ в соответствии с правилами \eqref{eq:foc_numeration_circle}. С каждым вектором скорости ассоциируем по одной из областей $\widetilde{\Omega}_1, \ldots, \widetilde{\Omega}_4$, каждая выглядит как показано на  рис. \ref{fig:pt10:_B2_domain_1}. 
 Склейкой областей $\widetilde{\Omega}_1 \cup \widetilde{\Omega}_4$ по дугам, проектирующимся на дуги граничных окружностей $\widetilde{\Omega}$, получим сферу с тремя дырками. Аналогично для склейки $\widetilde{\Omega}_2 \cup \widetilde{\Omega}_3$. Склейкой двух таких сфер по общим границам дырок, которые проектируются на прямолинейные граничные отрезки $\widetilde{\Omega}$, получим поверхность $\Xi=\const$, которая является сферой с двумя ручками. 
 
-\subsubsection{Случай  $r_2^2 > \rho_2^2 > \rho_1^2 > r_1^2$}\label{s3.9.2}
-Данный случай рассматривается аналогично предыдущему пункту. Заметаемая точкой область $\widetilde{\Omega}$ изображена на рис. \ref{fig:pt10:_B2_domain_2}, дальнейшие рассуждения повторяют пункт \ref{s3.9.1}. Поверхность $\Xi = \const$ также является сферой с двумя ручками.
+\subsubsection{Случай  $r_2^2 > \rho_2^2 > \rho_1^2 > r_1^2$}\label{sec:ch4/sec3/subsec9/subsec2}
+Данный случай рассматривается аналогично предыдущему пункту. Заметаемая точкой область $\widetilde{\Omega}$ изображена на рис. \ref{fig:pt10:_B2_domain_2}, дальнейшие рассуждения повторяют пункт \ref{sec:ch4/sec3/subsec9/subsec1}. Поверхность $\Xi = \const$ также является сферой с двумя ручками.
 
-\subsubsection{Случай  $\rho_2^2 > r_2^2 > \rho_1^2 > r_1^2$ и случай $\rho_1^2 > r_2^2 > \rho_2^2 > r_1^2$}\label{s3.9.3}
+\subsubsection{Случай  $\rho_2^2 > r_2^2 > \rho_1^2 > r_1^2$ и случай $\rho_1^2 > r_2^2 > \rho_2^2 > r_1^2$}\label{sec:ch4/sec3/subsec9/subsec3}
 В обоих случаях  точка при движении заметает область $\widetilde{\Omega}$, которая ограничивается дугами двух окружностей и отрезками двух прямых (см. рис. \ref{fig:pt10:_B3_domain}, \ref{fig:pt10:_B4_domain}).
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/sect3_B3_domain.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/sect3_B3_domain.pdf}
     \caption{Область, заметаемая траекторией для случая $\rho_2^2 > r_2^2 > \rho_1^2 > r_1^2$.}
     \label{fig:pt10:_B3_domain}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=2cm]{images/section3_circular/atoms/sect3_B4_domain.pdf}
+\includegraphics[width=2cm]{images/ch4/section3_circular/atoms/sect3_B4_domain.pdf}
     \caption{Область, заметаемая траекторией для случая $\rho_1^2 > r_2^2 > \rho_2^2 > r_1^2$.}
         \label{fig:pt10:_B4_domain}
 \endminipage\hfill
@@ -1023,7 +1016,7 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 Склейкой областей $\widetilde{\Omega}_1 \cup \widetilde{\Omega}_4$ по дугам, проектирующимся на дуги граничных окружностей $\widetilde{\Omega}$, получим сферу с двумя дырками. Аналогично для склейки $\widetilde{\Omega}_2 \cup \widetilde{\Omega}_3$. Склейкой двух таких сфер по общим границам дырок, получим поверхность $\Xi = \const$, которая является тором.
 
 
-\subsection{Особые поверхности для случая $\left\{ \xi < L_1 \right\}$}\label{s3.10}
+\subsection{Особые поверхности для случая $\left\{ \xi < L_1 \right\}$}\label{sec:ch4/sec3/subsec10}
 Для простоты ограничимся случаем  $n_1^2 < n_2^2$. 
 На рис. \ref{fig:pt10:_C_kPrime_definitions} серые клинья с одной стороны ограничиваются кривыми семейства $III$, а с другой --- кривыми семейства $IV$, см. \eqref{eq:IVdef}.
 
@@ -1031,7 +1024,7 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 %, см. рис. 
 %\begin{figure}[!htb]
 %\centering
-%\includegraphics[scale=0.12]{images/section3_circular/atoms/bifurcations/lines_families.pdf}
+%\includegraphics[scale=0.12]{images/ch4/section3_circular/atoms/bifurcations/lines_families.pdf}
 %    \caption{Область, заметаемая траекторией для случая $B_3$.}
 %    \label{fig:pt10:_B3_domain}
 %\end{figure}
@@ -1044,19 +1037,19 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
  \begin{figure}[!htb]
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[scale=0.12]{images/section3_circular/atoms/II/before/before_page_segment.pdf}
+\includegraphics[scale=0.12]{images/ch4/section3_circular/atoms/II/before/before_page_segment.pdf}
     \caption{До бифуркации.}
         \label{fig:pt10:_II_before_segment}
 \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[scale=0.11]{images/section3_circular/atoms/II/bifurcation/page_segment.pdf}
+\includegraphics[scale=0.11]{images/ch4/section3_circular/atoms/II/bifurcation/page_segment.pdf}
     \caption{В момент бифуркации.}
     \label{fig:pt10:_II_page_segment}
 \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[scale=0.11]{images/section3_circular/atoms/II/after/page_segment.pdf}
+\includegraphics[scale=0.11]{images/ch4/section3_circular/atoms/II/after/page_segment.pdf}
     \caption{После бифуркации.}
     \label{fig:pt10:_II_after_page_segment}
 \endminipage\hfill
@@ -1068,13 +1061,13 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[scale=0.1]{images/section3_circular/atoms/II/bifurcation/trajectories_1.pdf}
+\includegraphics[scale=0.1]{images/ch4/section3_circular/atoms/II/bifurcation/trajectories_1.pdf}
     \caption{Пример траекторий в момент бифуркации.}
     \label{fig:pt10:_II_trajectories_1}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[scale=0.1]{images/section3_circular/atoms/II/before/before_trajectories.pdf}
+\includegraphics[scale=0.1]{images/ch4/section3_circular/atoms/II/before/before_trajectories.pdf}
     \caption{Пример траекторий до бифуркации, заданных кривыми $II$.}
     \label{fig:pt10:_II_before_trajectories}
 \endminipage\hfill
@@ -1085,38 +1078,38 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[scale=0.11]{images/section3_circular/atoms/II/bifurcation/trajectories_2.pdf}
+\includegraphics[scale=0.11]{images/ch4/section3_circular/atoms/II/bifurcation/trajectories_2.pdf}
     \caption{Пример траекторий на новом листе.}
         \label{fig:pt10:_II_trajectories_2}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[scale=0.11]{images/section3_circular/atoms/II/bifurcation/special_surface_1.pdf}
+\includegraphics[scale=0.11]{images/ch4/section3_circular/atoms/II/bifurcation/special_surface_1.pdf}
     \caption{Фрагмент поверхности, образованный новым листом.}
         \label{fig:pt10:_II_special_surface_1}
 \endminipage\hfill
 \end{figure}
  
- При склейке $\widetilde{\Omega}_1$ и $\widetilde{\Omega}_2$ (а также $\widetilde{\Omega}_3$ и $\widetilde{\Omega}_4$),  как и в разделе \ref{s3.8}, нужно отождествить дуги $\beta_0 \subset \widetilde{\Omega}_1$  и $\beta_0 \subset \widetilde{\Omega}_2$ и приклеить их к одной из дуг $\beta_0$ на новой поверхности, изображенной на рис.  \ref{fig:pt10:_II_special_surface_1}.
+ При склейке $\widetilde{\Omega}_1$ и $\widetilde{\Omega}_2$ (а также $\widetilde{\Omega}_3$ и $\widetilde{\Omega}_4$),  как и в разделе \ref{sec:ch4/sec3/subsec8}, нужно отождествить дуги $\beta_0 \subset \widetilde{\Omega}_1$  и $\beta_0 \subset \widetilde{\Omega}_2$ и приклеить их к одной из дуг $\beta_0$ на новой поверхности, изображенной на рис.  \ref{fig:pt10:_II_special_surface_1}.
 Ко второй дуге $\beta_0$ поверхности с того же рисунка подклеивается дуга $\beta_0$, полученная отождествлением $\beta_0 \subset \widetilde{\Omega}_3$  и $\beta_0 \subset \widetilde{\Omega}_4$.
 
 После бифуркации этот диск с двумя дырками <<надувается>> и превращается в пару ручек, поскольку теперь в прообразе точки добавленного семиугольника не две вершины, как в момент бифуркации, а четыре (см. рис. \ref{fig:pt10:_II_after_surface_segment}).
 \begin{figure}[!htb]
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[width=3cm]{images/section3_circular/atoms/II/before/before_surface_segment.pdf}
+\includegraphics[width=3cm]{images/ch4/section3_circular/atoms/II/before/before_surface_segment.pdf}
     \caption{Фрагмент поверхности до бифуркации.}
         \label{fig:pt10:_II_before_surface}
 \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[width=3cm]{images/section3_circular/atoms/II/bifurcation/surface_segment.pdf}
+\includegraphics[width=3cm]{images/ch4/section3_circular/atoms/II/bifurcation/surface_segment.pdf}
     \caption{Фрагмент поверхности в момент бифуркации.}
         \label{fig:pt10:_II_surface_segment}
 \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-\includegraphics[width=3cm]{images/section3_circular/atoms/II/after/surface_segment.pdf}
+\includegraphics[width=3cm]{images/ch4/section3_circular/atoms/II/after/surface_segment.pdf}
     \caption{Фрагмент поверхности после бифуркации.}
         \label{fig:pt10:_II_after_surface_segment}
 \endminipage\hfill
@@ -1132,13 +1125,13 @@ $$\xi = m \gamma + \varepsilon = ||L_1|| + \left(m - \left\lfloor \frac{||L_1||}
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[scale=0.11]{images/section3_circular/atoms/III/page_segment_1.pdf}
+\includegraphics[scale=0.11]{images/ch4/section3_circular/atoms/III/page_segment_1.pdf}
     \caption{Лист $\widetilde{\Omega}$ до бифуркации.}
     \label{fig:pt10:_III_page_segment_1}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[scale=0.12]{images/section3_circular/atoms/III/page_segment_2.pdf}
+\includegraphics[scale=0.12]{images/ch4/section3_circular/atoms/III/page_segment_2.pdf}
     \caption{Лист $\widetilde{\Omega}$ до бифуркации.}
         \label{fig:pt10:_III_page_segment_2}
 \endminipage\hfill
@@ -1149,13 +1142,13 @@ $$\xi = m \gamma + \varepsilon = ||L_1|| + \left(m - \left\lfloor \frac{||L_1||}
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[scale=0.11]{images/section3_circular/atoms/III/surface_half.pdf}
+\includegraphics[scale=0.11]{images/ch4/section3_circular/atoms/III/surface_half.pdf}
     \caption{Склейка $\Omega_1 \cup \Omega_4$ по правилу склейки $c$.}
     \label{fig:pt10:_III_surface_half}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[scale=0.12]{images/section3_circular/atoms/III/surface.pdf}
+\includegraphics[scale=0.12]{images/ch4/section3_circular/atoms/III/surface.pdf}
     \caption{Особая поверхность.}
         \label{fig:pt10:_III_surface}
 \endminipage\hfill
@@ -1173,4 +1166,4 @@ $$\xi = m \gamma + \varepsilon = ||L_1|| + \left(m - \left\lfloor \frac{||L_1||}
 
 
 \subsubsection{Случай $n_1^2 > n_2^2$}
-Применимы соображения, аналогичные приведенным в \ref{s3.8.1}. Следует использовать уравнения для кривых семейств $I, \ldots, III$, приведенные в утверждении \ref{st:curves_formulas}. Сами особые поверхности будут соответствовать пересечениям кривых семейств $II, III, IV$. При этом, как можно заметить из сходств рис. \ref{fig:pt10:_big_domain_transformed} и  рис. \ref{fig:pt10:_big_domain_transformed_2}, особенности будут повторять те, что были  приведены в предыдущем разделе.
+Применимы соображения, аналогичные приведенным в \ref{sec:ch4/sec3/subsec8/subsec2}. Следует использовать уравнения для кривых семейств $I, \ldots, III$, приведенные в утверждении \ref{st:curves_formulas}. Сами особые поверхности будут соответствовать пересечениям кривых семейств $II, III, IV$. При этом, как можно заметить из сходств рис. \ref{fig:pt10:_big_domain_transformed} и  рис. \ref{fig:pt10:_big_domain_transformed_2}, особенности будут повторять те, что были  приведены в предыдущем разделе.

@@ -1,120 +1,42 @@
-\chapter{Примеры вставки листингов программного кода}\label{app:A}
+\chapter{Постоянная наблюдаемая величина}\label{app:A}
 
-Для крупных листингов есть два способа. Первый красивый, но в нём могут быть
-проблемы с поддержкой кириллицы (у вас может встречаться в~комментариях
-и~печатаемых сообщениях), он представлен на листинге~\cref{lst:hwbeauty}.
-\begin{ListingEnv}[!h]% настройки floating аналогичны окружению figure
-    \captiondelim{ } % разделитель идентификатора с номером от наименования
-    \caption{Программа ,,Hello, world`` на \protect\cpp}\label{lst:hwbeauty}
-    % окружение учитывает пробелы и табуляции и применяет их в сответсвии с настройками
-    \begin{lstlisting}[language={[ISO]C++}]
-	#include <iostream>
-	using namespace std;
+Как было показано в  \cite{wref13}, наблюдаемая  $(\hat{L_z})^2=\hbar^2\frac{\partial^2}{\partial \phi^2}$ сохраняется для квантового биллиарда в круговом секторе. 
+В частности, решению $\psi(r,\phi) = J_{\lambda_p}(\frac{\alpha_{\lambda_{p,n}}}{r_0}r) \sin \lambda_p \phi$ 
+уравнения Шрёдингера в секторе $0\leq r \leq r_0, 0 \leq \phi \leq \theta_s$ соответствует величина $$\langle \psi, (\hat{L_z})^2\psi\rangle = \hbar^2 \lambda_p^2.$$
 
-	int main() //кириллица в комментариях при xelatex и lualatex имеет проблемы с пробелами
-	{
-		cout << "Hello, world" << endl; //latin letters in commentaries
-		system("pause");
-		return 0;
-	}
-    \end{lstlisting}
-\end{ListingEnv}%
-Второй не~такой красивый, но без ограничений (см.~листинг~\cref{lst:hwplain}).
-\begin{ListingEnv}[!h]
-    \captiondelim{ } % разделитель идентификатора с номером от наименования
-    \caption{Программа ,,Hello, world`` без подсветки}\label{lst:hwplain}
-    \begin{Verb}
-
-        #include <iostream>
-        using namespace std;
-
-        int main() //кириллица в комментариях
-        {
-            cout << "Привет, мир" << endl;
-        }
-    \end{Verb}
-\end{ListingEnv}
-
-Можно использовать первый для вставки небольших фрагментов
-внутри текста, а второй для вставки полного
-кода в приложении, если таковое имеется.
-
-Если нужно вставить совсем короткий пример кода (одна или две строки),
-то~выделение  линейками и нумерация может смотреться чересчур громоздко.
-В таких случаях можно использовать окружения \texttt{lstlisting} или
-\texttt{Verb} без \texttt{ListingEnv}. Приведём такой пример
-с указанием языка программирования, отличного от~заданного по умолчанию:
-\begin{lstlisting}[language=Haskell]
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
-\end{lstlisting}
-Такое решение "--- со вставкой нумерованных листингов покрупнее
-и~вставок без выделения для маленьких фрагментов "--- выбрано,
-например, в~книге Эндрю Таненбаума и Тодда Остина по архитектуре
-компьютера.
-
-Наконец, для оформления идентификаторов внутри строк
-(функция \lstinline{main} и~тому подобное) используется
-\texttt{lstinline} или, самое простое, моноширинный текст
-(\texttt{\textbackslash texttt}).
-
-Пример~\cref{lst:internal3}, иллюстрирующий подключение переопределённого
-языка. Может быть полезным, если подсветка кода работает криво. Без
-дополнительного окружения, с подписью и ссылкой, реализованной встроенным
-средством.
-\begingroup
-\captiondelim{ } % разделитель идентификатора с номером от наименования
-\begin{lstlisting}[language={Renhanced},caption={Пример листинга c подписью собственными средствами},label={lst:internal3}]
-## Caching the Inverse of a Matrix
-
-## Matrix inversion is usually a costly computation and there may be some
-## benefit to caching the inverse of a matrix rather than compute it repeatedly
-## This is a pair of functions that cache the inverse of a matrix.
-
-## makeCacheMatrix creates a special "matrix" object that can cache its inverse
-
-makeCacheMatrix <- function(x = matrix()) {#кириллица в комментариях при xelatex и lualatex имеет проблемы с пробелами
-    i <- NULL
-    set <- function(y) {
-        x <<- y
-        i <<- NULL
-    }
-    get <- function() x
-    setSolved <- function(solve) i <<- solve
-    getSolved <- function() i
-    list(set = set, get = get,
-    setSolved = setSolved,
-    getSolved = getSolved)
-
-}
+В наших условиях интегрируемость классического биллиарда следует из сохраняемой величины, а именно, произведение угловых моментов относительно фокусов.
 
 
-## cacheSolve computes the inverse of the special "matrix" returned by
-## makeCacheMatrix above. If the inverse has already been calculated (and the
-## matrix has not changed), then the cachesolve should retrieve the inverse from
-## the cache.
+Определим два оператора  $\hat L_{\pm c} = (x \pm c)\frac{\partial}{\partial y} - y\frac{\partial}{\partial x}$ угловых моментов относительно фокусов  $(x,y) = (\mp c, 0)$.
 
-cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
-    i <- x$getSolved()
-    if(!is.null(i)) {
-        message("getting cached data")
-        return(i)
-    }
-    data <- x$get()
-    i <- solve(data, ...)
-    x$setSolved(i)
-    i
-}
-\end{lstlisting} %$ %Комментарий для корректной подсветки синтаксиса
-%вне листинга
-\endgroup
 
-Листинг~\cref{lst:external1} подгружается из внешнего файла. Приходится
-загружать без окружения дополнительного. Иначе по страницам не переносится.
-\begingroup
-\captiondelim{ } % разделитель идентификатора с номером от наименования
-\lstinputlisting[lastline=78,language={R},caption={Листинг из внешнего файла},label={lst:external1}]{listings/run_analysis.R}
-\endgroup
+Рассмотрим оператор  $\hat A = \frac{-1}{2}(L_c L_{-c} + L_{-c} L_c + c^2 \nabla ^2)$. Пусть функция $\psi(\phi, \rho) = \Phi(\zeta, q, \phi) R(\zeta, q, \rho)$ является собственной функцией для оператора $\nabla^2$. %, причем $<\psi, \psi>=1$.
+%Положим $\Phi_1(a, q, \phi), \Phi_2(a, q, \phi)$ -- независимые решения уравнения $\frac{\partial^2}{\partial \phi^2}\Phi + (a - 2q\cos{2\phi})\Phi = 0$, $R_1(a, q, \rho), R_2(a, q, \rho)$ -- независимые решения уравнения $\frac{\partial^2}{\partial \rho^2}R - (a - 2q\cosh{2\rho})R = 0$. 
+
+Тогда
+$\hat A \phi = \zeta \phi,$
+в частности,
+\begin{equation}
+\langle  \psi, \hat A \psi\rangle = \zeta \langle\psi, \psi\rangle. \label{eq:cons}
+\end{equation}
+
+
+$\hat A$ в эллиптических координатах можно записать в виде 
+\begin{align*}
+\hat A & = \frac{2}{\cos 2\phi - \cosh 2\rho}(\sinh{\rho}^2 \dfrac{\partial^2}{\partial \phi^2}-{}\notag\\ 
+&\qquad{}-\sin\phi^2\dfrac{\partial^2}{\partial \rho^2})  -\frac{c^2}{2} \nabla^2 =\notag\\
+&= \frac{\cos 2\phi \dfrac{\partial^2}{\partial \rho^2} + \cosh 2\rho \dfrac{\partial^2}{\partial \phi^2}}{\cos 2 \phi - \cosh 2 \rho}.
+\end{align*}
+Угловая  $\Phi(\zeta, q, \phi)$ и радиальная   $R(\zeta, q, \rho)$ составляющие являются решениями соответствующих функций Матьё с параметрами  $\zeta, q$.
+Таким образом,
+$\frac{\partial^2}{\partial \phi ^2} \Phi(\phi) = -(\zeta-2q\cos\phi)\Phi(\phi)$ и $\frac{\partial^2}{\partial \rho ^2} R(\rho) = (\zeta-2q\cosh\rho)R(\rho)$. 
+Поэтому,
+\begin{align*}
+A \psi &= R(\rho)\Phi(\phi)\times {}\notag\\
+&{}\times\frac{\zeta(\cos 2\phi -\cosh2\rho) + (2q-2q)\cos2\phi\cosh2\rho}{\cos 2 \phi - \cosh 2 \rho} = {}\notag \\
+&{}=\zeta \psi.
+\end{align*}
+
 
 \chapter{Очень длинное название второго приложения, в~котором продемонстрирована работа с~длинными таблицами}\label{app:B}
 
@@ -645,148 +567,3 @@ cacheSolve <- function(x, ...) {
     \)                                                                                                   \\
     \bottomrule %%% нижняя линейка
 \end{longtblr}
-
-\section{Форматирование внутри таблиц}\label{app:B3}
-
-В таблице \cref{tab:other-row} пример с чересстрочным форматированием.
-Это реализовано средствами, доступными в таблицах пакета \verb+tabularray+.
-
-В таблице \cref{tab:other-row} каждая чётная строчка (заголовок таблицы тоже
-считается за~строчку) "--- синяя, нечётная "--- с наклоном и~слегка поднята
-вверх.
-Визуально это приводит к тому, что среднее значение и~среднеквадратичное
-изменение группируются и хорошо выделяются взглядом в~таблице.
-Сохраняется возможность отдельные значения в таблице выделить цветом или
-шрифтом.
-К~первому и~второму столбцу форматирование не применяется по~сути таблицы,
-к~шестому общее форматирование не~применяется для наглядности.
-
-\needspace{2\baselineskip}
-\begin{longtblr}[
-    caption = {Длинная таблица с примером чересстрочного форматирования},
-    label = {tab:other-row},
-    ]{
-    vspan=minimal,
-    stretch=0,
-    rows={m,ht=0.8\baselineskip},
-    columns={c},
-    colspec = {%
-    @{}X[0.27,l]%
-    @{}X[0.7]%
-    @{}X%
-    @{}X%
-    @{}X%
-    @{}X[0.98]%
-    @{}X[preto={\setlength{\baselineskip}{0.7\baselineskip}}]%
-    @{}X@{}%
-    },
-    width = \textwidth,
-    rowhead = 1,
-    cell{even}{3-5,7-8} = {font=\color{blue}},
-    cell{odd[3]}{3-5,7-8} = {cmd={\vspace{0.3ex}},font=\itshape},
-        }
-    \toprule %%% верхняя линейка
-        & Итера\-ции & JADE\texttt{++}  & JADE      & jDE                    & SaDE                   & DE/rand /1/bin & PSO       \\
-    \midrule %%% тонкий разделитель. Отделяет названия столбцов. Обязателен по ГОСТ 2.105 пункт 4.4.5
-    f1  & 1500       & \textbf{1.8E-60} & 1.3E-54   & 2.5E-28                & 4.5E-20                & 9.8E-14        & 9.6E-42   \\\nopagebreak
-        &            & (8.4E-60)        & (9.2E-54) & {\color{red}(3.5E-28)} & (6.9E-20)              & (8.4E-14)      & (2.7E-41) \\
-    f2  & 2000       & 1.8E-25          & 3.9E-22   & 1.5E-23                & 1.9E-14                & 1.6E-09        & 9.3E-21   \\\nopagebreak
-        &            & (8.8E-25)        & (2.7E-21) & (1.0E-23)              & (1.1E-14)              & (1.1E-09)      & (6.3E-20) \\
-    f3  & 5000       & 5.7E-61          & 6.0E-87   & 5.2E-14                & {\color{green}9.0E-37} & 6.6E-11        & 2.5E-19   \\\nopagebreak
-        &            & (2.7E-60)        & (1.9E-86) & (1.1E-13)              & (5.4E-36)              & (8.8E-11)      & (3.9E-19) \\
-    f4  & 5000       & 8.2E-24          & 4.3E-66   & 1.4E-15                & 7.4E-11                & 4.2E-01        & 4.4E-14   \\\nopagebreak
-        &            & (4.0E-23)        & (1.2E-65) & (1.0E-15)              & (1.8E-10)              & (1.1E+00)      & (9.3E-14) \\
-    f5  & 3000       & 8.0E-02          & 3.2E-01   & 1.3E+01                & 2.1E+01                & 2.1E+00        & 2.5E+01   \\\nopagebreak
-        &            & (5.6E-01)        & (1.1E+00) & (1.4E+01)              & (7.8E+00)              & (1.5E+00)      & (3.2E+01) \\
-    f6  & 100        & 2.9E+00          & 5.6E+00   & 1.0E+03                & 9.3E+02                & 4.7E+03        & 4.5E+01   \\\nopagebreak
-        &            & (1.2E+00)        & (1.6E+00) & (2.2E+02)              & (1.8E+02)              & (1.1E+03)      & (2.4E+01) \\
-    f7  & 3000       & 6.4E-04          & 6.8E-04   & 3.3E-03                & 4.8E-03                & 4.7E-03        & 2.5E-03   \\\nopagebreak
-        &            & (2.5E-04)        & (2.5E-04) & (8.5E-04)              & (1.2E-03)              & (1.2E-03)      & (1.4E-03) \\
-    f8  & 1000       & 3.3E-05          & 7.1E+00   & 7.9E-11                & 4.7E+00                & 5.9E+03        & 2.4E+03   \\\nopagebreak
-        &            & (2.3E-05)        & (2.8E+01) & (1.3E-10)              & (3.3E+01)              & (1.1E+03)      & (6.7E+02) \\
-    f9  & 1000       & 1.0E-04          & 1.4E-04   & 1.5E-04                & 1.2E-03                & 1.8E+02        & 5.2E+01   \\\nopagebreak
-        &            & (6.0E-05)        & (6.5E-05) & (2.0E-04)              & (6.5E-04)              & (1.3E+01)      & (1.6E+01) \\
-    f10 & 500        & 8.2E-10          & 3.0E-09   & 3.5E-04                & 2.7E-03                & 1.1E-01        & 4.6E-01   \\\nopagebreak
-        &            & (6.9E-10)        & (2.2E-09) & (1.0E-04)              & (5.1E-04)              & (3.9E-02)      & (6.6E-01) \\
-    f11 & 500        & 9.9E-08          & 2.0E-04   & 1.9E-05                & 7.8E-04                & 2.0E-01        & 1.3E-02   \\\nopagebreak
-        &            & (6.0E-07)        & (1.4E-03) & (5.8E-05)              & (1.2E-03)              & (1.1E-01)      & (1.7E-02) \\
-    f12 & 500        & 4.6E-17          & 3.8E-16   & 1.6E-07                & 1.9E-05                & 1.2E-02        & 1.9E-01   \\\nopagebreak
-        &            & (1.9E-16)        & (8.3E-16) & (1.5E-07)              & (9.2E-06)              & (1.0E-02)      & (3.9E-01) \\
-    f13 & 500        & 2.0E-16          & 1.2E-15   & 1.5E-06                & 6.1E-05                & 7.5E-02        & 2.9E-03   \\\nopagebreak
-        &            & (6.5E-16)        & (2.8E-15) & (9.8E-07)              & (2.0E-05)              & (3.8E-02)      & (4.8E-03) \\
-    f1  & 1500       & \textbf{1.8E-60} & 1.3E-54   & 2.5E-28                & 4.5E-20                & 9.8E-14        & 9.6E-42   \\\nopagebreak
-        &            & (8.4E-60)        & (9.2E-54) & {\color{red}(3.5E-28)} & (6.9E-20)              & (8.4E-14)      & (2.7E-41) \\
-    f2  & 2000       & 1.8E-25          & 3.9E-22   & 1.5E-23                & 1.9E-14                & 1.6E-09        & 9.3E-21   \\\nopagebreak
-        &            & (8.8E-25)        & (2.7E-21) & (1.0E-23)              & (1.1E-14)              & (1.1E-09)      & (6.3E-20) \\
-    f3  & 5000       & 5.7E-61          & 6.0E-87   & 5.2E-14                & 9.0E-37                & 6.6E-11        & 2.5E-19   \\\nopagebreak
-        &            & (2.7E-60)        & (1.9E-86) & (1.1E-13)              & (5.4E-36)              & (8.8E-11)      & (3.9E-19) \\
-    f4  & 5000       & 8.2E-24          & 4.3E-66   & 1.4E-15                & 7.4E-11                & 4.2E-01        & 4.4E-14   \\\nopagebreak
-        &            & (4.0E-23)        & (1.2E-65) & (1.0E-15)              & (1.8E-10)              & (1.1E+00)      & (9.3E-14) \\
-    f5  & 3000       & 8.0E-02          & 3.2E-01   & 1.3E+01                & 2.1E+01                & 2.1E+00        & 2.5E+01   \\\nopagebreak
-        &            & (5.6E-01)        & (1.1E+00) & (1.4E+01)              & (7.8E+00)              & (1.5E+00)      & (3.2E+01) \\
-    f6  & 100        & 2.9E+00          & 5.6E+00   & 1.0E+03                & 9.3E+02                & 4.7E+03        & 4.5E+01   \\\nopagebreak
-        &            & (1.2E+00)        & (1.6E+00) & (2.2E+02)              & (1.8E+02)              & (1.1E+03)      & (2.4E+01) \\
-    f7  & 3000       & 6.4E-04          & 6.8E-04   & 3.3E-03                & 4.8E-03                & 4.7E-03        & 2.5E-03   \\\nopagebreak
-        &            & (2.5E-04)        & (2.5E-04) & (8.5E-04)              & (1.2E-03)              & (1.2E-03)      & (1.4E-03) \\
-    f8  & 1000       & 3.3E-05          & 7.1E+00   & 7.9E-11                & 4.7E+00                & 5.9E+03        & 2.4E+03   \\\nopagebreak
-        &            & (2.3E-05)        & (2.8E+01) & (1.3E-10)              & (3.3E+01)              & (1.1E+03)      & (6.7E+02) \\
-    f9  & 1000       & 1.0E-04          & 1.4E-04   & 1.5E-04                & 1.2E-03                & 1.8E+02        & 5.2E+01   \\\nopagebreak
-        &            & (6.0E-05)        & (6.5E-05) & (2.0E-04)              & (6.5E-04)              & (1.3E+01)      & (1.6E+01) \\
-    f10 & 500        & 8.2E-10          & 3.0E-09   & 3.5E-04                & 2.7E-03                & 1.1E-01        & 4.6E-01   \\\nopagebreak
-        &            & (6.9E-10)        & (2.2E-09) & (1.0E-04)              & (5.1E-04)              & (3.9E-02)      & (6.6E-01) \\
-    f11 & 500        & 9.9E-08          & 2.0E-04   & 1.9E-05                & 7.8E-04                & 2.0E-01        & 1.3E-02   \\\nopagebreak
-        &            & (6.0E-07)        & (1.4E-03) & (5.8E-05)              & (1.2E-03)              & (1.1E-01)      & (1.7E-02) \\
-    f12 & 500        & 4.6E-17          & 3.8E-16   & 1.6E-07                & 1.9E-05                & 1.2E-02        & 1.9E-01   \\\nopagebreak
-        &            & (1.9E-16)        & (8.3E-16) & (1.5E-07)              & (9.2E-06)              & (1.0E-02)      & (3.9E-01) \\
-    f13 & 500        & 2.0E-16          & 1.2E-15   & 1.5E-06                & 6.1E-05                & 7.5E-02        & 2.9E-03   \\\nopagebreak
-        &            & (6.5E-16)        & (2.8E-15) & (9.8E-07)              & (2.0E-05)              & (3.8E-02)      & (4.8E-03) \\
-    \bottomrule %%% нижняя линейка
-\end{longtblr}
-
-\section{Стандартные префиксы ссылок}\label{app:B4}
-
-Общепринятым является следующий формат ссылок: \texttt{<prefix>:<label>}.
-Например, \verb+\label{fig:knuth}+; \verb+\ref{tab:test1}+; \verb+label={lst:external1}+.
-В~таблице \cref{tab:tab_pref} приведены стандартные префиксы для различных
-типов ссылок.
-
-\begin{table}[htbp]
-    \captionsetup{justification=centering}
-    \centering{
-        \caption{\label{tab:tab_pref}Стандартные префиксы ссылок}
-        \begin{tabular}{ll}
-            \toprule
-            \textbf{Префикс} & \textbf{Описание} \\
-            \midrule
-            ch:              & Глава             \\
-            sec:             & Секция            \\
-            subsec:          & Подсекция         \\
-            fig:             & Рисунок           \\
-            tab:             & Таблица           \\
-            eq:              & Уравнение         \\
-            lst:             & Листинг программы \\
-            itm:             & Элемент списка    \\
-            alg:             & Алгоритм          \\
-            app:             & Секция приложения \\
-            \bottomrule
-        \end{tabular}
-    }
-\end{table}
-
-
-Для упорядочивания ссылок можно использовать разделительные символы.
-Например, \verb+\label{fig:scheemes/my_scheeme}+ или \\ \verb+\label{lst:dts/linked_list}+.
-
-\section{Очередной подраздел приложения}\label{app:B5}
-
-Нужно больше подразделов приложения!
-
-\section{И ещё один подраздел приложения}\label{app:B6}
-
-Нужно больше подразделов приложения!
-
-\clearpage
-\refstepcounter{chapter}
-\addcontentsline{toc}{appendix}{\protect\chapternumberline{\thechapter}Чертёж детали}
-
-\includepdf[pages=-]{Dissertation/images/drawing.pdf}

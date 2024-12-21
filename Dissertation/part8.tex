@@ -1,4 +1,5 @@
-\section{Введение}\label{s1}
+\chapter{Поверхности уровня интеграла для системы бильярд с косинусным преломлением}\label{ch:ch4}
+\section{Введение}\label{sec:ch4/sec1}
 Теория интегрируемых бильярдов развивается в двух в каком-то смысле встречных направлениях:
 
 (1) доказательство гипотезы Биркгофа; 
@@ -49,17 +50,17 @@ $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$, где $a > b > 0$.
 
 \begin{figure}[!htb]
 \minipage{0.32\textwidth}
-\includegraphics[width=\linewidth]{images/section1/example1.pdf}
+\includegraphics[width=\linewidth]{images/ch4/section1/example1.pdf}
     \caption{Иллюстрация к пункту 1.}
     \label{fig:pt8:_example1}
 \endminipage\hfill
 \minipage{0.32\textwidth}
-\includegraphics[width=\linewidth]{images/section1/example2.pdf}
+\includegraphics[width=\linewidth]{images/ch4/section1/example2.pdf}
     \caption{Иллюстрация к пункту 2.}
     \label{fig:pt8:_example2}
 \endminipage\hfill
 \minipage{0.32\textwidth}
-\includegraphics[width=\linewidth]{images/section1/example3.pdf}
+\includegraphics[width=\linewidth]{images/ch4/section1/example3.pdf}
     \caption{Иллюстрация к пункту 4.}
     \label{fig:pt8:_example3}
 \endminipage\hfill
@@ -82,12 +83,12 @@ $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$, где $a > b > 0$.
 Пусть внутренность эллипса разбита попарно непересекающимися дугами софокусных квадрик на области $\Omega_1, \ldots, \Omega_k$.  Перенумеруем области так, чтобы общие границы имели только области с соседними номерами. Пусть $\lambda_j$ --- параметр софокусной квадрики, разделяющей $\Omega_j$ и $\Omega_{j+1}$, $j=1, \ldots, k-1$. Два возможных варианта показаны на рис. \ref{fig:pt8:_example4} и \ref{fig:pt8:_example5}. Здесь и далее показатель преломления для области $\Omega_j$ обозначается через $n_j$.
 \begin{figure}[!htb]
 \minipage{0.45\textwidth}
-   \includegraphics[width=1\textwidth]{images/section1/multiple ellipses.pdf}
+   \includegraphics[width=1\textwidth]{images/ch4/section1/multiple ellipses.pdf}
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
     \label{fig:pt8:_example4}
 \endminipage\hfill
 \minipage{0.45\textwidth}
-    \includegraphics[width=0.9\textwidth]{images/section1/multiple hyperbolas.pdf}   
+    \includegraphics[width=0.9\textwidth]{images/ch4/section1/multiple hyperbolas.pdf}   
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
     \label{fig:pt8:_example5}
 \endminipage\hfill
@@ -120,11 +121,11 @@ $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$, где $a > b > 0$.
 Случаи, когда область $\Omega$ разбивается на подобласти дугами \textit{пересекающихся} софокусных квадрик, оказываются гораздо сложнее. В частности, дополнительный интеграл принимает значения не в $\mathbb{R}$, а в фактор-группе $\mathbb{R}$ по  аддитивной подгруппе, допускающей явное описание.
 
 
-{\it Случай 1: одна точка пересечения. }
+\textit{ Случай 1: одна точка пересечения. }
 
 \begin{figure}[!htb]
 \centering
-     \includegraphics[width=0.35\textwidth]{images/section1/img2.pdf}
+     \includegraphics[width=0.35\textwidth]{images/ch4/section1/img2.pdf}
 \caption{Взаимное расположение областей $\Omega_1,\ldots,\Omega_4$.}
     \label{fig:pt8:_example6}
 \end{figure}
@@ -155,14 +156,14 @@ $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$, где $a > b > 0$.
 Если границы раздела областей пересекаются по двум и более точкам, то имеет место общая закономерность: 
 \medskip
 
-{\it 
+\textit{ 
 \noindent Для каждой точки пересечения $A_i, i=1,\ldots,m$, определен коэффициент $\gamma_{A_i}$. Дополнительный интеграл \  $\Xi(x, y, v_x, v_y)$ принимает значения в $\mathbb{R}/(\gamma_{A_1} \mathbb{Z}+ \ldots + \gamma_{A_m} \mathbb{Z})$. Если $\gamma_{A_i}$ соизмеримы, т. е. всевозможные дроби $\dfrac{\gamma_{A_i}}{\gamma_{A_j}}$ --- рациональные числа (или бесконечность), то $\mathbb{R}/(\gamma_{A_1} \mathbb{Z}+ \ldots + \gamma_{A_m} \mathbb{Z}) = S^1$. Если же среди $\gamma_{A_i}$ есть пара с иррациональным отношением $\dfrac{\gamma_{A_i}}{\gamma_{A_j}}$, то подгруппа $\gamma_{A_1} \mathbb{Z}+ \ldots + \gamma_{A_m} \mathbb{Z}$ всюду плотна в $\mathbb{R}$. В этом случае дополнительный интеграл $\Xi(x, y, v_x, v_y)$ корректно определен, но использовать его для топологического анализа структуры траекторий представляется весьма затруднительным.}
 
 \bigskip
-{\it Случай 2: две точки пересечения.}
+\textit{ Случай 2: две точки пересечения.}
 \begin{figure}[!htb]
 \centering
-   \includegraphics[width=0.35\textwidth]{images/section1/img3.pdf}   
+   \includegraphics[width=0.35\textwidth]{images/ch4/section1/img3.pdf}   
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_4$.}
     \label{fig:pt8:_example7}
 \end{figure}
@@ -186,11 +187,11 @@ $$\gamma_{A_2} = \lambda_1(n_1^2 - n_2^2) + \lambda_2(n_2^2-n_3^2) + \lambda_1(n
 \right.
 \end{equation*}
  \medskip
-{\it Случай 3: две точки пересечения.}
+\textit{ Случай 3: две точки пересечения.}
 Рассмотрим области, изображенные на рис. \ref{fig:pt8:_example8}. 
 \begin{figure}[!htb]
 \centering
-   \includegraphics[width=0.35\textwidth]{images/section1/img4.pdf}   
+   \includegraphics[width=0.35\textwidth]{images/ch4/section1/img4.pdf}   
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_6$.}
     \label{fig:pt8:_example8}
 \end{figure}
@@ -212,15 +213,15 @@ $$\gamma_{A_2} = (\lambda_3 - \lambda_2)(n_1^2 - n_4^2 + n_5^2 - n_2^2).$$
 
 \begin{figure}[!htb]
 \centering
-   \includegraphics[width=0.25\textwidth]{images/section1/imgB.pdf}   
+   \includegraphics[width=0.25\textwidth]{images/ch4/section1/imgB.pdf}   
     \caption{Взаимное расположение областей $\Omega_1, \Omega_2$.}
     \label{fig:pt8:_example9}
 \end{figure}
 
 Перечислим основные результаты настоящей работы.
 Для задачи А полностью описаны поверхности уровня регулярных значений интеграла $\Xi$ (теорема \ref{st:pt9:n1_n2_surfaces}).
-В разделе \ref{s2.1.2}  описаны поверхности уровня для всех нерегулярных значений интеграла $\Xi$, а также все перестройки поверхностей уровня интеграла при проходе через сингулярные значения. 
-Для задачи Б  показано, что многозначный интеграл $\Xi$ в действительности принимает лишь конечное число значений, в теоремах \ref{th:pt10:th1} и \ref{th:pt10:th2} и подразделе \ref{s3.8} полностью описаны поверхности уровня регулярных значений интеграла $\Xi$.
-Описанию особых слоев и перестроек посвящен подраздел \ref{s3.10}.
+В разделе \ref{sec:ch4/sec2/subsec2} описаны поверхности уровня для всех нерегулярных значений интеграла $\Xi$, а также все перестройки поверхностей уровня интеграла при проходе через сингулярные значения. 
+Для задачи Б  показано, что многозначный интеграл $\Xi$ в действительности принимает лишь конечное число значений, в теоремах \ref{th:pt10:th1} и \ref{th:pt10:th2} и подразделе \ref{sec:ch4/sec3/subsec8} полностью описаны поверхности уровня регулярных значений интеграла $\Xi$.
+Описанию особых слоев и перестроек посвящен подраздел \ref{sec:ch4/sec3/subsec10}.
 \bigskip
 
