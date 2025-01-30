@@ -579,8 +579,9 @@ $$
 а область  $B$ приближается к круговому сектору с углом $\phi_1-\phi_0$. 
 
 
-\subsection{Собственные функции и асимптотика собственных значений}\label{sec:ch2/sec2/sub2}
-\subsubsection{Симметричная область $A_\varepsilon: \rho \in [0,\rho_0], \phi \in [-\phi_0,\phi_0]$}\label{sec:ch2/sec2/sub2/sub1}
+%\subsection{Симметричная область $A_\varepsilon: \rho \in [0,\rho_0], \phi \in [-\phi_0,\phi_0]$}\label{sec:ch2/sec2/sub2}
+\subsection{Симметричная область $A_\varepsilon$}\label{sec:ch2/sec2/sub2}
+\subsubsection{Собственные функции и асимптотика собственных значений}\label{sec:ch2/sec2/sub2/sub1}
 
 Обозначим через $\Phi_{even}(\zeta, q, \phi), \Phi_{odd}(\zeta, q, \phi)$ четное и нечетное решения уравнения $\frac{\partial^2}{\partial \phi^2}\Phi + (\zeta - 2q\cos{2\phi})\Phi = 0$, соответственно. 
 В частности, (см.~\cite{wref2})
@@ -786,8 +787,55 @@ $$\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \
 \biggr) + o(\varepsilon^2).
 \end{align*}
 
+\subsubsection{Особый случай: $A_\varepsilon$ для $\phi_0=\pi/2$}\label{sec:ch2/sec2/sub2/sub1}
 
-\subsubsection{Несимметричная область $B_\varepsilon:  \rho \in [0, \rho_0], \phi \in [\phi_0, \phi_1 ]$}\label{sec:ch2/sec2/sub2/sub2}
+
+Для $\nu\ne 1$ формулы для собственных функций и собственных значений, см. уравнения (\ref{eq:fun}) и (\ref{eq:val}), верны. Единственным исключением является случай  $\nu=\nu_0=1$.
+Для $\nu=\nu_0=1$ для четного решения справедливо разложение (см. \cite[Subsect.~20.2.27]{wref2}):
+\begin{equation*}
+ce_1(\phi, q) = 	\cos{\phi}  - \frac{q}{8} \cos{3\phi} + o(q),
+ \end{equation*}
+для которого граничное условие  $ce_1(\phi_0, q)=0$ выполняется. 
+Рассмотрим второе граничное условие $R(\rho_0) = 0$.
+Для $R(\rho) = Ce_1(\rho, q)$ существует разложение по функциям Бесселя первого рода:
+\begin{equation*}
+Ce_1(\rho, q) = J_1(2\sqrt{q} \cosh{\rho}) + \frac{q}{8} J_3(2\sqrt{q}\cosh{\rho}) + o(q).
+\end{equation*}
+Из подстановок $\cosh\rho = \cosh\rho_0 =  \frac{1}{\varepsilon}$ и $q = \frac{\varkappa^2 r_0^2 \varepsilon^2}{4}$ следует равенство
+$2\sqrt{q} \cosh{\rho_0} = 2 \frac{\varkappa r_0 \varepsilon}{2} \frac{1}{\varepsilon} = \varkappa r_0$. Для краткости $\varkappa r_0$ обозначим через $u$. 
+
+Подставим $\nu = 1$ в граничное условие $0 = Ce_1(\rho_0, q)$ и рассмотрим разложение в ряд по степеням   $q$:
+\begin{equation*}
+    0 = J_1(u) + q \left( \frac{J_3(u)}{8} \right) + o(q).
+\end{equation*}
+Подстановкой  $u = u_0 + q u_1 + o(q)$ получим:
+\begin{equation*}
+    0 = 
+    J_1(u_0) + q \left( 
+    u_1 \left.\frac{\partial J_1 (u)}{\partial u}\right|_{u=u_0}
+    + \frac{J_3(u_0)}{8}
+    \right) + o(q).
+\end{equation*}
+Поэтому, 
+\begin{equation*}
+u_0 = \alpha_{1, m}, \qquad u_1 = 
+\frac{ - J_3(\alpha_{1, m}) }{8\left.
+\frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}},
+\end{equation*}
+где $\alpha_{1, m}$ -- $m$-ый нуль функции Бесселя  $J_1(x)$. По аналогии с предыдущим случаем,
+собственное значение $\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \frac{u_0^3 u_1}{2r_0^2} + o(\varepsilon^2)$ получается из подстановки величин  $u_0, u_1$:
+\begin{align}
+   & \varkappa_{k, m}^2 = \frac{\alpha_{1, m}^2}{r_0^2} - \varepsilon^2 \frac{\alpha_{1, m}^3}{16r_0^2} 
+    \frac{J_3(\alpha_{1, m})}{\left.\frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}} 
+    + o(\varepsilon^2), \label{eq:valS1}
+    \end{align}
+
+
+
+%\subsection{Несимметричная область $B_\varepsilon:  \rho \in [0, \rho_0], \phi \in [\phi_0, \phi_1 ]$}\label{sec:ch2/sec2/sub3}
+\subsection{Несимметричная область $B_\varepsilon$}\label{sec:ch2/sec2/sub3}
+\subsubsection{Собственные функции и асимптотика собственных значений}\label{sec:ch2/sec2/sub3/sub1}
+
 
 Внутренность области $B_\varepsilon$ не содержит особых точек эллиптической системы координат~(\ref{eq:coord}). Поэтому, условия непрерывности сдвига или непрерывности производной, рассмотренные для случая симметричной области (в частности, для эллипса), здесь не требуются.
 Хотя эти особые точки, тем не менее, появятся на границе  $B_\varepsilon$ (а именно, они образуют горизонтальный отрезок в составе границы).
@@ -802,7 +850,7 @@ $$\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \
     \right) R_{odd}(\rho).
 \]
 
-{\em Далее следует основной результат текущего подраздела.}
+%{\em Далее следует основной результат текущего подраздела.}
 В области  $B_\varepsilon$ для собственных функций $\psi_{k, m}(\rho, \phi)$ и собственных значений $\varkappa^2_{k, m}$ оператора $\hat{H}$ справедливы выражения
 
 \begin{align}
@@ -863,53 +911,7 @@ $$\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \
     \biggr) + o(\varepsilon^2).
 \end{align*}
 
-\subsection{Особые случаи}\label{sec:ch2/sec2/sub3}
-\subsubsection{$A_\varepsilon$ для $\phi_0=\pi/2$}\label{sec:ch2/sec2/sub3/sub1}
-
-
-Для $\nu\ne 1$ формулы для собственных функций и собственных значений, см. уравнения (\ref{eq:fun}) и (\ref{eq:val}), верны. Единственным исключением является случай  $\nu=\nu_0=1$.
-Для $\nu=\nu_0=1$ для четного решения справедливо разложение (см. \cite[Subsect.~20.2.27]{wref2}):
-\begin{equation*}
-ce_1(\phi, q) = 	\cos{\phi}  - \frac{q}{8} \cos{3\phi} + o(q),
- \end{equation*}
-для которого граничное условие  $ce_1(\phi_0, q)=0$ выполняется. 
-Рассмотрим второе граничное условие $R(\rho_0) = 0$.
-Для $R(\rho) = Ce_1(\rho, q)$ существует разложение по функциям Бесселя первого рода:
-\begin{equation*}
-Ce_1(\rho, q) = J_1(2\sqrt{q} \cosh{\rho}) + \frac{q}{8} J_3(2\sqrt{q}\cosh{\rho}) + o(q).
-\end{equation*}
-Из подстановок $\cosh\rho = \cosh\rho_0 =  \frac{1}{\varepsilon}$ и $q = \frac{\varkappa^2 r_0^2 \varepsilon^2}{4}$ следует равенство
-$2\sqrt{q} \cosh{\rho_0} = 2 \frac{\varkappa r_0 \varepsilon}{2} \frac{1}{\varepsilon} = \varkappa r_0$. Для краткости $\varkappa r_0$ обозначим через $u$. 
-
-Подставим $\nu = 1$ в граничное условие $0 = Ce_1(\rho_0, q)$ и рассмотрим разложение в ряд по степеням   $q$:
-\begin{equation*}
-    0 = J_1(u) + q \left( \frac{J_3(u)}{8} \right) + o(q).
-\end{equation*}
-Подстановкой  $u = u_0 + q u_1 + o(q)$ получим:
-\begin{equation*}
-    0 = 
-    J_1(u_0) + q \left( 
-    u_1 \left.\frac{\partial J_1 (u)}{\partial u}\right|_{u=u_0}
-    + \frac{J_3(u_0)}{8}
-    \right) + o(q).
-\end{equation*}
-Поэтому, 
-\begin{equation*}
-u_0 = \alpha_{1, m}, \qquad u_1 = 
-\frac{ - J_3(\alpha_{1, m}) }{8\left.
-\frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}},
-\end{equation*}
-где $\alpha_{1, m}$ -- $m$-ый нуль функции Бесселя  $J_1(x)$. По аналогии с предыдущим случаем,
-собственное значение $\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \frac{u_0^3 u_1}{2r_0^2} + o(\varepsilon^2)$ получается из подстановки величин  $u_0, u_1$:
-\begin{align}
-   & \varkappa_{k, m}^2 = \frac{\alpha_{1, m}^2}{r_0^2} - \varepsilon^2 \frac{\alpha_{1, m}^3}{16r_0^2} 
-    \frac{J_3(\alpha_{1, m})}{\left.\frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}} 
-    + o(\varepsilon^2), \label{eq:valS1}
-    \end{align}
-
-
-
-\subsubsection{$B_\varepsilon$: $\phi_0=0, \phi_1=\pi$ и $\phi_0=0, \phi_1=\pi/2$}\label{sec:ch2/sec2/sub3/sub2}
+\subsubsection{Особые случаи: $B_\varepsilon$ для $(\phi_0, \phi_1)=(0,\pi)$ и для $(\phi_0, \phi_1)=(0,\pi/2)$}\label{sec:ch2/sec2/sub3/sub2}
 
 
 Хотя $\phi_0=0, \phi_1=\pi/2$ является особенным случаем при $k=1$,
