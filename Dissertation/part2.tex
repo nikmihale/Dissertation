@@ -83,10 +83,10 @@ $2\frac{\partial Y_\nu(u)}{\partial u} = Y_{\nu-1}(u) - Y_{\nu+1}(u)$, $2\frac{\
 $W_{\nu, \nu}(u)$ получаем
 $$\frac{\partial W_{\nu, \nu}(u)
 }{\partial u} = 
-\lambda (Y_\nu(u) J_{\nu-1}(\lambda u)
-+  Y_{\nu+1}(\lambda u) J_\nu(u)) - 
- (Y_\nu(\lambda u) J_{\nu-1}(u)  + 
- Y_{\nu+1}(u) J_\nu(\lambda u) ).$$
+\lambda \big(Y_\nu(u) J_{\nu-1}(\lambda u)
++  Y_{\nu+1}(\lambda u) J_\nu(u)\big) - 
+\big(Y_\nu(\lambda u) J_{\nu-1}(u)  + 
+ Y_{\nu+1}(u) J_\nu(\lambda u) \big).$$
  \end{remark}
 
 По предыдущей теореме \ref{th:sect2_th3} собственные значения $E_{k, m}$ оператора $\hat{H}$, а следовательно, числа $\varkappa^2_{k,m} = \varkappa^2_{k,m}(\delta)$ связаны с нулями $\beta_{\nu, m}$ функции $f(q)$. Здесь функция $f(q)$ имеет один из трех возможных видов (см. \eqref{eq:funcF}).
@@ -102,7 +102,7 @@ $R(\rho)$ решением радиального уравнения Матьё 
 \begin{lemma}
 Пусть $r_0 = \delta\cosh{\rho_0}, r_1 = \delta\cosh{\rho_1}, \lambda = \frac{r_1}{r_0}$, $\alpha_{\nu, m}$ --- $m$-й нуль функции $W_{\nu, \nu}(u)$. Тогда $\varkappa^2$ при малых $\delta$ имеет вид
 \begin{multline*}
-\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} + \delta^2 \dfrac{\alpha_{\nu, m}^3}{2 c_\nu r_0^4} * \\ *\left. \frac{
+\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} + \delta^2 \dfrac{\alpha_{\nu, m}^3}{2 c_\nu r_0^4} \times \\ \times \left. \frac{
 c_{\nu+2} \left( W_{\nu+2, \nu}(u) + W_{\nu, \nu+2}(u) \right) + 
 c_{\nu-2} \left( W_{\nu-2, \nu}(u) + W_{\nu, \nu-2}(u) \right)
 }{ \frac{\partial W_{\nu,\nu}(u)}{\partial u} }\right|_{u=\alpha_{\nu, m}} + o(\delta^2).
@@ -127,25 +127,25 @@ $$ R_1(\rho, q) =
 Напомним граничное условие $R_2(\rho_0) R_1(\rho_1) - R_2(\rho_1) R_1(\rho_0) = 0$. Заметим, что аргументы имеют вид $2 \sqrt{q} \cosh{\rho_s} = 2 \sqrt{\frac{\varkappa^2 \delta^2}{4}} \frac{r_s}{\delta} = \varkappa r_s, s=0,1$. Рассмотрим первое слагаемое в граничном условии:
 \begin{multline}
 	R_2(\rho_0) R_1(\rho_1) = \\
-\left(
+\bigg(
 c_\nu Y_\nu(\varkappa r_0) - 
 	q c_{\nu-2} Y_{\nu-2}(\varkappa r_0) -
 	q c_{\nu+2} Y_{\nu+2}(\varkappa r_0) + o(q)
-\right) 
-\left(
+\bigg) \times \\
+\times \bigg(
 c_\nu J_\nu(\varkappa r_1) - 
 	q c_{\nu-2} J_{\nu-2}(\varkappa r_1) -
 	q c_{\nu+2} J_{\nu+2}(\varkappa r_1) + o(q)
-\right) = \\
+\bigg) = \\
 = c_\nu^2 Y_\nu(\varkappa r_0)J_\nu(\varkappa r_1) - 
 	q c_\nu \bigg(    c_{\nu-2} 
-	\left(
+	\big(
 	Y_{\nu-2}(\varkappa r_0)J_\nu(\varkappa r_1) + Y_{\nu}(\varkappa r_0)J_{\nu-2}(\varkappa r_1)
-	\right)+ \\
+	\big)+ \\
 	  +  c_{\nu+2} 
-	\left(
+	\big(
 	Y_{\nu+2}(\varkappa r_0)J_\nu(\varkappa r_1) + Y_{\nu}(\varkappa r_0)J_{\nu+2}(\varkappa r_1)
-	\right)
+	\big)
 \bigg) + o(q).
 %\tag{7}
 \label{eq:eqRR}
@@ -190,7 +190,7 @@ $$
 	\frac{c_{\nu-2}}{c_\nu}
     \left(W_{\nu-2, \nu}(u) + W_{\nu, \nu-2}(u) \right)+ 
 \\
-	\frac{c_{\nu+2}}{c_\nu}
++	\frac{c_{\nu+2}}{c_\nu}
 	\left(
 	W_{\nu+2, \nu}(u) + W_{\nu, \nu+2}(u)
 	\right)
@@ -205,7 +205,6 @@ $$
 $$u_2 = \frac{\alpha_{\nu, m}^2}{4r_0^2} 
 \left.
 \frac{
-\bigg(    
 	\frac{c_{\nu-2}}{c_\nu}
 	\left(
 	W_{\nu-2, \nu}(u) + W_{\nu, \nu-2}(u)
@@ -214,7 +213,6 @@ $$u_2 = \frac{\alpha_{\nu, m}^2}{4r_0^2}
 	\left(
 	W_{\nu+2, \nu}(u) + W_{\nu, \nu+2}(u)
 	\right)
-\bigg)
 }{ \frac{\partial W_{\nu,\nu}(u)}{\partial u} }
 \right|_{u=\alpha_{\nu, m}}.$$
 Таким образом, 
@@ -222,7 +220,6 @@ $$u_2 = \frac{\alpha_{\nu, m}^2}{4r_0^2}
 \[
 u = \alpha_{\nu, m} + \delta^2 \frac{\alpha_{\nu, m}^2}{4r_0^2} \left.
 \frac{
-\bigg(    
 	\frac{c_{\nu-2}}{c_\nu}
 	\left(
 	W_{\nu-2, \nu}(u) + W_{\nu, \nu-2}(u)
@@ -231,7 +228,6 @@ u = \alpha_{\nu, m} + \delta^2 \frac{\alpha_{\nu, m}^2}{4r_0^2} \left.
 	\left(
 	W_{\nu+2, \nu}(u) + W_{\nu, \nu+2}(u)
 	\right)
-\bigg)
 }{ \frac{\partial W_{\nu,\nu}(u)}{\partial u} }
 \right|_{u=\alpha_{\nu, m}} + o(\delta^2). 
 \]
@@ -258,7 +254,7 @@ $$se_\nu(\phi, q) = c_\nu \sin{\nu \phi} + q c_{\nu+2} \sin{(\nu+2) \phi} +q c_{
 Пусть $r_0 = \delta\cosh{\rho_0}, r_1 = \delta\cosh{\rho_1}, \lambda = \frac{r_1}{r_0}$, $\alpha_{\nu, m}$ --- $m$-й нуль функции $W_{\nu, \nu}(u)$, тогда $\varkappa^2$ зависит от $\delta$ как
 {\small
 \begin{multline*}
-\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} + \delta^2 \dfrac{\alpha_{\nu, m}^3}{2 \nu c_\nu r_0^4} * \\ * \left. \frac{
+\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} + \delta^2 \dfrac{\alpha_{\nu, m}^3}{2 \nu c_\nu r_0^4} \times \\ \times \left. \frac{
 	(\nu-2) c_{\nu-2}
 	\left(
 	W_{\nu-2, \nu}(u) + W_{\nu, \nu-2}(u)
@@ -289,26 +285,26 @@ Se_\nu(\rho, q) =
 {\small
 \begin{multline*}
 	R_2(\rho_0) R_1(\rho_1) = \\
-=\left(
+=\big(
 \nu c_\nu Y_\nu(\varkappa r_0) - 
 	q (\nu-2) c_{\nu-2} Y_{\nu-2}(\varkappa r_0) -
 	q (\nu+2) c_{\nu+2} Y_{\nu+2}(\varkappa r_0) + o(q)
-\right) \times \\
-\times \left(
+\big) \times \\
+\times \big(
 \nu c_\nu J_\nu(\varkappa r_1) - 
 	q (\nu-2) c_{\nu-2} J_{\nu-2}(\varkappa r_1) -
 	q (\nu+2) c_{\nu+2} J_{\nu+2}(\varkappa r_1) + o(q)
-\right) = \\
+\big) = \\
 = \nu^2 c_\nu^2 Y_\nu(\varkappa r_0)J_\nu(\varkappa r_1) - 
 	q \nu c_\nu \bigg(   (\nu-2) c_{\nu-2} 
-	\left(
+	\big(
 	Y_{\nu-2}(\varkappa r_0)J_\nu(\varkappa r_1) +  Y_{\nu}(\varkappa r_0)J_{\nu-2}(\varkappa r_1)
-	\right) +
+	\big) +
 	\\ +
 	 (\nu+2) c_{\nu+2} 
-	\left(
+	\big(
 	Y_{\nu+2}(\varkappa r_0)J_\nu(\varkappa r_1) + Y_{\nu}(\varkappa r_0)J_{\nu+2}(\varkappa r_1)
-	\right)
+	\big)
 \bigg) + o(q).
 \end{multline*}
 }
@@ -384,7 +380,7 @@ $$
 откуда из определения $u = \varkappa r_0$ следует равенство
 {\small
 \begin{multline*}
-\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} + \delta^2 \dfrac{\alpha_{\nu, m}^3}{2 \nu c_\nu r_0^4} * \\ * \left. \frac{
+\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} + \delta^2 \dfrac{\alpha_{\nu, m}^3}{2 \nu c_\nu r_0^4} \times \\ \times \left. \frac{
 	(\nu-2) c_{\nu-2}
 	\left(
 	W_{\nu-2, \nu}(u) + W_{\nu, \nu-2}(u)
@@ -459,8 +455,8 @@ se_\nu(\phi, q) =
 Пусть $\nu \in \mathbb{N} \setminus \{1, 2\}$. Тогда $c_\nu=1,
 	c_{\nu-2} = \frac{1}{4(\nu-1)}, c_{\nu+2} = \frac{-1}{4(\nu+1)}$ и из леммы \ref{th:ringLemma2}  получим
 \begin{multline*}
-\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} + \delta^2 \dfrac{\alpha_{\nu, m}^3}{8 \nu r_0^4} * \\
- * \left. \frac{
+\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} + \delta^2 \dfrac{\alpha_{\nu, m}^3}{8 \nu r_0^4} \times \\
+ \times \left. \frac{
 \frac{\nu-2}{\nu-1}
 \left(
 W_{\nu-2, \nu}(u) + W_{\nu, \nu-2}(u)
@@ -498,7 +494,7 @@ $$\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} - \delta^2 \dfrac{\alpha_{\nu, 
 Поведение квантовой частицы в круговом секторе рассмотрено в \cite{wref13}.
 В частности, доказано, что для собственных функций $\psi_{k,m}(r,\phi)$ и соответствующих собственных значений $E_{k,m}$ справедливы формулы
 \begin{align}
-&\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{r_0}\right)\sin{\lambda\phi}\notag \\  
+&\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{r_0}\right)\sin{\lambda\phi}, \notag \\  
 &E_{k,m} = \frac{\hbar^2 \alpha_{\lambda, m}^2}{2M r_0^2},
  \qquad k, m \in \mathbb{Z}_+, \label{eq:energy0}
 \end{align}
@@ -546,7 +542,7 @@ $\frac{x^2}{r_0^2 - \lambda} + \frac{y^2}{r_0^2(1-\varepsilon^2) - \lambda} = 1$
 определены следующим образом:
 $$
 \begin{aligned}
- A_\varepsilon:&\qquad\qquad \rho \in [0, \rho_0], \phi \in [-\phi_0, \phi_0 ]\\
+ A_\varepsilon:&\qquad\qquad \rho \in [0, \rho_0], \phi \in [-\phi_0, \phi_0 ],\\
   B_\varepsilon:&\qquad\qquad  \rho \in [0, \rho_0], \phi \in [\phi_0, \phi_1 ], 
 \end{aligned}
 $$
@@ -638,7 +634,7 @@ $$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\alpha_{\nu_0, m}
 \end{array}
 \right.
 \end{equation*}
-Здесь $\alpha_{\nu_0,m}$ --  $m$-ый нуль функции Бесселя первого рода $J_{\nu_0}(x)$.
+Здесь $\alpha_{\nu_0,m}$ --  $m$-й нуль функции Бесселя первого рода $J_{\nu_0}(x)$.
 
 
 Нечетный и четный случаи мы рассматриваем отдельно. Сперва рассмотрим
@@ -671,8 +667,8 @@ $$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\alpha_{\nu_0, m}
 справедливо разложение в ряд по функциям Бесселя первого рода, см.~\cite[гл. VIII]{mclachlan}, поэтому:
 \begin{multline*}
 Se_\nu(\rho, q) \,\propto\,\,  \nu J_\nu(2\sqrt{q} \cosh{\rho})  
-+q \bigl( \frac{\nu + 2}{4(\nu+1)} J_{\nu+2}(2\sqrt{q} \cosh{\rho}) - \\
-- \frac{\nu - 2}{4(\nu-1)} J_{\nu-2}(2\sqrt{q} \cosh{\rho}) \bigr) + o(q).
++q \bigg( \frac{\nu + 2}{4(\nu+1)} J_{\nu+2}(2\sqrt{q} \cosh{\rho}) - \\
+- \frac{\nu - 2}{4(\nu-1)} J_{\nu-2}(2\sqrt{q} \cosh{\rho}) \bigg) + o(q).
 \end{multline*}
 Символ $\propto$ означает равенство с точностью до умножения на ненулевую константу.
 
@@ -680,31 +676,31 @@ Se_\nu(\rho, q) \,\propto\,\,  \nu J_\nu(2\sqrt{q} \cosh{\rho})
 Для краткости обозначим $u = \varkappa r_0$. Теперь подставим  
 $\nu=\nu_0 + q\nu_1 + o(q)$ в граничное условие $0 = Se_{\nu(q)}(\rho_0, q)$:
 \begin{multline*}
-0 = \nu_0 J_{\nu_0}(u) + q \bigl(  \nu_1 J_{\nu_0}(u) 
+0 = \nu_0 J_{\nu_0}(u) + q \bigg(  \nu_1 J_{\nu_0}(u) 
 - \frac{\nu_0 - 2}{4(\nu_0-1)} J_{\nu_0-2}(u) + %{} \notag\\ 
 \\ %&{}+
 + \frac{\nu_0 + 2}{4(\nu_0+1)} J_{\nu_0+2}(u) +
  \nu_0 \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(u)
-\bigr) + o(q).
+\bigg) + o(q).
 \end{multline*}
 После чего подставим   $u = u_0 + q u_1 + o(q)$ в последнее равенство:
 \begin{multline*}
-0 = \nu_0 J_{\nu_0}(u_0) + q \bigl( 
+0 = \nu_0 J_{\nu_0}(u_0) + q \bigg( 
 \nu_0 u_1 \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=u_0} 
-+\nu_1 J_{\nu_0}(u_0) - \frac{\nu_0 - 2}{4(\nu_0-1)} J_{\nu_0-2}(u_0) \\ 
++\nu_1 J_{\nu_0}(u_0) - \frac{\nu_0 - 2}{4(\nu_0-1)} J_{\nu_0-2}(u_0) +\\ 
 +\frac{\nu_0 + 2}{4(\nu_0+1)} J_{\nu_0+2}(u_0) 
 + \nu_0 \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(u_0)
-\bigr) + o(q).
+\bigg) + o(q).
 \end{multline*}
 Снова приравнивая к $0$ коэффициенты при степенях  $q$, получим
 \begin{align}
     u_0 =& \alpha_{\nu_0, m}, \label{eq:u0}\\
     u_1 =& \frac{1}{\left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} } \biggl(
-\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m}) }{4 \nu_0(\nu_0-1)} \notag \\    
+\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m}) }{4 \nu_0(\nu_0-1)} - \notag \\    
 &{}- \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m}) }{4 \nu_0(\nu_0+1)} - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m})
     \biggr),\label{eq:u1}
 \end{align}
-где $\alpha_{\nu_0, m}$ --  $m$-ый нуль функции Бесселя $J_{\nu_0}(x)$. 
+где $\alpha_{\nu_0, m}$ --  $m$-й нуль функции Бесселя $J_{\nu_0}(x)$. 
 
 
 
@@ -775,7 +771,7 @@ Ce_\nu(\rho, q) = & J_\nu(2\sqrt{q} \cosh{\rho}) + {}\notag \\
  - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu=\nu_0}(\alpha_{\nu_0, m})
 \biggr),
 \end{align*}
-где $\alpha_{\nu_0, m}$ -- $m$-ый нуль функции $J_{\nu_0}(x)$.  
+где $\alpha_{\nu_0, m}$ -- $m$-й нуль функции $J_{\nu_0}(x)$.  
 
 Как и в предыдущем случае, собственное значение
 $$\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \frac{u_0^3 u_1}{2r_0^2} + o(\varepsilon^2)$$ получается подстановкой значений $u_0, u_1$:
@@ -822,7 +818,7 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
 \frac{ - J_3(\alpha_{1, m}) }{8\left.
 \frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}},
 \end{equation*}
-где $\alpha_{1, m}$ -- $m$-ый нуль функции Бесселя  $J_1(x)$. По аналогии с предыдущим случаем,
+где $\alpha_{1, m}$ -- $m$-й нуль функции Бесселя  $J_1(x)$. По аналогии с предыдущим случаем,
 собственное значение $\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \frac{u_0^3 u_1}{2r_0^2} + o(\varepsilon^2)$ получается из подстановки величин  $u_0, u_1$:
 \begin{align}
    & \varkappa_{k, m}^2 = \frac{\alpha_{1, m}^2}{r_0^2} - \varepsilon^2 \frac{\alpha_{1, m}^3}{16r_0^2} 
@@ -870,13 +866,13 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
 Для соответствующих собственных значений справедливы равенства
 \begin{align}
 \varkappa_{k, m}^2 ={}& \frac{\alpha_{\nu_0, m}^2}{r_0^2} +  \varepsilon^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^2}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} }  
- \biggl(\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} 
+ \biggl(\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} -
 \notag \\ 
 &{}- \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m})}{4\nu_0 (\nu_0+1)} 
 - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m})
     \biggr) + o(\varepsilon^2).\label{eq:valB}
 \end{align}
-Здесь $\alpha_{\nu_0,m}$ -- $m$-ый нуль функции Бесселя первого рода $J_{\nu_0}(x)$.
+Здесь $\alpha_{\nu_0,m}$ -- $m$-й нуль функции Бесселя первого рода $J_{\nu_0}(x)$.
 
 
 Мы хотим найти решение углового решения в виде
@@ -906,7 +902,7 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
 Из соображений, аналогичных тем, что были проведены для  $\psi_{k, m}(\rho, \phi) = \Phi_{odd}(\phi) R_{odd}(\rho)$ из предыдущего подраздела,
 мы получаем разложение радиальной функции и соответствующих собственных значений:
 \begin{align*}
-    \varkappa_{k, m}^2 ={}& \frac{\alpha_{\nu_0, m}^2}{r_0^2} +  \varepsilon^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^2}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} }\biggl(\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} \notag \\
+    \varkappa_{k, m}^2 ={}& \frac{\alpha_{\nu_0, m}^2}{r_0^2} +  \varepsilon^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^2}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} }\biggl(\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} - \notag \\
 &{}- \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m})}{4\nu_0 (\nu_0+1)}  - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m})
     \biggr) + o(\varepsilon^2).
 \end{align*}
@@ -954,7 +950,7 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
 \frac{ - 3 J_3(\alpha_{1, m}) }{8\left.
 \frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}},
 \end{equation*}
-где $\alpha_{1, m}$ -- $m$-ый нуль функции $J_1(x)$. 
+где $\alpha_{1, m}$ -- $m$-й нуль функции $J_1(x)$. 
 
 Наконец, как в предыдущем случае, подстановкой $u_0, u_1$ в $\varkappa_{1, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \frac{u_0^3 u_1}{2r_0^2} + o(\varepsilon^2)$, получим выражение для собственного значения:
 \begin{align}
