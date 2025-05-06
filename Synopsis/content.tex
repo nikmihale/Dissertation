@@ -15,17 +15,12 @@
 \newcommand{\volumeAndStructure}{\pdfbookmark[1]{Объем и структура работы}{VolumeAndStructure}\underline{\textbf{\volumeAndStructureTXT}}}
 \newcommand{\contribution}{\pdfbookmark[1]{Личный вклад}{contribution}\underline{\textbf{\contributionTXT}}}
 \newcommand{\publications}{\pdfbookmark[1]{Публикации}{publications}\underline{\textbf{\publicationsTXT}}}
-
+\newcommand{\gratitude}{\pdfbookmark[1]{Благодарности}{gratitude}\section*{\gratitudeTXT}}
 \input{common/characteristic} % Характеристика работы по структуре во введении и в автореферате не отличается (ГОСТ Р 7.0.11, пункты 5.3.1 и 9.2.1), потому её загружаем из одного и того же внешнего файла, предварительно задав форму выделения некоторым параметрам
 
 %Диссертационная работа была выполнена при поддержке грантов \dots
-
-
-
-\FloatBarrier
-\pdfbookmark{Заключение}{conclusion}                                  % Закладка pdf
-В \underline{\textbf{заключении}} приведены основные результаты работы, которые заключаются в следующем:
-\input{common/concl}
+\pdfbookmark{Содержание работы}{description}                          % Закладка pdf
+\input{common/content}
 
 %{\gratitude}
 %\pdfbookmark{Литература}{bibliography}                                % Закладка pdf
