@@ -67,7 +67,7 @@ $\sigma=\frac{\pi m}{\lambda - 1}$,
 
 
 \subsection{Квантовый биллиард в круге}\label{sec:ch1/sec1/sub3}
-Пусть $\Omega = D^2$ --- двумерный диск радиуса $\rho_0$. Для этой системы гамильтониан имеет выглядит как в уравнении \eqref{eq:schrodinger}, где 
+Пусть $\Omega = D^2$ --- двумерный диск радиуса $r_0$. Для этой системы гамильтониан имеет выглядит как в уравнении \eqref{eq:schrodinger}, где 
 % в декартовых координатах записывается как указано в уравнении 
 %$$\hat{H} = \frac{\hat{p}^2}{2M} + V(x, y) = \frac{-\hbar^2}{2M}\left(\frac{\partial^2 }{\partial x^2} + \frac{\partial^2}{\partial y^2}\right)  + V(x, y) = \frac{-\hbar^2}{2M} \nabla^2  + V(x, y), $$
 потенциал $V(x,y)$ определяется как
@@ -75,31 +75,31 @@ $\sigma=\frac{\pi m}{\lambda - 1}$,
     V(x, y) = 
     \Bigg\{
     \begin{array}{cc}
-        0, \sqrt{x^2+y^2} < \rho_0 \\
-        \infty, \sqrt{x^2+y^2} \geq \rho_0. \\
+        0, \sqrt{x^2+y^2} < r_0 \\
+        \infty, \sqrt{x^2+y^2} \geq r_0. \\
     \end{array}
 \] 
 В силу замечания \ref{rem:schrodinger_equivalent}, для решения задачи достаточно найти такие собственные функции и собственные значения оператора Лапласа в области $\Omega$, которые обращаются в нуль на границе $\Omega$.
 \begin{statement}
 В области $D^2$ собственные функции $\psi_{k, m}(r, \phi)$ и собственные значения $E_{k,m}$ оператора $\hat{H}$ имеют вид 
-$$\psi_{k, m}(r, \phi) = J_k\left(\frac{\alpha_{k, m}r}{\rho_0}\right)\sin{k \phi}, \hspace{15pt} E_{k,m} = \frac{\hbar^2 \alpha_{k, m}^2}{2M\rho_0^2}, \hspace{15pt} k, m \in \mathbb{Z},$$
+$$\psi_{k, m}(r, \phi) = J_k\left(\frac{\alpha_{k, m}r}{r_0}\right)\cos{(k \phi + \phi_0)}, \hspace{15pt} E_{k,m} = \frac{\hbar^2 \alpha_{k, m}^2}{2Mr_0^2}, \hspace{15pt} k \geq 0, m \in \mathbb{N},$$
 где $\alpha_{k, m}$ - $m$-й ноль функции Бесселя первого рода $J_k(x)$.
 \label{st:sec1_stat1}
 \end{statement}
-\begin{remark}
-Вместо $\sin$ можно использовать $\cos$.
-\end{remark}
+%\begin{remark}
+%Вместо $\sin$ можно использовать $\cos$.
+%\end{remark}
 \begin{proof}
-Для $r < \rho_0$ получаем дифференциальное уравнение второго порядка в частных производных $(\nabla^2 + \varkappa^2)\psi = 0$, где $\varkappa^2 = \frac{2M E}{\hbar^2}$. Запишем искомую функцию в виде $\psi(r, \phi) = R(r)\Phi(\phi)$. Тогда, в силу соображений из подраздела \ref{sec:ch1/sec1/sub1}, $\Phi(\phi) = A\cos{k\phi} + B\sin{k\phi}$ и $R(r) = J_k(\varkappa r)$, где $J_k(x)$ - функция Бесселя первого рода. Таким образом, $\psi(r, \phi) = J_k(\varkappa r) (\widetilde{A}\cos{k\phi} + \widetilde{B}\sin{k\phi} )$.
+Для $r < r_0$ получаем дифференциальное уравнение второго порядка в частных производных $(\nabla^2 + \varkappa^2)\psi = 0$, где $\varkappa^2 = \frac{2M E}{\hbar^2}$. Запишем искомую функцию в виде $\psi(r, \phi) = R(r)\Phi(\phi)$. Тогда, в силу соображений из подраздела \ref{sec:ch1/sec1/sub1}, $\Phi(\phi) = A\cos{k\phi} + B\sin{k\phi}$ и $R(r) = J_k(\varkappa r)$, где $J_k(x)$ - функция Бесселя первого рода. Таким образом, $\psi(r, \phi) = J_k(\varkappa r) (\widetilde{A}\cos{k\phi} + \widetilde{B}\sin{k\phi} )$.
 
-Из граничного условия заметим, что $$\psi(r, \phi) |_{\partial D^2} = 0 \implies J_k(\varkappa r)|_{r=\rho_0} = 0 \implies \varkappa \rho_0 \in \{\alpha: J_k(\alpha) = 0\},$$
-откуда допустимые значения $\varkappa \in \{ \frac{\alpha}{\rho_0} : J_k(\alpha)=0 \}$. Значения $k$ должны быть такими, чтоы выполнялось равенство $\Phi(\phi) = \Phi(\phi+2\pi)$, справедливое при условии $k \in \mathbb{Z}$. Учитывая также, что $\varkappa^2 = \frac{2M E}{\hbar^2}$, допустимыми значениями $E$ являются
-$$E = \frac{\hbar^2\varkappa^2}{2M} \in \left\{ \frac{\hbar^2\alpha^2}{2M\rho_0^2}: J_k(\alpha)=0 \right\}, k \in \mathbb{Z}.$$
+Из граничного условия заметим, что $$\psi(r, \phi) |_{\partial D^2} = 0 \implies J_k(\varkappa r)|_{r=r_0} = 0 \implies \varkappa r_0 \in \{\alpha: J_k(\alpha) = 0\},$$
+откуда допустимые значения $\varkappa \in \{ \frac{\alpha}{r_0} : J_k(\alpha)=0 \}$. Значения $k$ должны быть такими, чтоы выполнялось равенство $\Phi(\phi) = \Phi(\phi+2\pi)$, справедливое при условии $k \in \mathbb{Z}$. Учитывая также, что $\varkappa^2 = \frac{2M E}{\hbar^2}$, допустимыми значениями $E$ являются
+$$E = \frac{\hbar^2\varkappa^2}{2M} \in \left\{ \frac{\hbar^2\alpha^2}{2Mr_0^2}: J_k(\alpha)=0 \right\}, k \in \mathbb{Z}.$$
 
 Тогда, выбирая из множества $\alpha$ один конкретный $\alpha_{k, m}$ для некоторого $m \in \mathbb{N}$, получим вид собственных функций системы (с точностью до умножения на константу) 
-$$\psi_{k, m}(r, \phi) = J_k\left(\frac{\alpha_{k, m}r}{\rho_0}\right) \sin{k\phi},$$
+$$\psi_{k, m}(r, \phi) = J_k\left(\frac{\alpha_{k, m}r}{r_0}\right) \cos{(k \phi + \phi_0)},$$
 и их собственными значениями будут
-$$E_{k, m} = \frac{\hbar^2\alpha_{k, m}^2}{2M\rho_0^2}, \hspace{15pt} k, m \in \mathbb{Z},$$
+$$E_{k, m} = \frac{\hbar^2\alpha_{k, m}^2}{2Mr_0^2}, \hspace{15pt} k \geq 0, m \in \mathbb{N},$$
 где $\alpha_{k, m}$ - $m$-й ноль функции $J_k(x)$.
 \end{proof}
 
@@ -114,8 +114,8 @@ $$E_{k, m} = \frac{\hbar^2\alpha_{k, m}^2}{2M\rho_0^2}, \hspace{15pt} k, m \in \
     V(x, y) = 
     \Bigg\{
     \begin{array}{cc}
-        0, \rho_0 < \sqrt{x^2+y^2} < \rho_1 \\
-        \infty, \rho_1 < \sqrt{x^2+y^2} \text{ или } \sqrt{x^2+y^2} < \rho_0.\\
+        0, r_0 < \sqrt{x^2+y^2} < r_1 \\
+        \infty, r_1 < \sqrt{x^2+y^2} \text{ или } \sqrt{x^2+y^2} < r_0.\\
     \end{array}
 \] 
  $V(r)$ внутри области $\Omega$ равен нулю, а вне ее обращается в бесконечность. Задача равносильна поиску собственных функций и собственных значений оператора Лапласа в области $\Omega$ для функций, обращающихся в нуль на границе $\Omega$.
@@ -163,19 +163,19 @@ $f(\varkappa r_0)=0$.
 
 \subsection{Квантовый биллиард в секторе круга $D^2: \phi \in (0, \theta)$}\label{sec:ch1/sec1/sub5}
 Зафиксируем угол $\theta \in (0, 2\pi)$ и в полярных координатах $(r, \phi)$ в качестве $\Omega$ рассмотрим область 
-$S^2 = \{r, \phi : 0 \leq r \leq \rho_0 , 0 \leq \phi \leq \theta\}$.
+$S^2 = \{r, \phi : 0 \leq r \leq r_0 , 0 \leq \phi \leq \theta\}$.
 \[
     V(x, y) = 
     \Bigg\{
     \begin{array}{cc}
-        0, r \in (0, \rho_0), \phi \in (0, \theta) \\
+        0, r \in (0, r_0), \phi \in (0, \theta) \\
         \infty, \text{ иначе}.\\
     \end{array}
 \] 
 
 \begin{statement} \cite[p.~4]{wref13}
 В области $S^2$ собственные функции $\psi_{k, m}(r, \phi)$ и собственные значения $E_{k, m}$ оператора $\hat{H}$ имеют вид 
-$$\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{\rho_0}\right)\sin{\lambda\phi}, \hspace{15pt} E_{k, m} = \frac{\hbar^2 \alpha_{\lambda, m}^2}{2M\rho_0^2}, \hspace{15pt} k, m \in \mathbb{Z},$$
+$$\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{r_0}\right)\sin{\lambda\phi}, \hspace{15pt} E_{k, m} = \frac{\hbar^2 \alpha_{\lambda, m}^2}{2Mr_0^2}, \hspace{15pt} k, m \in \mathbb{N},$$
 где $\lambda = \frac{\pi k}{\theta}$, $\alpha_{\lambda, m}$ - $m$-й ноль функции Бесселя первого рода $J_\lambda(x)$.
 \label{st:sect1_stat1}
 \end{statement}
@@ -188,12 +188,12 @@ $$\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{\rho_0}\righ
 \end{array}
 \right.
 \]
-решение которой должно удовлетворять новому граничному условию $\Phi(0)=\Phi(\theta)=0$. Поэтому $\Phi(\theta) = \sin(\lambda \theta) \in \{\pi k, k \in \mathbb{Z}\} \implies \lambda = \frac{\pi k}{\theta}, k \in \mathbb{Z}$.
+решение которой должно удовлетворять новому граничному условию $\Phi(0)=\Phi(\theta)=0$. Поэтому $\Phi(\theta) = \sin(\lambda \theta) \in \{\pi k, k \in \mathbb{N}\} \implies \lambda = \frac{\pi k}{\theta}, k \in \mathbb{N}$.
 
 В силу соображений из предыдущего пункта, решение системы дифференциальных уравнений имеет вид:
-$$\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{\rho_0}\right)\sin{\lambda\phi} , \quad \lambda=\frac{\pi k}{\theta}.$$
+$$\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{r_0}\right)\sin{\lambda\phi} , \quad \lambda=\frac{\pi k}{\theta}.$$
 Аналогичными рассуждениями можно обнаружить, что собственные значения в этом случае принимают вид 
-$E_{k, m} = \frac{\hbar^2 \alpha_{\lambda, m}^2}{2M\rho_0^2}$ для $\lambda=\frac{\pi k}{\theta}.$
+$E_{k, m} = \frac{\hbar^2 \alpha_{\lambda, m}^2}{2Mr_0^2}$ для $\lambda=\frac{\pi k}{\theta}.$
 \end{proof}
 
 \begin{consequence} \cite[p.~4]{wref13}
@@ -403,25 +403,25 @@ R(\zeta, q, \rho) = A_\rho R_{even}(\zeta, q, \rho) + B_\rho R_{odd}(\zeta, q, \
 В случае эллипса на угловую функцию Матьё накладывается уловие периодичности: $\Phi(\phi) = \Phi(\phi+ 2 \pi)$. 
 Тогда, как следует из табл. \ref{tab:table1}, четные периодические функции $\Phi_{even}(\phi)$ соответствуют случаю $\zeta = a_m(q)$, при этом $\Phi_{even}(\phi) = ce_m(\phi, q)$. 
 Нечетные периодические решения $\Phi_{odd}(\phi)$ -- это функции 
-$se_m(\phi, q)$, соответствующие случаю $\zeta = b_m(q)$ для некоторого целого $m$. Таким образом, нами доказано
+$se_m(\phi, q)$, соответствующие случаю $\zeta = b_m(q)$ для некоторого натурального $m$. Таким образом, нами доказано
     
 \begin{statement}
 Собственные функции $\psi(\rho, \phi)$ оператора $\hat{H}$ в эллипсе имеют вид:
 \[
     \psi_{k,m}(\rho, \phi) = \left[
-    \begin{array}{ccc}
-    Ce_k(\rho, q_{k,m})ce_k(\phi, q_{k,m}), & \zeta = a_k(q_{k, m}); \\
-    Se_k(\rho, q_{k,m})se_k(\phi, q_{k,m}), & \zeta = b_k(q_{k, m}),
+    \begin{array}{cccc}
+    Ce_k(\rho, q_{k,m})ce_k(\phi, q_{k,m}), & \zeta = a_k(q_{k, m}), & k \in \{0\} \cup \mathbb{N}; \\
+    Se_k(\rho, q_{k,m})se_k(\phi, q_{k,m}), & \zeta = b_k(q_{k, m}), & k \in \mathbb{N},
     \end{array}
     \right.
 \]
-$k, m \in \mathbb{Z}$. При этом собственное значение  $q_{k, m}$ -- $m$-й нуль функции $Ce_k(\rho_0, q)$ или $Se_k(\rho_0, q)$ как функции от $q$.
+$m \in \mathbb{N}$. При этом собственное значение  $q_{k, m}$ -- $m$-й нуль функции $Ce_k(\rho_0, q)$ или $Se_k(\rho_0, q)$ как функции от $q$.
 Значение параметра $q_{k,m}$ связано с соответствующим собственным значением $E_{k,m}$ формулой  $q_{k,m} = \frac{M E_{k,m}\delta^2}{2\hbar^2} = \frac{\varkappa_{k,m}^2\delta^2}{4}$. 
 \end{statement}
 
 \subsubsection{Асимптотика собственных значений}\label{sec:ch1/sec2/sub2/sub2}
 \begin{theorem}
-Собственные значения $\varkappa^2_{k,m}(\delta), k, m \in \mathbb{N}$, оператора $\hat{H}$ в эллипсе зависят от половины фокусного расстояния $\delta$ с точностью до $o(\delta^2)$ следующим образом:
+Величины $\varkappa^2_{k,m}(\delta), k \geq 0, m \in \mathbb{N}$ для собственных функций оператора $\hat{H}$ в эллипсе зависят от половины фокусного расстояния $\delta$ с точностью до $o(\delta^2)$ следующим образом:
 {
 \begin{equation}
 \varkappa^2_{k,m}(\delta) = \left[
@@ -435,7 +435,7 @@ $k, m \in \mathbb{Z}$. При этом собственное значение  
  & \zeta = a_0(q); \\
 \dfrac{\alpha_{k, m}^2}{a^2} +  \delta^2 
 \dfrac{\alpha_{k, m}^3}{8 k a^4}
-\left.\frac{\frac{k-2}{k-1} J_{k-2}(u) - \frac{k+2}{k+1} J_{k+2}(u)}{\frac{\partial J_{k} (u)}{\partial u}}\right|_{u=\alpha_{k, m}} , & \zeta = b_k(q), & k > 2; \\
+\left.\frac{\frac{k-2}{k-1} J_{k-2}(u) - \frac{k+2}{k+1} J_{k+2}(u)}{\frac{\partial J_{k} (u)}{\partial u}}\right|_{u=\alpha_{k, m}} , & \zeta = b_k(q), & k \geq 3; \\
 \dfrac{\alpha_{2, m}^2}{a^2} -  \delta^2 \dfrac{\alpha_{2, m}^3}{12 a^4}\left.\dfrac{J_{4}(u)}{\frac{\partial J_{2} (u)}{\partial u}}\right|_{u=\alpha_{2, m}},
  & \zeta = b_2(q); \\
 \dfrac{\alpha_{1, m}^2}{a^2} -  \delta^2 \dfrac{3\alpha_{1, m}^3}{16 a^4}\left.\dfrac{ J_{3}(u)}{\frac{\partial J_{1} (u)}{\partial u}}\right|_{u=\alpha_{1, m}},
@@ -454,7 +454,7 @@ $k, m \in \mathbb{Z}$. При этом собственное значение  
 Пусть $\zeta = a_k(q_{k, m})$, $q=\frac{\varkappa^2 \delta^2}{4}$, и пусть $\psi_{k,m}(\rho, \phi) = Ce_k(\rho, q)ce_k(\phi, q)$ -- произведение решений радиального и углового уравнений Матьё с указанными параметрами $\zeta, q$. Для малых $q$ справедливо разложение (см. \cite[\S~2.2, с.~122---124]{wref12}):
 $$ce_k(\phi, q) = c_k \cos{k \phi} + q c_{k+2} \cos{(k+2) \phi} +q c_{k-2} \cos{(k-2) \phi} + o(q).$$ 
 \begin{lemma}
-Пусть $\zeta = a_k(q_{k, m})$, тогда $\varkappa^2$ при малых $\delta$ имеет вид
+Пусть $\zeta = a_k(q_{k, m})$, тогда $\varkappa_{k,m}^2$ при малых $\delta$ имеет вид
 \begin{multline*}
 \varkappa_{k, m}^2 = 
 \frac{\alpha_{k, m}^2}{a^2} +  \delta^2 \frac{\alpha_{k, m}^3}{2 a^4}\frac{1}{\left.\frac{\partial J_{k} (u)}{\partial u}\right|_{u=\alpha_{k, m}}} 
@@ -466,7 +466,7 @@ $$ce_k(\phi, q) = c_k \cos{k \phi} + q c_{k+2} \cos{(k+2) \phi} +q c_{k-2} \cos{
 \label{th:lemEllipse1}
 \end{lemma}
 \begin{proof}
-Возможные значения $\varkappa^2$ определяются из условия обращения в нуль радиальной функции Матьё $Ce_k(\rho, q)$ на граничном эллипсе $\rho = \rho_0 = \text{arccosh} (\frac{a}{\delta})$.
+Возможные значения $\varkappa_{k,m}^2$ определяются из условия обращения в нуль радиальной функции Матьё $Ce_k(\rho, q)$ на граничном эллипсе $\rho = \rho_0 = \text{arccosh} (\frac{a}{\delta})$.
 Коэффициенты $\{c_k\}$ связаны \cite{wref2} с точностью до постоянного множителя с разложением радиальной функции Матьё $Ce_k(\rho, q)$ в бесконечную сумму функций Бесселя следующим образом:
 \begin{multline*}
 Ce_k(\rho, q) \propto 
@@ -474,8 +474,8 @@ Ce_k(\rho, q) \propto
 	- q c_{k-2} J_{k-2}(2\sqrt{q}\cosh{\rho}) -
 	q c_{k+2} J_{k+2}(2\sqrt{q}\cosh{\rho}) + o(q).
 \end{multline*}
-Заметим, что из-за равенства $q = \frac{\varkappa^2\delta^2}{4}$ аргументы имеют вид $2 \sqrt{q} \cosh{\rho_0} = 2 \sqrt{\frac{\varkappa^2 \delta^2}{4}} \frac{a}{\delta} = \varkappa a$. 
-Запишем для краткости $u = \varkappa a$ и перепишем граничное условие $Ce_k(\rho_0, q) = 0$:
+Заметим, что из-за равенства $q = \frac{\varkappa_{k,m}^2\delta^2}{4}$ аргументы имеют вид $2 \sqrt{q} \cosh{\rho_0} = 2 \sqrt{\frac{\varkappa_{k,m}^2 \delta^2}{4}} \frac{a}{\delta} = \varkappa_{k,m} a$. 
+Запишем для краткости $u = \varkappa_{k,m} a$ и перепишем граничное условие $Ce_k(\rho_0, q) = 0$:
 $$0 = Ce_k(\rho_0, q) =
 	c_k J_k(u) 
 	- q c_{k-2} J_{k-2}(u) -
@@ -496,7 +496,7 @@ $$0 =
 \end{align*}
 где $\alpha_{k, m}$ -- $m$-й нуль функции $J_k(x)$.  
 
-Из равенства $q=\frac{\varkappa^2 a^2 \delta^2}{4 a^2}=\frac{u^2 \delta^2}{4a^2}$ можно получить выражение для собственного значения
+Из равенства $q=\frac{\varkappa_{k,m}^2 a^2 \delta^2}{4 a^2}=\frac{u^2 \delta^2}{4a^2}$ можно получить выражение для собственного значения
 $$\varkappa_{k, m}^2 = \frac{u^2}{a^2} = \frac{u_0^2}{a^2} + \frac{2 q u_0 u_1}{a^2} + o(q)= \frac{u_0^2}{a^2} +  \delta^2 \frac{u_0^3 u_1}{2 a^4} + o(\delta^2).$$ 
 Непосредственной подстановкой $u_0, u_1$ в полученную формулу, получаем
 $$\varkappa_{k, m}^2 = 
@@ -507,11 +507,11 @@ $$\varkappa_{k, m}^2 =
 $$ 
 \end{proof}
 
-Пусть $\zeta = b_k(q_{k,m})$, $q=\frac{\varkappa^2 \delta^2}{4}$, и пусть 
+Пусть $\zeta = b_k(q_{k,m})$, $q=\frac{\varkappa_{k,m}^2 \delta^2}{4}$, и пусть 
 $\psi_{k,m}(\rho, \phi) = Se_k(\rho, q)se_k(\phi, q)$ -- произведение решений радиального и углового уравнений Матьё с указанными параметрами $\zeta, q$. Для малых $q$ справедливо разложение (см. \cite[\S~2.2, с.~122---124]{wref12}):
 $$se_k(\phi, q) = c_k \sin{k \phi} + q c_{k+2} \sin{(k+2) \phi} +q c_{k-2} \sin{(k-2) \phi} + o(q).$$ 
 \begin{lemma}
-Пусть $\zeta = b_k(q_{k, m})$, тогда $\varkappa^2$ при малых $\delta$ имеет вид
+Пусть $\zeta = b_k(q_{k, m})$, тогда $\varkappa_{k,m}^2$ при малых $\delta$ имеет вид
 \begin{multline*}
 \varkappa_{k, m}^2 = 
 \frac{\alpha_{k, m}^2}{a^2} +  \delta^2 \frac{\alpha_{k, m}^3}{2 a^4}\frac{1}{\left.\frac{\partial J_{k} (u)}{\partial u}\right|_{u=\alpha_{k, m}}} \times \\ \times
@@ -523,7 +523,7 @@ $$se_k(\phi, q) = c_k \sin{k \phi} + q c_{k+2} \sin{(k+2) \phi} +q c_{k-2} \sin{
 \label{th:lemEllipse2}
 \end{lemma}
 \begin{proof}
-Возможные значения $\varkappa^2$ определяются из условия обращения в нуль радиальной функции Матьё $Se_k(\rho, q)$ на граничном эллипсе $\rho = \rho_0$.
+Возможные значения $\varkappa_{k,m}^2$ определяются из условия обращения в нуль радиальной функции Матьё $Se_k(\rho, q)$ на граничном эллипсе $\rho = \rho_0$.
 Коэффициенты $\{c_k\}$ связаны \cite{wref2} с точностью до постоянного множителя с разложением радиальной функции Матьё $Se_k(\rho, q)$ в бесконечную сумму функций Бесселя следующим образом:
 \begin{multline*}
 Se_k(\rho, q) \propto 
@@ -531,8 +531,8 @@ Se_k(\rho, q) \propto
 	- q (k-2) c_{k-2} J_{k-2}(2\sqrt{q}\cosh{\rho}) -
 	q (k+2) c_{k+2} J_{k+2}(2\sqrt{q}\cosh{\rho}) + o(q).
 \end{multline*}
-Заметим, что из-за равенства $q = \frac{\varkappa^2\delta^2}{4}$ аргументы имеют вид $2 \sqrt{q} \cosh{\rho_0} = 2 \sqrt{\frac{\varkappa^2 \delta^2}{4}} \frac{a}{\delta} = \varkappa a$. 
-Запишем для краткости $u = \varkappa a$ и перепишем граничное условие $Se_k(\rho_0, q) = 0$:
+Заметим, что из-за равенства $q = \frac{\varkappa_{k,m}^2\delta^2}{4}$ аргументы имеют вид $2 \sqrt{q} \cosh{\rho_0} = 2 \sqrt{\frac{\varkappa_{k,m}^2 \delta^2}{4}} \frac{a}{\delta} = \varkappa_{k,m} a$. 
+Запишем для краткости $u = \varkappa_{k,m} a$ и перепишем граничное условие $Se_k(\rho_0, q) = 0$:
 $$0 = Se_k(\rho_0, q) =
 	k c_k J_k(u) 
 	- q (k-2) c_{k-2} J_{k-2}(u) -
@@ -555,7 +555,7 @@ $$0 = Se_k(\rho_0, q) =
 \end{align*}
 где $\alpha_{k, m}$ -- $m$-й нуль функции $J_k(x)$.  
 
-Из равенства $q=\frac{\varkappa^2 a^2 \delta^2}{4 a^2}=\frac{u^2 \delta^2}{4a^2}$ можно получить выражение для собственного значения
+Из равенства $q=\frac{\varkappa_{k,m}^2 a^2 \delta^2}{4 a^2}=\frac{u^2 \delta^2}{4a^2}$ можно получить выражение для собственного значения
 $$\varkappa_{k, m}^2 = \frac{u^2}{a^2} = \frac{u_0^2}{a^2} + \frac{2 q u_0 u_1}{a^2} + o(q)= \frac{u_0^2}{a^2} +  \delta^2 \frac{u_0^3 u_1}{2 a^4} + o(\delta^2).$$ 
 Непосредственной подстановкой $u_0, u_1$ в полученную формулу, получаем
 \begin{multline*}
@@ -617,7 +617,7 @@ se_k(\phi, q) =
 \begin{array}{ll}
 	\sin{k\phi} + 
 	\frac{q}{4(k-1)} \sin{(k-2)\phi} - 
-	\frac{q}{4(k+1)} \sin{(k+2)\phi} + o(q), \ \ & k > 2;\\
+	\frac{q}{4(k+1)} \sin{(k+2)\phi} + o(q), \ \ & k \geq 3;\\
 	\sin{2\phi} - \frac{q}{12} \sin{4 \phi} + o(q), & k = 2; \\
 	\sin{\phi} - \frac{q}{8}\sin{3 \phi} + o(q), & k = 1. 
 \end{array}
@@ -625,7 +625,7 @@ se_k(\phi, q) =
 \]
 }
 
-Пусть $k > 2$. Тогда $c_k = 1, c_{k+2}=\frac{-1}{4(k+1)},  c_{k-2}=\frac{1}{4(k-1)}$. Применим лемму \ref{th:lemEllipse2}:
+Пусть $k \geq 3$. Тогда $c_k = 1, c_{k+2}=\frac{-1}{4(k+1)},  c_{k-2}=\frac{1}{4(k-1)}$. Применим лемму \ref{th:lemEllipse2}:
 \begin{multline*}
 \varkappa_{k, m}^2 = 
 \frac{\alpha_{k, m}^2}{a^2} +  \delta^2 \frac{\alpha_{k, m}^3}{2 a^4}\frac{1}{\left.\frac{\partial J_{k} (u)}{\partial u}\right|_{u=\alpha_{k, m}}} \times \\ \times

@@ -342,11 +342,12 @@ $$a^2-x^2=\frac{a^2-\lambda_0}{b^2-\lambda_0}y^2+\lambda_0 \ \text{ и }\  b^2-y
 \begin{array}{ll}
     \Lambda(x, y, v_x, v_y) n_1^2, \qquad  \  \ \qquad   \text{ если } (x,y) \in \Omega_1 
     \\
-    \Lambda(x, y, v_x, v_y) n_p^2 + \sum_{j=1}^{p-1} \lambda_j(n_j^2-n_{j+1}^2), \\
-     \qquad \qquad \qquad \qquad \qquad \qquad  \text{ если } (x,y) \in \Omega_p \text{ для } 1 < p \leq 4. 
+    \Lambda(x, y, v_x, v_y) n_p^2 + \sum_{j=1}^{p-1} \lambda_{\sigma(j)}(n_j^2-n_{j+1}^2), \\
+     \qquad \qquad \qquad \qquad \qquad \qquad  \text{ если } (x,y) \in \Omega_p \text{ для } 1 < p \leq 4,
 \end{array}
 \right.
 \end{equation*}
+где $\sigma(j)$ -- номер квадрики, разделяющей $\Omega_j$ и $\Omega_{j+1}$. 
 Неформально говоря, она почти подходит на роль дополнительного интеграла, но имеет разрыв на дуге, разделяющей области $\Omega_1$ и $\Omega_4$. Можно проверить, что на любой бильярдной траектории, пересекающей эту дугу, функция $\widetilde{\Xi}$ испытывает один и тот же скачок, равный  $\pm \gamma_A$. 
 Поэтому мы определим \textit{первый интеграл $\Xi(x, y, v_x, v_y)$ со значениями в $S^1= \mathbb{R}/\gamma_A \mathbb{Z}$ }по формуле $$\Xi(x, y, v_x, v_y) = \widetilde{\Xi}(x, y, v_x, v_y) \mod \gamma_A.$$
 Эта величина на траекториях бильярда сохраняется.
@@ -380,11 +381,13 @@ $$\gamma_{A_2} = \lambda_1(n_1^2 - n_2^2) + \lambda_2(n_2^2-n_3^2) + \lambda_1(n
     \Lambda(x, y, v_x, v_y) n_1^2,  \qquad \ \  \qquad  \text{ если } (x,y) \in \Omega_1 
     \\
     \Lambda(x, y, v_x, v_y) n_p^2 + 
-    \sum_{j=1}^{p-1} \lambda_j(n_j^2-n_{j+1}^2), \\
-     \qquad \qquad  \qquad \qquad  \qquad \qquad \text{ если } (x,y) \in \Omega_p \text{ для } 1 < p \leq 4. 
+    \sum_{j=1}^{p-1} \lambda_{\sigma(j)}(n_j^2-n_{j+1}^2), \\
+     \qquad \qquad  \qquad \qquad  \qquad \qquad \text{ если } (x,y) \in \Omega_p \text{ для } 1 < p \leq 4,
 \end{array}
 \right.
 \end{equation*}
+где $\sigma(j)$ -- номер квадрики, разделяющей $\Omega_j$ и $\Omega_{j+1}$. 
+
  \medskip
 \textit{ Случай 3: две точки пересечения.}
 Рассмотрим области, изображенные на рис. \ref{fig:pt8:_example8}. 

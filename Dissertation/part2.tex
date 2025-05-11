@@ -8,9 +8,9 @@ W_{a, b}(u) = Y_a(u)J_b(\lambda u) - Y_a(\lambda u)J_b(u), \quad \lambda = \frac
 \label{eq:YJdef}
 \end{equation}
 
-Обозначим $\nu = \frac{k}{p}, k \in \mathbb{Z}$. 
+Обозначим $\nu = \frac{k}{p}, k \in \mathbb{N}$. 
 \begin{theorem}
-	Значение $\varkappa^2_{k,m}(\delta), k, m \in \mathbb{N}$, зависит от половины фокусного расстояния $\delta$ с точностью до $o(\delta^2)$ следующим образом:
+	Величина $\varkappa^2_{k,m}(\delta), k, m \in \mathbb{N}$, зависит от половины фокусного расстояния $\delta$ с точностью до $o(\delta^2)$ следующим образом:
 {\small
 \begin{equation}
 \varkappa^2_{k,m}(\delta) = \left[
@@ -489,50 +489,49 @@ $$\varkappa^2 = \dfrac{\alpha_{\nu, m}^2}{r_0^2} - \delta^2 \dfrac{\alpha_{\nu, 
 \section{Квантовый биллиард в эллиптическом секторе}\label{sec:ch2/sec2}
 %\subsection{Рассматриваемые области}\label{sec:ch2/sec2/sub1}
 
-Мы рассмотрим квантовую частицу в областях двух типов: симметричную $A_\varepsilon$ и несимметричную $B_\varepsilon$, где симметрия подразумевается относительно оси $Ox$.
-Обе области выбраны таким образом, чтобы при стремлении расстояния между фокусами $2r_0 \varepsilon $ к нулю (или, что эквивалентно, при стремлении эксцентриситета $\varepsilon$ к нулю) области приближались к круговому сектору.
+Мы рассмотрим квантовую частицу в областях двух типов: симметричной $A_\delta$ и несимметричной $B_\delta$, где симметрия подразумевается относительно оси $Ox$.
+Обе области выбраны таким образом, чтобы при стремлении расстояния между фокусами $2 \delta$ к нулю области приближались к круговому сектору.
 Поведение квантовой частицы в круговом секторе рассмотрено в \cite{wref13}.
 В частности, доказано, что для собственных функций $\psi_{k,m}(r,\phi)$ и соответствующих собственных значений $E_{k,m}$ справедливы формулы
 \begin{align}
 &\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, m}r}{r_0}\right)\sin{\lambda\phi}, \notag \\  
 &E_{k,m} = \frac{\hbar^2 \alpha_{\lambda, m}^2}{2M r_0^2},
- \qquad k, m \in \mathbb{Z}_+, \label{eq:energy0}
+ \qquad k, m \in \mathbb{Z}, \label{eq:energy0}
 \end{align}
 где 
 $\lambda = \frac{\pi k}{\phi_0}$ и $\alpha_{\lambda, m}$ является
 $m$-ым нулем функции Бесселя первого рода $J_\lambda(x)$.
 
-Прежде чем переходить к описанию областей $A_\varepsilon$ и  $B_\varepsilon$, введем подходящую эллиптическую систему координат.
+Прежде чем переходить к описанию областей $A_\delta$ и  $B_\delta$, введем подходящую эллиптическую систему координат.
 Зафиксируем $r_0>0$. 
-В евклидовых координатах эллипс с большой полуосью  $r_0$ и эксцентриситетом  $\varepsilon$ 
-задается уравнением
+В евклидовых координатах эллипс с большой полуосью  $r_0$ и фокусами в точках $(\pm \delta, 0)$ задается уравнением
 $$
-\frac{x^2}{r_0^2} + \frac{y^2}{r_0^2(1-\varepsilon^2)}=1.
+\frac{x^2}{r_0^2} + \frac{y^2}{r_0^2 -\delta^2}=1.
 $$
 В эллиптических координатах
 $(\rho,\phi)$ таких, что
 \begin{equation}
 \label{eq:coord}
-(x, y) = (r_0\varepsilon \cosh \rho \cos \phi , r_0\varepsilon \sinh \rho \sin \phi),
+(x, y) = (\delta \cosh \rho \cos \phi , \delta \sinh \rho \sin \phi),
 \end{equation}
 этот эллипс задается координатной линией $\rho=\rho_0$,
-где $\cosh \rho_0 = \frac{1}{\varepsilon}$.
+где $\cosh \rho_0 = \dfrac{r_0}{\delta}$.
 
 В декартовых координатах пучок софокусных гипербол определяется равенством
-$\frac{x^2}{r_0^2 - \lambda} + \frac{y^2}{r_0^2(1-\varepsilon^2) - \lambda} = 1$, где $\lambda\in (r_0^0 (1-\varepsilon^2),r_0^2)$.
+$\frac{x^2}{r_0^2 - \lambda} + \frac{y^2}{r_0^2 - \delta^2 - \lambda} = 1$, где $\lambda\in (r_0^2 - \delta^2, r_0^2)$.
 Гипербола из пучка имеет большую полуось
  $A=\sqrt{r_0^2 - \lambda}$
-и малую полуось $ B=\sqrt{\lambda - r_0^2(1-\varepsilon^2)}$.
+и малую полуось $ B=\sqrt{\lambda - (r_0^2 - \delta^2)}$.
  
-Теперь потребуем зависимости параметра $\lambda $ от  $\varepsilon$ такой, чтобы отношение $k=B/A$ оставалось постоянным, при этом асимптоты также не будут меняться при изменениях $\varepsilon$. Пусть $k^2 = \tan ^2 \phi_0$, где $\pi/2\ne \phi_0\in (0,\pi) $.
- Тогда $A^2(1+k^2) = A^2+B^2 = r_0^2\varepsilon^2.$
- Следовательно, $A^2=\frac{r_0^2\varepsilon^2}{1+k^2} = r_0^2\varepsilon^2\cos^2\phi_0$ и
- $B^2=\frac{r_0^2\varepsilon^2k^2}{1+k^2} = r_0^2\varepsilon^2\sin^2\phi_0$.
+Теперь потребуем зависимости параметра $\lambda $ от  $\delta$ такой, чтобы отношение $k=B/A$ оставалось постоянным, при этом асимптоты также не будут меняться при изменениях $\delta$. Пусть $k^2 = \tan ^2 \phi_0$, где $\pi/2\ne \phi_0\in (0,\pi) $.
+ Тогда $A^2(1+k^2) = A^2+B^2 = \delta^2.$
+ Следовательно, $A^2=\dfrac{\delta^2}{1+k^2} = \delta^2\cos^2\phi_0$ и
+ $B^2=\dfrac{\delta^2k^2}{1+k^2} = \delta^2\sin^2\phi_0$.
  Таким образом, будем рассматривать софокусные гиперболы
  \begin{equation}\label{eq:hyper}
- \frac{x^2}{r_0^2\varepsilon^2\cos^2\phi_0}  -  \frac{y^2}{r_0^2\varepsilon^2\sin^2\phi_0}  =1
+ \frac{x^2}{\delta^2\cos^2\phi_0}  -  \frac{y^2}{\delta^2\sin^2\phi_0}  =1
  \end{equation}
-С фокусами в точках $(\pm r_0\varepsilon,0)$ и асимптотами
+С фокусами в точках $(\pm \delta, 0)$ и асимптотами
  $
   \frac{x^2}{\cos^2\phi_0}  -  \frac{y^2}{\sin^2\phi_0}  =0.
  $
@@ -542,41 +541,41 @@ $\frac{x^2}{r_0^2 - \lambda} + \frac{y^2}{r_0^2(1-\varepsilon^2) - \lambda} = 1$
 определены следующим образом:
 $$
 \begin{aligned}
- A_\varepsilon:&\qquad\qquad \rho \in [0, \rho_0], \phi \in [-\phi_0, \phi_0 ],\\
-  B_\varepsilon:&\qquad\qquad  \rho \in [0, \rho_0], \phi \in [\phi_0, \phi_1 ], 
+ A_\delta:&\qquad\qquad \rho \in [0, \rho_0], \phi \in [-\phi_0, \phi_0 ],\\
+  B_\delta:&\qquad\qquad  \rho \in [0, \rho_0], \phi \in [\phi_0, \phi_1 ], 
 \end{aligned}
 $$
-Заметим, что замыкание  $A_\varepsilon$ содержит множество особых точек эллиптической системы координат (\ref{eq:coord}), мы будем считать, что эти точки также принадлежат $A_\varepsilon$.
+Заметим, что замыкание  $A_\delta$ содержит множество особых точек эллиптической системы координат (\ref{eq:coord}), мы будем считать, что эти точки также принадлежат $A_\delta$.
 
 \begin{figure}[ht]
     \begin{minipage}[b][][b]{0.49\linewidth}\centering
         \includegraphics[width=0.8\linewidth]{right1.pdf} \\ 
-        Множество $A_\varepsilon$, $\phi_0<\pi/2$
+        Множество $A_\delta$, $\phi_0<\pi/2$
     \end{minipage}
     \hfill
     \begin{minipage}[b][][b]{0.49\linewidth}\centering
         \includegraphics[width=0.8\linewidth]{left1.pdf} \\ 
-        Множество $A_\varepsilon$, $\phi_0>\pi/2$
+        Множество $A_\delta$, $\phi_0>\pi/2$
     \end{minipage}
-\caption{Примеры множеств $A_\varepsilon$}
+\caption{Примеры множеств $A_\delta$}
 \end{figure}
 
 \begin{figure}[ht]
 \begin{minipage}{0.9\linewidth}\centering
         \includegraphics[width=0.8\linewidth]{up1.pdf}  
     \end{minipage}
-\caption{        Множество $B_\varepsilon$, $\phi_0<\phi_1<\pi/2$}
+\caption{        Множество $B_\delta$, $\phi_0<\phi_1<\pi/2$}
 \end{figure}
 
-Очевидно, что с приближением величины $\varepsilon$ к 0, эллипс приближается к кругу радиуса $r_0$,
+Очевидно, что с приближением величины $\delta$ к 0, эллипс приближается к кругу радиуса $r_0$,
 а любая гипербола~(\ref{eq:hyper}) приближается к собственным асимптотам.
 
-Следовательно, при $\varepsilon\to 0$, область $A$ приближается к круговому сектору с величиной центрального угла $2\phi_0$, 
+Следовательно, при $\delta \to 0$, область $A$ приближается к круговому сектору с величиной центрального угла $2\phi_0$, 
 а область  $B$ приближается к круговому сектору с углом $\phi_1-\phi_0$. 
 
 
-%\subsection{Симметричная область $A_\varepsilon: \rho \in [0,\rho_0], \phi \in [-\phi_0,\phi_0]$}\label{sec:ch2/sec2/sub2}
-\subsection{Симметричная область $A_\varepsilon$}\label{sec:ch2/sec2/sub1}
+%\subsection{Симметричная область $A_\delta: \rho \in [0,\rho_0], \phi \in [-\phi_0,\phi_0]$}\label{sec:ch2/sec2/sub2}
+\subsection{Симметричная область $A_\delta$}\label{sec:ch2/sec2/sub1}
 \subsubsection{Собственные функции и асимптотика собственных значений}\label{sec:ch2/sec2/sub1/sub1}
 
 Обозначим через $\Phi_{even}(\zeta, q, \phi), \Phi_{odd}(\zeta, q, \phi)$ четное и нечетное решения уравнения $\frac{\partial^2}{\partial \phi^2}\Phi + (\zeta - 2q\cos{2\phi})\Phi = 0$, соответственно. 
@@ -592,15 +591,15 @@ $$
 \end{array}
 \]
 
-Напомним, что эллиптическая система координат имеет особенности на соединяющем фокусы отрезке. Область $A_\varepsilon$ содержит особые точки эллиптической системы координат, а именно, они находятся на отрезке $J$ с концами на правом фокусе и на вершине дуги гиперболы.
+Напомним, что эллиптическая система координат имеет особенности на соединяющем фокусы отрезке. Область $A_\delta$ содержит особые точки эллиптической системы координат, а именно, они находятся на отрезке $J$ с концами на правом фокусе и на вершине дуги гиперболы.
 Следовательно, решение $\psi(\rho, \phi)$ и его производная должны удовлетворять условиям непрерывности \eqref{eq:disp} и \eqref{eq:grad} на  $J$.
-В силу соображений раздела \ref{sec:ch1/sec2/sub3/sub1}, собственная функция  $\psi(\rho,\phi)=R(\rho) \Phi(\phi)$ оператора $\hat{H}$ в области $A_\varepsilon$ является произведением радиальной и угловой функций Матьё одинаковой четности:
+В силу соображений раздела \ref{sec:ch1/sec2/sub3/sub1}, собственная функция  $\psi(\rho,\phi)=R(\rho) \Phi(\phi)$ оператора $\hat{H}$ в области $A_\delta$ является произведением радиальной и угловой функций Матьё одинаковой четности:
 $$ \psi(\rho,\phi) = \Phi_{even}(\phi) R_{even}(\rho)  
 \text{ или }
  \psi(\rho,\phi) = \Phi_{odd}(\phi) R_{odd}(\rho) .  $$
 %\hfill
 %$\Box$
-То есть, в наших обозначениях в области $A_\varepsilon$ для собственных функций $\psi_{k, m}(\rho, \phi)$ оператора   $\hat{H}$ справедливы выражения
+То есть, в наших обозначениях в области $A_\delta$ для собственных функций $\psi_{k, m}(\rho, \phi)$ оператора   $\hat{H}$ справедливы выражения
 \begin{equation}
 \psi_{k, m}(\rho, \phi) = 
 \left[
@@ -612,14 +611,14 @@ $$ \psi(\rho,\phi) = \Phi_{even}(\phi) R_{even}(\rho)
 \end{equation}
 с параметрами
 \[
-\nu = \nu_{k,m} = \nu_0+ \varepsilon^2 \nu_1 + o(\varepsilon^2),  \quad q=q_{k,m} = \dfrac{\varkappa_{k,m}^2 r_0^2 \varepsilon^2}{4},
+\nu = \nu_{k,m} = \nu_0+ \delta^2 \frac{\alpha_{\nu_0, m}^2}{4 r_0^2}  \nu_1 + o(\delta^2),  \quad q=q_{k,m} = \dfrac{\varkappa_{k,m}^2 \delta^2}{4},
 \]
 где
-$$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\alpha_{\nu_0, m}^2}{4} \frac{\pi k \sin 2\phi_0}{\pi^2 k^2 - 4\phi_0^2}  .$$
-Для соответствующих собственных  значений  $\varkappa^2_{k, m}$ справедливы равенства
+$$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\pi k \sin 2\phi_0}{\pi^2 k^2 - 4\phi_0^2}  .$$
+Соответствующие собственные значения $E_{k, m}$ выражаются через величины $\varkappa^2_{k, m}$ по формуле $E_{k, m} =  \frac{\hbar^2 \varkappa^2_{k, m}}{2M}$, при этом для последних  справедливы равенства
 \begin{equation}
 \varkappa^2_{k, m} = \dfrac{\alpha_{\nu_0, m}^2}{r_0^2} +
-\varepsilon^2 \dfrac{\alpha_{\nu_0, m}^3}{2 r_0^2}\dfrac{\varkappa_1 }{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} } + o(\varepsilon^2),\label{eq:val}
+\delta^2 \dfrac{\alpha_{\nu_0, m}^3}{2 r_0^4}\dfrac{\varkappa_1 }{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} } + o(\delta^2),\label{eq:val}
 \end{equation}
 где
 \begin{equation*}
@@ -627,7 +626,7 @@ $$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\alpha_{\nu_0, m}
     \left[
 \begin{array}{ll}
 \frac{J_{\nu_0-2}(\alpha_{\nu_0, m})}{4(\nu_0-1)} - \frac{J_{\nu_0+2}(\alpha_{\nu_0, m})}{4(\nu_0+1)} 
-  - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu=\nu_0}(\alpha_{\nu_0, m}),\qquad \text{для нечетных $k\geq 3$ ;} \\[10pt]
+  - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu=\nu_0}(\alpha_{\nu_0, m}),\qquad \text{для нечетных $k\geq 1$ ;} \\[10pt]
 \frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} -\\
 \qquad - \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m})}{4\nu_0 (\nu_0+1)}  
 - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m}), \qquad \ \ \!    \text{для четных $k \geq 2$}.        
@@ -672,7 +671,7 @@ Se_\nu(\rho, q) \,\propto\,\,  \nu J_\nu(2\sqrt{q} \cosh{\rho})
 \end{multline*}
 Символ $\propto$ означает равенство с точностью до умножения на ненулевую константу.
 
-Заметим, что $\frac{1}{\varepsilon} = \cosh \rho = \cosh \rho_0 $, тогда из  $q = \frac{\varkappa^2 r_0^2 \varepsilon^2}{4}$ следует, что $2\sqrt{q} \cosh{\rho_0} =   \varkappa r_0$. 
+Заметим, что $\dfrac{r_0}{\delta} = \cosh \rho = \cosh \rho_0 $, тогда из  $q = \frac{\varkappa^2 \delta^2}{4}$ следует, что $2\sqrt{q} \cosh{\rho_0} =   \varkappa r_0$. 
 Для краткости обозначим $u = \varkappa r_0$. Теперь подставим  
 $\nu=\nu_0 + q\nu_1 + o(q)$ в граничное условие $0 = Se_{\nu(q)}(\rho_0, q)$:
 \begin{multline*}
@@ -705,16 +704,17 @@ $\nu=\nu_0 + q\nu_1 + o(q)$ в граничное условие $0 = Se_{\nu(q)
 
 
 
-Из равенства $q=\frac{\varkappa^2 r_0^2 \varepsilon^2}{4}=\frac{u^2 \varepsilon^2}{4}$ можно получить выражение для собственного значения
-$$\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \frac{2 q u_0 u_1}{r_0^2} + o(q)= \frac{u_0^2}{r_0^2} +  \varepsilon^2 \frac{u_0^3 u_1}{2 r_0^2} + o(\varepsilon^2).$$ 
+Из равенства $q=\frac{\varkappa^2 \delta^2}{4}=\frac{u^2 \delta^2}{4 r_0^2}$ можно получить выражение для собственного значения
+$$\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \frac{2 q u_0 u_1}{r_0^2} + o(q)= \frac{u_0^2}{r_0^2} +  \delta^2 \frac{u_0^3 u_1}{2 r_0^4} + o(\delta^2).$$ 
 Из уравнений~(\ref{eq:u0}) и (\ref{eq:u1}) для $u_0, u_1$ верны выражения
 \begin{align}
-  & \nu_0 = \frac{2\pi k}{2\phi_0},   \nu_1 = \frac{2 \pi k \sin 2 \phi_0}{4 k^2\pi^2  - 4\phi_0^2},\\
+  & \nu_0 = \frac{2\pi k}{2\phi_0}, \nu_1 = \frac{2 \pi k \sin 2 \phi_0}{4 k^2\pi^2  - 4\phi_0^2},\\
+    & \nu_{k, m} = \nu_0 + \delta^2 \frac{\alpha_{\nu_0, m}^2}{4 r_0^2} \nu_1 + o(\delta^2), \\
    & \varkappa_{k, m}^2 = \frac{\alpha_{\nu_0, m}^2}{r_0^2} 
-+  \varepsilon^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^2}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} } \biggl(
++  \delta^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^4}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} } \biggl(
 \frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} - \notag \\
 &\qquad\qquad{}- \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m})}{4\nu_0 (\nu_0+1)} - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m})
-    \biggr) + o(\varepsilon^2).
+    \biggr) + o(\delta^2).
  \label{eq:oddSe_nueigenvalues}
  \end{align}
 
@@ -743,7 +743,7 @@ Ce_\nu(\rho, q) = & J_\nu(2\sqrt{q} \cosh{\rho}) + {}\notag \\
 &{}+q \biggl( \frac{1}{4(\nu+1)} J_{\nu+2}(2\sqrt{q}\cosh{\rho}) -\frac{1}{4(\nu-1)} J_{\nu-2}(2\sqrt{q} \cosh{\rho})
 \biggr) + o(q).
 \end{align*}
-Заметим, что $\frac{1}{\varepsilon} = \cosh \rho = \cosh \rho_0 $, тогда из  $q = \frac{\varkappa^2 r_0^2 \varepsilon^2}{4}$ следует, что $2\sqrt{q} \cosh{\rho_0} =   \varkappa r_0$. 
+Заметим, что $\dfrac{r_0}{\delta} = \cosh \rho = \cosh \rho_0 $, тогда из  $q = \frac{\varkappa^2 \delta^2}{4}$ следует, что $2\sqrt{q} \cosh{\rho_0} =   \varkappa r_0$. 
 Обозначим для краткости $u = \varkappa r_0$. 
 
 Подставим  $\nu = \nu_0 + q \nu_1 + o(q)$  в граничное условие $0 = Ce_{\nu(q)}(\rho_0, q)$:
@@ -774,16 +774,17 @@ Ce_\nu(\rho, q) = & J_\nu(2\sqrt{q} \cosh{\rho}) + {}\notag \\
 где $\alpha_{\nu_0, m}$ -- $m$-й нуль функции $J_{\nu_0}(x)$.  
 
 Как и в предыдущем случае, собственное значение
-$$\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \frac{u_0^3 u_1}{2r_0^2} + o(\varepsilon^2)$$ получается подстановкой значений $u_0, u_1$:
+$$\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \delta^2 \frac{u_0^3 u_1}{2r_0^4} + o(\delta^2)$$ получается подстановкой значений $u_0, u_1$:
 \begin{align*}
 &\nu_0 = \frac{\pi (1 + 2 k)}{2 \phi_0}, \quad \nu_1 = \frac{\pi (1+2k) \sin 2\phi_0}{\pi^2(1+2k)^2 - 4\phi_0^2},\\
-&\varkappa_{k, m}^2 = \frac{\alpha_{\nu_0, m}^2}{r_0^2} + \varepsilon^2 \frac{\alpha_{\nu_0, m}^3}{2r_0^2} \frac{1}{\left.\frac{\partial J_{\nu_0} (u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}}}\biggl(
+& \nu_{k, m} = \nu_0 + \delta^2 \frac{\alpha_{\nu_0, m}^2}{4 r_0^2} \nu_1 + o(\delta^2), \\
+&\varkappa_{k, m}^2 = \frac{\alpha_{\nu_0, m}^2}{r_0^2} + \delta^2 \frac{\alpha_{\nu_0, m}^3}{2r_0^4} \frac{1}{\left.\frac{\partial J_{\nu_0} (u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}}}\biggl(
 \frac{J_{\nu_0-2}(\alpha_{\nu_0, m})}{4(\nu_0-1)} - \notag\\
 &\qquad{} - \frac{J_{\nu_0+2}(\alpha_{\nu_0, m})}{4(\nu_0+1)}    - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu=\nu_0}(\alpha_{\nu_0, m})
-\biggr) + o(\varepsilon^2).
+\biggr) + o(\delta^2).
 \end{align*}
 
-\subsubsection{Особый случай: $A_\varepsilon$ для $\phi_0=\pi/2$}\label{sec:ch2/sec2/sub1/sub2}
+\subsubsection{Особый случай: $A_\delta$ для $\phi_0=\pi/2$}\label{sec:ch2/sec2/sub1/sub2}
 
 
 Для $\nu\ne 1$ формулы для собственных функций и собственных значений, см. уравнения (\ref{eq:fun}) и (\ref{eq:val}), верны. Единственным исключением является случай  $\nu=\nu_0=1$.
@@ -797,8 +798,8 @@ ce_1(\phi, q) = 	\cos{\phi}  - \frac{q}{8} \cos{3\phi} + o(q),
 \begin{equation*}
 Ce_1(\rho, q) = J_1(2\sqrt{q} \cosh{\rho}) + \frac{q}{8} J_3(2\sqrt{q}\cosh{\rho}) + o(q).
 \end{equation*}
-Из подстановок $\cosh\rho = \cosh\rho_0 =  \frac{1}{\varepsilon}$ и $q = \frac{\varkappa^2 r_0^2 \varepsilon^2}{4}$ следует равенство
-$2\sqrt{q} \cosh{\rho_0} = 2 \frac{\varkappa r_0 \varepsilon}{2} \frac{1}{\varepsilon} = \varkappa r_0$. Для краткости $\varkappa r_0$ обозначим через $u$. 
+Из подстановок $\cosh\rho = \cosh\rho_0 =  \frac{r_0}{\delta}$ и $q = \frac{\varkappa^2 \delta^2}{4}$ следует равенство
+$2\sqrt{q} \cosh{\rho_0} =  \varkappa r_0$. Для краткости $\varkappa r_0$ обозначим через $u$. 
 
 Подставим $\nu = 1$ в граничное условие $0 = Ce_1(\rho_0, q)$ и рассмотрим разложение в ряд по степеням   $q$:
 \begin{equation*}
@@ -819,26 +820,26 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
 \frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}},
 \end{equation*}
 где $\alpha_{1, m}$ -- $m$-й нуль функции Бесселя  $J_1(x)$. По аналогии с предыдущим случаем,
-собственное значение $\varkappa_{k, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \frac{u_0^3 u_1}{2r_0^2} + o(\varepsilon^2)$ получается из подстановки величин  $u_0, u_1$:
+собственное значение $\varkappa_{1, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \delta^2 \frac{u_0^3 u_1}{2r_0^4} + o(\delta^2)$ получается из подстановки величин  $u_0, u_1$:
 \begin{align}
-   & \varkappa_{k, m}^2 = \frac{\alpha_{1, m}^2}{r_0^2} - \varepsilon^2 \frac{\alpha_{1, m}^3}{16r_0^2} 
+   & \varkappa_{1, m}^2 = \frac{\alpha_{1, m}^2}{r_0^2} - \delta^2 \frac{\alpha_{1, m}^3}{16r_0^4} 
     \frac{J_3(\alpha_{1, m})}{\left.\frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}} 
-    + o(\varepsilon^2), \label{eq:valS1}
+    + o(\delta^2), \label{eq:valS1}
     \end{align}
 
 
 
-%\subsection{Несимметричная область $B_\varepsilon:  \rho \in [0, \rho_0], \phi \in [\phi_0, \phi_1 ]$}\label{sec:ch2/sec2/sub3}
-\subsection{Несимметричная область $B_\varepsilon$}\label{sec:ch2/sec2/sub2}
+%\subsection{Несимметричная область $B_\delta:  \rho \in [0, \rho_0], \phi \in [\phi_0, \phi_1 ]$}\label{sec:ch2/sec2/sub3}
+\subsection{Несимметричная область $B_\delta$}\label{sec:ch2/sec2/sub2}
 \subsubsection{Собственные функции и асимптотика собственных значений}\label{sec:ch2/sec2/sub2/sub1}
 
 
-Внутренность области $B_\varepsilon$ не содержит особых точек эллиптической системы координат~(\ref{eq:coord}). Поэтому, условия непрерывности сдвига или непрерывности производной, рассмотренные для случая симметричной области (в частности, для эллипса), здесь не требуются.
-Хотя эти особые точки, тем не менее, появятся на границе  $B_\varepsilon$ (а именно, они образуют горизонтальный отрезок в составе границы).
+Внутренность области $B_\delta$ не содержит особых точек эллиптической системы координат~(\ref{eq:coord}). Поэтому, условия непрерывности сдвига или непрерывности производной, рассмотренные для случая симметричной области (в частности, для эллипса), здесь не требуются.
+Хотя эти особые точки, тем не менее, появятся на границе  $B_\delta$ (а именно, они образуют горизонтальный отрезок в составе границы).
 
-Рассмотрим собственную функцию $\psi_{k,l}(\rho,\phi) = R(\rho)\Phi(\phi)$.
-Обращение  $\psi_{k,l}(\rho,\phi) $ в нуль на горизонтальном отрезке на границе  $B_\varepsilon$
-подразумевает, что $\psi_{k,l}(\rho,\phi)$ может быть представлена в виде
+Рассмотрим собственную функцию $\psi_{k,m}(\rho,\phi) = R(\rho)\Phi(\phi)$.
+Обращение  $\psi_{k,m}(\rho,\phi) $ в нуль на горизонтальном отрезке на границе  $B_\delta$
+подразумевает, что $\psi_{k,m}(\rho,\phi)$ может быть представлена в виде
 \[
 \psi(\rho,\phi) = 
     \left(
@@ -847,30 +848,29 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
 \]
 
 %{\em Далее следует основной результат текущего подраздела.}
-В области  $B_\varepsilon$ для собственных функций $\psi_{k, m}(\rho, \phi)$ и собственных значений $\varkappa^2_{k, m}$ оператора $\hat{H}$ справедливы выражения
+В области  $B_\delta$ для собственных функций $\psi_{k, m}(\rho, \phi)$ оператора $\hat{H}$ справедливы выражения
 
 \begin{align}
 &\psi_{k, m}(\rho, \phi) = 
     Se_\nu(\rho, q) \biggl( ce_\nu(\phi_0, q) se_\nu(\phi, q) -ce_\nu(\phi, q) se_\nu(\phi_0, q) \biggr) ,  \label{eq:funB}
 \end{align}
 с параметрами
-\begin{align*}    
-    & q=q_{k,m} = \frac{\varkappa_{k,m}^2 r_0^2 \varepsilon^2}{4}, \\ 
-&\nu = \nu_{k,m} = \frac{\pi k}{\phi_1-\phi_0} +\varepsilon^2 \frac{\alpha_{\nu_0, m}^2}{4} \frac{\pi k (\sin 2\phi_1 - \sin 2 \phi_0)}{\pi^2k^2-(\phi_1-\phi_0)^2} + o(\varepsilon^2) ,  
-\end{align*}
+\begin{equation*}    
+\nu = \nu_{k,m} = \nu_0 +\delta^2 \frac{\alpha_{\nu_0, m}^2}{4 r_0^2} \nu_1 + o(\delta^2), \quad q=q_{k,m} = \frac{\varkappa_{k,m}^2 \delta^2}{4},
+\end{equation*}
 где
 \begin{align*}
 & \nu_0 = \frac{\pi k}{\phi_1-\phi_0},\text{\ \ и \ \ }
 \nu_1= \frac{\pi k (\sin 2\phi_1 - \sin 2 \phi_0)}{\pi^2k^2-(\phi_1-\phi_0)^2} .
 \end{align*}
-Для соответствующих собственных значений справедливы равенства
+Соответствующие собственные значения $E_{k, m}$ выражаются через величины $\varkappa^2_{k, m}$ по формуле $E_{k, m} =  \frac{\hbar^2 \varkappa^2_{k, m}}{2M}$, при этом для последних  справедливы равенства
 \begin{align}
-\varkappa_{k, m}^2 ={}& \frac{\alpha_{\nu_0, m}^2}{r_0^2} +  \varepsilon^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^2}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} }  
+\varkappa_{k, m}^2 ={}& \frac{\alpha_{\nu_0, m}^2}{r_0^2} +  \delta^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^4}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} }  
  \biggl(\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} -
 \notag \\ 
 &{}- \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m})}{4\nu_0 (\nu_0+1)} 
 - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m})
-    \biggr) + o(\varepsilon^2).\label{eq:valB}
+    \biggr) + o(\delta^2).\label{eq:valB}
 \end{align}
 Здесь $\alpha_{\nu_0,m}$ -- $m$-й нуль функции Бесселя первого рода $J_{\nu_0}(x)$.
 
@@ -902,12 +902,12 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
 Из соображений, аналогичных тем, что были проведены для  $\psi_{k, m}(\rho, \phi) = \Phi_{odd}(\phi) R_{odd}(\rho)$ из предыдущего подраздела,
 мы получаем разложение радиальной функции и соответствующих собственных значений:
 \begin{align*}
-    \varkappa_{k, m}^2 ={}& \frac{\alpha_{\nu_0, m}^2}{r_0^2} +  \varepsilon^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^2}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} }\biggl(\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} - \notag \\
+    \varkappa_{k, m}^2 ={}& \frac{\alpha_{\nu_0, m}^2}{r_0^2} +  \delta^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^4}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} }\biggl(\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} - \notag \\
 &{}- \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m})}{4\nu_0 (\nu_0+1)}  - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m})
-    \biggr) + o(\varepsilon^2).
+    \biggr) + o(\delta^2).
 \end{align*}
 
-\subsubsection{Особые случаи: $B_\varepsilon$ для $(\phi_0, \phi_1)=(0,\pi)$ и для $(\phi_0, \phi_1)=(0,\pi/2)$}\label{sec:ch2/sec2/sub2/sub2}
+\subsubsection{Особые случаи: $B_\delta$ для $(\phi_0, \phi_1)=(0,\pi)$ и для $(\phi_0, \phi_1)=(0,\pi/2)$}\label{sec:ch2/sec2/sub2/sub2}
 
 
 Хотя $\phi_0=0, \phi_1=\pi/2$ является особенным случаем при $k=1$,
@@ -927,8 +927,8 @@ se_1(\phi, q) = 	\sin{\phi}  - 	\frac{q}{8} \sin{3\phi} + o(q),
 \begin{equation*}
 Se_1(\rho, q) = J_1(2\sqrt{q} \cosh{\rho}) + \frac{3 q}{8} J_3(2\sqrt{q}\cosh{\rho}) + o(q).
 \end{equation*}
-Подставим $\cosh \rho = \cosh \rho_0 =\frac{1}{\varepsilon}$.
-Тогда из $q = \frac{\varkappa^2 r_0^2 \varepsilon^2}{4}$ следует равенство
+Подставим $\cosh \rho = \cosh \rho_0 =\frac{r_0}{\delta}$.
+Тогда из $q = \frac{\varkappa^2 \delta^2}{4}$ следует равенство
 $2\sqrt{q} \cosh{\rho_0} =  \varkappa r_0$.
 
 Для краткости положим $u = \varkappa r_0$ .
@@ -952,11 +952,11 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
 \end{equation*}
 где $\alpha_{1, m}$ -- $m$-й нуль функции $J_1(x)$. 
 
-Наконец, как в предыдущем случае, подстановкой $u_0, u_1$ в $\varkappa_{1, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \varepsilon^2 \frac{u_0^3 u_1}{2r_0^2} + o(\varepsilon^2)$, получим выражение для собственного значения:
+Наконец, как в предыдущем случае, подстановкой $u_0, u_1$ в $\varkappa_{1, m}^2 = \frac{u^2}{r_0^2} = \frac{u_0^2}{r_0^2} + \delta^2 \frac{u_0^3 u_1}{2r_0^4} + o(\delta^2)$, получим выражение для собственного значения:
 \begin{align}
-    \varkappa_{1, m}^2& = \frac{\alpha_{1, m}^2}{r_0^2} - \varepsilon^2 \frac{3\alpha_{1, m}^3}{16r_0^2} 
+    \varkappa_{1, m}^2& = \frac{\alpha_{1, m}^2}{r_0^2} - \delta^2 \frac{3\alpha_{1, m}^3}{16r_0^4} 
     \frac{J_3(\alpha_{1, m})}{\left.\frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}} 
-    + o(\varepsilon^2).  \label{eq:valS2}
+    + o(\delta^2).  \label{eq:valS2}
 \end{align}
 
 \section{Постоянная наблюдаемая величина}\label{sec:ch2/sec3}
