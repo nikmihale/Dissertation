@@ -1,7 +1,13 @@
 \thispagestyle{empty}
+\begin{center}
+МОСКОВСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ  \\
+имени М.В.ЛОМОНОСОВА \\
+\end{center}
 
+\vspace{0pt plus2fill} 
 \noindent%
 \begin{tabularx}{\textwidth}{@{}lXr@{}}%
+
     & & \large{На правах рукописи}\\
     \IfFileExists{images/logo.pdf}{\includegraphics[height=2.5cm]{logo}}{\rule[0pt]{0pt}{2.5cm}}  & &
     \ifnumequal{\value{showperssign}}{0}{%
@@ -13,23 +19,23 @@
 
 \vspace{0pt plus1fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 \begin{center}
-\textbf {\large \thesisAuthor}
+\textbf{\large \thesisAuthor}
 \end{center}
 
-\vspace{0pt plus3fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
+\vspace{0pt plus2fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 \begin{center}
 \textbf {\Large %\MakeUppercase
 \thesisTitle}
 
 \vspace{0pt plus3fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
-{\large Специальность \thesisSpecialtyNumber\ "---\par <<\thesisSpecialtyTitle>>}
+{\large Специальность \thesisSpecialtyNumber\ "---\par \thesisSpecialtyTitle}
 
 \ifdefined\thesisSpecialtyTwoNumber
 {\large Специальность \thesisSpecialtyTwoNumber\ "---\par <<\thesisSpecialtyTwoTitle>>}
 \fi
 
 \vspace{0pt plus1.5fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
-\Large{Автореферат}\par
+\Large{АВТОРЕФЕРАТ}\par
 \large{диссертации на соискание учёной степени\par \thesisDegree}
 \end{center}
 
@@ -39,9 +45,9 @@
 \newpage
 % оборотная сторона обложки
 \thispagestyle{empty}
-\noindent Работа выполнена на {\thesisInOrganization}.
+\noindent Диссертация подготовлена на {\thesisInOrganization}.
 
-\vspace{0.008\paperheight plus1fill}
+\vspace{0.008\paperheight plus0fill}
 \noindent%
 \begin{tabularx}{\textwidth}{@{}lX@{}}
     \ifdefined\supervisorTwoFio
@@ -61,12 +67,9 @@
                               \fi
                               \vspace{0.013\paperheight}\\
     \else
-    Научный руководитель:   & \supervisorRegalia\par
-                              \ifdefined\supervisorDead
-                              \framebox{\textbf{\supervisorFio}}
-                              \else
+    Научный руководитель:   &
                               \textbf{\supervisorFio}
-                              \fi
+	  	   	     \par \supervisorRegalia
                               \vspace{0.013\paperheight}\\
     \fi
     Официальные оппоненты:  &
@@ -97,26 +100,25 @@
     }%
     \fi
 \end{tabularx}
-\vspace{0.008\paperheight plus1fill}
 
-\noindent Защита диссертации состоится \defenseDate~на~заседании диссертационного совета \defenseCouncilNumber~при \defenseCouncilTitle~по адресу: \defenseCouncilAddress.
+\vspace{0.008\paperheight plus0fill}
+\noindent Защита диссертации состоится \defenseDate~на~заседании диссертационного совета \defenseCouncilNumber~Московского государственного университета имени М.В.Ломоносова~по адресу: \defenseCouncilAddress.
 
-\vspace{0.008\paperheight plus1fill}
-\noindent E-mail: \fixme{address@domain.ru}.
+\vspace{0.008\paperheight plus0fill}
+\noindent E-mail: dissovet.msu.011.4@math.msu.ru
 
-\vspace{0.008\paperheight plus1fill}
-\noindent С диссертацией можно ознакомиться в {\synopsisLibrary} и на сайте ИАС
-<<ИСТИНА>>: https://istina.msu.ru/dissertations/\fixme{12345}
+\vspace{0.008\paperheight plus0fill}
+\noindent С диссертацией можно ознакомиться в отделе диссертаций научной библиотеки МГУ имени М.В.Ломоносова (Ломоносовский просп., д. 27) и на портале: https://dissovet.msu.ru/dissertation/\fixme{12345}
 
 %\vspace{0.008\paperheight plus1fill}
 %\noindent Отзывы на автореферат в двух экземплярах, заверенные печатью учреждения, просьба направлять по адресу: \defenseCouncilAddress, ученому секретарю диссертационного совета~\defenseCouncilNumber.
 
-\vspace{0.008\paperheight plus1fill}
+\vspace{0.008\paperheight plus0fill}
 \noindent{Автореферат разослан \synopsisDate.}
 
 %\noindent Телефон для справок: \defenseCouncilPhone.
 
-\vspace{0.008\paperheight plus1fill}
+\vspace{0.008\paperheight plus0fill}
 \noindent%
 \begin{tabularx}{\textwidth}{@{}%
 >{\raggedright\arraybackslash}b{18em}@{}
@@ -125,7 +127,7 @@ r
 @{}}
     Ученый секретарь\par
     диссертационного совета\par
-    \defenseCouncilNumber,\par
+%    \defenseCouncilNumber,\par
     \defenseSecretaryRegalia
     &
     \ifnumequal{\value{showsecrsign}}{0}{}{%
