@@ -67,15 +67,14 @@
                               \fi
                               \vspace{0.013\paperheight}\\
     \else
-    Научный руководитель:   &
-                              \textbf{\supervisorFio}
-	  	   	     \par \supervisorRegalia
-                              \vspace{0.013\paperheight}\\
+    Научный  --    	& \textbf{\supervisorFio} \\
+    руководитель	&  \par \supervisorRegalia
+	                              \vspace{0.013\paperheight}
+        	                      \\
     \fi
-    Официальные оппоненты:  &
-    \ifnumequal{\value{showopplead}}{0}{\vspace{13\onelineskip plus1fill}}{%
-        \textbf{\opponentOneFio,}\par
-        \opponentOneRegalia,\par
+%    	\vspace{13\onelineskip plus1fill}
+    Официальные --  &        \textbf{\opponentOneFio,}\\
+	оппоненты	&	   \opponentOneRegalia,\par
         \opponentOneJobPlace,\par
         \opponentOneJobPost\par
         \vspace{0.01\paperheight}
@@ -90,15 +89,7 @@
         \opponentThreeRegalia,\par
         \opponentThreeJobPlace,\par
         \opponentThreeJobPost
-    \fi
-    }%
-    \vspace{0.013\paperheight} \\
-    \ifdefined\leadingOrganizationTitle
-    Ведущая организация:    &
-    \ifnumequal{\value{showopplead}}{0}{\vspace{6\onelineskip plus1fill}}{%
-        \leadingOrganizationTitle
-    }%
-    \fi
+    
 \end{tabularx}
 
 \vspace{0.008\paperheight plus0fill}
