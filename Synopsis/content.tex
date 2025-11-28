@@ -23,11 +23,10 @@
 \input{common/content}
 
 %{\gratitude}
-%\pdfbookmark{Литература}{bibliography}                                % Закладка pdf
+\pdfbookmark{Литература}{bibliography}                                % Закладка pdf
 %При использовании пакета \verb!biblatex! список публикаций автора по теме
 %диссертации формируется в разделе <<\publications>>\ файла
 %\verb!common/characteristic.tex!  при помощи команды \verb!\nocite!
-%\insertbiblioauthor
 
 \ifdefmacro{\microtypesetup}{\microtypesetup{protrusion=false}}{} % не рекомендуется применять пакет микротипографики к автоматически генерируемому списку литературы
 \urlstyle{rm}                               % ссылки URL обычным шрифтом
@@ -41,7 +40,7 @@
     %  * Порядок перечисления определяет порядок в библиографии (только внутри подраздела, если `\insertbiblioauthorgrouped`).
     %  * Если не соблюдать порядок "как для \printbibliography", нумерация в `\insertbiblioauthor` будет кривой.
     %  * Если цитировать каждый источник отдельной командой --- найти некоторые ошибки будет проще.
-    %
+    % убери эти -- исчезнут публикации из автореферата
     \nocite{nikulin2023spektr611484954}
     \nocite{nikulin2024asymptotic617844539}
     \nocite{vestnikLatest}

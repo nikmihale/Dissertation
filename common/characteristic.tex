@@ -184,51 +184,13 @@
         %
         {\publications} Основные результаты по теме диссертации изложены в~\arabic{citeauthor}~печатных работах, 
         из которых \arabic{citeauthor} опубликованы в журналах, удовлетворяющих положению о присуждении учёных степеней в диссертационном совете МГУ. Список работ приведен в конце диссертации.
-        
-        %
-%        \ifnum \value{citeauthorscopuswos}>0%
-%            , \arabic{citeauthorscopuswos} "--- в~периодических научных журналах, индексируемых Web of~Science и Scopus%
-%        \fi%
-%        \ifnum \value{citeauthorconf}>0%
-%            , \arabic{citeauthorconf} "--- в~тезисах докладов.
-%        \else%
-%            .
-%        \fi%
-%        \ifnum \value{citeregistered}=1%
-%            \ifnum \value{citeauthorpatent}=1%
-%                Зарегистрирован \arabic{citeauthorpatent} патент.
-%            \fi%
-%            \ifnum \value{citeauthorprogram}=1%
-%                Зарегистрирована \arabic{citeauthorprogram} программа для ЭВМ.
-%            \fi%
-%        \fi%
-%        \ifnum \value{citeregistered}>1%
-%            Зарегистрированы\ %
-%            \ifnum \value{citeauthorpatent}>0%
-%            \formbytotal{citeauthorpatent}{патент}{}{а}{}%
-%            \ifnum \value{citeauthorprogram}=0 . \else \ и~\fi%
-%            \fi%
-%            \ifnum \value{citeauthorprogram}>0%
-%            \formbytotal{citeauthorprogram}{программ}{а}{ы}{} для ЭВМ.
-%            \fi%
-%        \fi%
-        % К публикациям, в которых излагаются основные научные результаты диссертации на соискание учёной
-        % степени, в рецензируемых изданиях приравниваются патенты на изобретения, патенты (свидетельства) на
-        % полезную модель, патенты на промышленный образец, патенты на селекционные достижения, свидетельства
-        % на программу для электронных вычислительных машин, базу данных, топологию интегральных микросхем,
-        % зарегистрированные в установленном порядке.(в ред. Постановления Правительства РФ от 21.04.2016 N 335)
     \end{refsection}%
     \begin{refsection}[bl-author, bl-registered]
         % Это refsection=2.
         % Процитированные здесь работы:
         %  * попадают в авторскую библиографию, при usefootcite==0 и стиле `\insertbiblioauthorimportant`.
         %  * ни на что не влияют в противном случае
-        \nocite{vakbib2}%vak
-        \nocite{patbib1}%patent
-        \nocite{progbib1}%program
-        \nocite{bib1}%other
-        \nocite{confbib1}%conf
-%        \nocite{nikulin2023spektr611484954}
+%         \nocite{nikulin2023spektr611484954}
 %	\nocite{nikulin2024asymptotic617844539}
 %	\nocite{vestnikLatest}
 %	\nocite{sbornikLatest}
@@ -240,10 +202,6 @@
         %  * для автореферата:
         %     * при usefootcite==0, ссылка корректно сработает только для источника из `external.bib`. Для своих работ --- напечатает "[0]" (и даже Warning не вылезет).
         %     * при usefootcite==1, ссылка сработает нормально. В авторской библиографии будут только процитированные в refsection=0 работы.
-        \nocite{nikulin2023spektr611484954}
-	\nocite{nikulin2024asymptotic617844539}
-	\nocite{vestnikLatest}
-	\nocite{sbornikLatest}
 }
 
 
