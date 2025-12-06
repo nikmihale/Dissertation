@@ -599,7 +599,9 @@ $$ \psi(\rho,\phi) = \Phi_{even}(\phi) R_{even}(\rho)
  \psi(\rho,\phi) = \Phi_{odd}(\phi) R_{odd}(\rho) .  $$
 %\hfill
 %$\Box$
-То есть, в наших обозначениях в области $A_\delta$ для собственных функций $\psi_{k, m}(\rho, \phi)$ оператора   $\hat{H}$ справедливы выражения
+В наших обозначениях для области $A_\delta$ справедлива следующая теорема
+\begin{theorem}
+Для собственных функций $\psi_{k, m}(\rho, \phi)$ оператора   $\hat{H}$ справедливы выражения
 \begin{equation}
 \psi_{k, m}(\rho, \phi) = 
 \left[
@@ -635,7 +637,8 @@ $$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\pi k \sin 2\phi_
 \end{equation*}
 Здесь $\alpha_{\nu_0,m}$ --  $m$-й нуль функции Бесселя первого рода $J_{\nu_0}(x)$.
 
-
+\end{theorem}
+\begin{proof}
 Нечетный и четный случаи мы рассматриваем отдельно. Сперва рассмотрим
 \textit{нечетный случай}: $\psi(\rho,\phi) = R_{odd}(\rho)\Phi_{odd}(\phi)  $.
 
@@ -827,7 +830,7 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
     + o(\delta^2), \label{eq:valS1}
     \end{align}
 
-
+\end{proof}
 
 %\subsection{Несимметричная область $B_\delta:  \rho \in [0, \rho_0], \phi \in [\phi_0, \phi_1 ]$}\label{sec:ch2/sec2/sub3}
 \subsection{Несимметричная область $B_\delta$}\label{sec:ch2/sec2/sub2}
@@ -847,7 +850,7 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
     \right) R_{odd}(\rho).
 \]
 
-%{\em Далее следует основной результат текущего подраздела.}
+\begin{theorem}
 В области  $B_\delta$ для собственных функций $\psi_{k, m}(\rho, \phi)$ оператора $\hat{H}$ справедливы выражения
 
 \begin{align}
@@ -873,8 +876,8 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
     \biggr) + o(\delta^2).\label{eq:valB}
 \end{align}
 Здесь $\alpha_{\nu_0,m}$ -- $m$-й нуль функции Бесселя первого рода $J_{\nu_0}(x)$.
-
-
+\end{theorem}
+\begin{proof}
 Мы хотим найти решение углового решения в виде
 \begin{multline*}
 \Phi(\phi, q) = \Phi_{even}(\phi_0) \Phi_{odd}(\phi) - \Phi_{even}(\phi) \Phi_{odd}(\phi_0)  = \\
@@ -959,6 +962,7 @@ u_0 = \alpha_{1, m}, \qquad u_1 =
     + o(\delta^2).  \label{eq:valS2}
 \end{align}
 
+\end{proof}
 \section{Постоянная наблюдаемая величина}\label{sec:ch2/sec3}
 
 Как было показано в  \cite{wref13}, наблюдаемая  $(\hat{L_z})^2=\hbar^2\frac{\partial^2}{\partial \phi^2}$ сохраняется для квантового биллиарда в круговом секторе. 

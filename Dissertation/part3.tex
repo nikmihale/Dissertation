@@ -278,20 +278,8 @@ $$a^2-x^2=\frac{a^2-\lambda_0}{b^2-\lambda_0}y^2+\lambda_0 \ \text{ и }\  b^2-y
 
 \section{Общий случай}\label{sec:ch3/sec3}
 Утверждение теоремы \ref{th:xi_is_integral} для $\Xi(\mathbf{x}, \mathbf{v})$ оказывается верным в значительно более общей ситуации.
-Пусть внутренность эллипса разбита попарно непересекающимися дугами софокусных квадрик на области $\Omega_1, \ldots, \Omega_k$.  Перенумеруем области так, чтобы общие границы имели только области с соседними номерами. Пусть $\lambda_j$ --- параметр софокусной квадрики, разделяющей $\Omega_j$ и $\Omega_{j+1}$, $j=1, \ldots, k-1$. Два возможных варианта показаны на рис. \ref{fig:pt8:_example4} и \ref{fig:pt8:_example5}. Здесь и далее показатель преломления для области $\Omega_j$ обозначается через $n_j$.
-\begin{figure}[!htb]
-\minipage{0.45\textwidth}
-   \includegraphics[width=1\textwidth]{images/ch4/section1/multiple ellipses.pdf}
-    \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
-    \label{fig:pt8:_example4}
-\endminipage\hfill
-\minipage{0.45\textwidth}
-    \includegraphics[width=0.9\textwidth]{images/ch4/section1/multiple hyperbolas.pdf}   
-    \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
-    \label{fig:pt8:_example5}
-\endminipage\hfill
-\end{figure}
-
+\begin{theorem}[\cite{vestnikLatest}]
+Пусть внутренность эллипса разбита попарно непересекающимися дугами софокусных квадрик на области $\Omega_1, \ldots, \Omega_k$.  Перенумеруем области так, чтобы общие границы имели только области с соседними номерами. Пусть $\lambda_j$ --- параметр софокусной квадрики, разделяющей $\Omega_j$ и $\Omega_{j+1}$, $j=1, \ldots, k-1$. Здесь и далее показатель преломления для области $\Omega_j$ обозначается через $n_j$.
 
 Определим функцию $\Xi(x, y, v_x, v_y)$ по формуле: 
 \begin{equation*}
@@ -304,12 +292,26 @@ $$a^2-x^2=\frac{a^2-\lambda_0}{b^2-\lambda_0}y^2+\lambda_0 \ \text{ и }\  b^2-y
 \end{array}
 \right.
 \end{equation*}
-
-\begin{theorem}[\cite{vestnikLatest}]
-Функция $\Xi(x, y, v_x, v_y)$ является константой на траекториях бильярда с модифицированным законом  преломления
+Функция $\Xi(x, y, v_x, v_y)$ является константой на траекториях бильярда с косинусным законом  преломления $(\ast)$. 
 \end{theorem}
-Доказательство этого утверждения полностью аналогично доказательству теоремы \ref{th:xi_is_integral}.
 
+\begin{proof}
+Доказательство этого утверждения полностью аналогично доказательству теоремы \ref{th:xi_is_integral}.
+\end{proof}
+
+Два возможных варианта таких разбиений показаны на рис. \ref{fig:pt8:_example4} и \ref{fig:pt8:_example5}.
+\begin{figure}[!htb]
+\minipage{0.45\textwidth}
+   \includegraphics[width=1\textwidth]{images/ch4/section1/multiple ellipses.pdf}
+    \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
+    \label{fig:pt8:_example4}
+\endminipage\hfill
+\minipage{0.45\textwidth}
+    \includegraphics[width=0.9\textwidth]{images/ch4/section1/multiple hyperbolas.pdf}   
+    \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
+    \label{fig:pt8:_example5}
+\endminipage\hfill
+\end{figure}
 Таким образом, возникает следующая важная естественная задача.
 
 \textbf{Задача А:} описать слоение изоэнергетического многообразия на поверхности уровня первого интеграла $\Xi$ для случаев, показанных на рис. \ref{fig:pt8:_example4} и \ref{fig:pt8:_example5}. 

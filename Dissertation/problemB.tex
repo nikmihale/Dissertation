@@ -971,20 +971,34 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
     \label{fig:pt10:_xiL1_subdivision}
 \end{figure}
 
+\begin{theorem}
+Поверхность уровня $\Xi = \const$ является 
+\[
+\begin{array}{cc}
+\text{сферой с двумя ручками для случаев} 	& 	\text{тором для случаев} \\
+r_2^2 > \rho_1^2 > \rho_2^2 > r_1^2 	& 	\rho_2^2 > r_2^2 > \rho_1^2 > r_1^2 \\
+r_2^2 > \rho_2^2 > \rho_1^2 > r_1^2		&	\rho_1^2 > r_2^2 > \rho_2^2 > r_1^2
+\end{array}
+\]
+\end{theorem}
+
+\begin{proof}
+Каждый случай разберем по отдельности.
+
 %Область, соответствующая случаю $B_2$, ограничивается координатными линиями $r_1^2 \leq \rho_1^2 \leq \rho_2^2 , r_1^2 \leq \rho_2^2 \leq \rho_2^2$. 
-\subsection{Случай $r_2^2 > \rho_1^2 > \rho_2^2 > r_1^2$}\label{sec:ch5/sec7/sub1}
+\textit{Случай $r_2^2 > \rho_1^2 > \rho_2^2 > r_1^2$.}
 Траектория в области $\Omega_1$ касается окружности радиуса $\rho_1 < r_2$, а в области $\Omega_2$ --- окружности радиуса $r_1 < \rho_2$. Проекция бильярдной траектории заметает область $\widetilde{\Omega} = (\Omega_1 \setminus B_{\rho_1}) \cup (\Omega_2 \setminus B_{\rho_2})$, где $B_r$ обозначает диск радиуса $r$ с радиусом в нуле. Область $\widetilde{\Omega}$ изображена на рис. \ref{fig:pt10:_B2_domain_1}. Пунктиром изображена дуга $EF$ окружности радиуса $r_1$. 
 \begin{figure}[!htb]
-\minipage{0.5\textwidth}
+\minipage{0.47\textwidth}
 \centering
 \includegraphics[width=2cm]{images/ch4/section3_circular/atoms/sect3_B2_domain_1.pdf}
-    \caption{Область, заметаемая траекторией для случая $\xi > L_1$ при $r_2^2 > \rho_1^2 > \rho_2^2 > r_1^2$.}
+    \caption{Заметаемая траекторией область для случая  $r_2^2 > \rho_1^2 > \rho_2^2 > r_1^2$.}
     \label{fig:pt10:_B2_domain_1}
 \endminipage\hfill
-\minipage{0.5\textwidth}
+\minipage{0.47\textwidth}
 \centering
 \includegraphics[width=2cm]{images/ch4/section3_circular/atoms/sect3_B2_domain_2.pdf}
-    \caption{Область, заметаемая траекторией для случая $\xi > L_1$ при $r_2^2 > \rho_2^2 > \rho_1^2 > r_1^2$.}
+    \caption{Заметаемая траекторией область для случая $r_2^2 > \rho_2^2 > \rho_1^2 > r_1^2$.}
         \label{fig:pt10:_B2_domain_2}
 \endminipage\hfill
 \end{figure}
@@ -992,28 +1006,29 @@ $\bullet$ и $k-2$ листов, каждый из которых соответ
 Определим векторы скоростей $v_1, \ldots, v_4$ в соответствии с правилами \eqref{eq:foc_numeration_circle}. С каждым вектором скорости ассоциируем по одной из областей $\widetilde{\Omega}_1, \ldots, \widetilde{\Omega}_4$, каждая выглядит как показано на  рис. \ref{fig:pt10:_B2_domain_1}. 
 Склейкой областей $\widetilde{\Omega}_1 \cup \widetilde{\Omega}_4$ по дугам, проектирующимся на дуги граничных окружностей $\widetilde{\Omega}$, получим сферу с тремя дырками. Аналогично для склейки $\widetilde{\Omega}_2 \cup \widetilde{\Omega}_3$. Склейкой двух таких сфер по общим границам дырок, которые проектируются на прямолинейные граничные отрезки $\widetilde{\Omega}$, получим поверхность $\Xi=\const$, которая является сферой с двумя ручками. 
 
-\subsection{Случай  $r_2^2 > \rho_2^2 > \rho_1^2 > r_1^2$}\label{sec:ch5/sec7/sub2}
-Данный случай рассматривается аналогично предыдущему пункту. Заметаемая точкой область $\widetilde{\Omega}$ изображена на рис. \ref{fig:pt10:_B2_domain_2}, дальнейшие рассуждения повторяют пункт \ref{sec:ch5/sec7/sub1}. Поверхность $\Xi = \const$ также является сферой с двумя ручками.
+\textit{Случай  $r_2^2 > \rho_2^2 > \rho_1^2 > r_1^2$.}
+Данный случай рассматривается аналогично предыдущему пункту. Заметаемая точкой область $\widetilde{\Omega}$ изображена на рис. \ref{fig:pt10:_B2_domain_2}, дальнейшие рассуждения повторяют пункт предыдущего случая. Поверхность $\Xi = \const$ также является сферой с двумя ручками.
 
-\subsection{Случай  $\rho_2^2 > r_2^2 > \rho_1^2 > r_1^2$ и случай $\rho_1^2 > r_2^2 > \rho_2^2 > r_1^2$}\label{sec:ch5/sec7/sub3}
+\textit{Случай  $\rho_2^2 > r_2^2 > \rho_1^2 > r_1^2$ и случай $\rho_1^2 > r_2^2 > \rho_2^2 > r_1^2$.}
 В обоих случаях  точка при движении заметает область $\widetilde{\Omega}$, которая ограничивается дугами двух окружностей и отрезками двух прямых (см. рис. \ref{fig:pt10:_B3_domain}, \ref{fig:pt10:_B4_domain}).
 \begin{figure}[!htb]
-\minipage{0.5\textwidth}
+\minipage{0.47\textwidth}
 \centering
 \includegraphics[width=2cm]{images/ch4/section3_circular/atoms/sect3_B3_domain.pdf}
-    \caption{Область, заметаемая траекторией для случая $\rho_2^2 > r_2^2 > \rho_1^2 > r_1^2$.}
+    \caption{Заметаемая траекторией область для случая $\rho_2^2 > r_2^2 > \rho_1^2 > r_1^2$.}
     \label{fig:pt10:_B3_domain}
 \endminipage\hfill
-\minipage{0.5\textwidth}
+\minipage{0.47\textwidth}
 \centering
 \includegraphics[width=2cm]{images/ch4/section3_circular/atoms/sect3_B4_domain.pdf}
-    \caption{Область, заметаемая траекторией для случая $\rho_1^2 > r_2^2 > \rho_2^2 > r_1^2$.}
+    \caption{Заметаемая траекторией область для случая $\rho_1^2 > r_2^2 > \rho_2^2 > r_1^2$.}
         \label{fig:pt10:_B4_domain}
 \endminipage\hfill
 \end{figure}
 
 Определим векторы $v_1, \ldots, v_4$ в соответствии с правилами \eqref{eq:foc_numeration_circle}, области $\widetilde{\Omega}_1, \ldots, \widetilde{\Omega}_4$ зададим так же, как и ранее.
 Склейкой областей $\widetilde{\Omega}_1 \cup \widetilde{\Omega}_4$ по дугам, проектирующимся на дуги граничных окружностей $\widetilde{\Omega}$, получим сферу с двумя дырками. Аналогично для склейки $\widetilde{\Omega}_2 \cup \widetilde{\Omega}_3$. Склейкой двух таких сфер по общим границам дырок, получим поверхность $\Xi = \const$, которая является тором.
+\end{proof}
 
 
 \section{Особые поверхности для случая $\left\{ \xi < L_1 \right\}$}\label{sec:ch5/sec8}
