@@ -55,9 +55,9 @@
 Тогда гладкое решение $\psi(\rho,\phi)$ удовлетворяет следующим условиям:
 \begin{align}
 & \psi(0,\phi) = \psi(0,-\phi)\notag \\
- &   \qquad\qquad\qquad\qquad     \text{\em (непрерывность сдвига через  $J$)} \label{eq:intro_disp}, \\[10pt]
+ &   \qquad\qquad\qquad\qquad     \text{\em (непрерывность сдвига через  $J$)} \label{eq:intro_disp} \tag{1.4}, \\[10pt]
  &   \frac{\partial}{\partial \rho} \psi( \rho, \phi)|_{\rho \to 0} = - \frac{\partial}{\partial \rho} \psi(\rho, - \phi)|_{\rho \to 0} \notag \\
- &\qquad\qquad\qquad\qquad   \text{\em (непрерывность производной через $J$)}\label{eq:intro_grad}, 
+ &\qquad\qquad\qquad\qquad   \text{\em (непрерывность производной через $J$)}\label{eq:intro_grad} \tag{1.5}, 
 \end{align}
 
 Один из разделов первой главы посвящен задаче об асимптотике уровня энергии свободной квантовой частицы в эллипсе с точки зрения теории специальных функций. Эта задача призвана сформировать базовый инструментарий, который получит дальнейшее развитие и применение при рассмотрении задач из следующей главы. В частности, показано, что при $\delta \to0$ собственные значения в эллипсе имеют своим пределом значения в круге. Этот же характер асимптотического поведения сохраняется и для иных областей, рассмотренных во второй главе.
@@ -65,6 +65,7 @@
 
 Асимптотика собственных значений для <<эллиптического кольца>> приводится в начале \underline{\textbf{второй главы}}. 
 Доказана следующая теорема:
+\renewcommand{\thetheorem}{4}
 \begin{theorem}
 	Значение $\varkappa^2_{k,m}(\delta), k, m \in \mathbb{N}$, зависит от половины фокусного расстояния $\delta$ с точностью до $o(\delta^2)$ следующим образом:
 {\small
@@ -114,32 +115,38 @@ W_{\nu+2, \nu}(u) + W_{\nu, \nu+2}(u)
 \right.
 \end{array}
 \right.,
-%\tag{6}
+\tag{2.2}
 \label{eq:valRing}
 \end{equation}
 }
 где $\alpha_{\nu, m}$ --- $m$-й нуль функции $W_{\nu, \nu}(u)$. Последняя определяется как $W_{a, b}(u) = Y_a(u)J_b(\lambda u) - Y_a(\lambda u)J_b(u)$ для $\lambda = \frac{r_1}{r_0}$.
-\label{th:sect2_th4}
+%\label{th:sect2_th4}
 \end{theorem}
 Отметим, что при $\delta \to 0$ область приближается к круговому кольцу, а собственные значения совпадают с теми, что были получены для предельной области. 
-Большой раздел второй главы посвящен рассмотрению квантовой свободной частицы в областях двух типов: симметричной $A_\delta$ и несимметричной $B_\delta$ (см. рис. \ref{fig:intro_AB_examples}), где симметрия подразумевается относительно горизонтальной оси $Ox$. 
+Большой раздел второй главы посвящен рассмотрению квантовой свободной частицы в областях двух типов: симметричной $A_\delta$ и несимметричной $B_\delta$ (см. рис. \ref{fig:intro_AB_examples_l} и \ref{fig:intro_AB_examples_r}), где симметрия подразумевается относительно горизонтальной оси $Ox$. 
 \begin{figure}[ht]
     \begin{minipage}[b][][b]{0.49\linewidth}\centering
-        \includegraphics[width=0.8\linewidth]{right1.pdf} \\ 
-        Множество $A_\delta$, $\phi_0<\pi/2$
+        \includegraphics[width=0.8\linewidth]{right1.pdf}
+        \renewcommand{\thefigure}{2.1}
+        \caption{Множество $A_\delta$ \\ для  $\phi_0<\pi/2$.}
+	\label{fig:intro_AB_examples_l}
+%	\tag{2.1}
     \end{minipage}
     \hfill
     \begin{minipage}[b][][b]{0.49\linewidth}\centering
-        \includegraphics[width=0.8\linewidth]{up1.pdf}  \\
-        Множество $B_\delta$, $\phi_0<\phi_1<\pi/2$
+        \includegraphics[width=0.8\linewidth]{up1.pdf}
+        \renewcommand{\thefigure}{2.2}
+        \caption{Множество $B_\delta$ \\ для $\phi_0<\phi_1<\pi/2$.}
+	\label{fig:intro_AB_examples_r}
+%	\tag{2.2}
     \end{minipage}
-\caption{Примеры множеств $A_\delta$ и $B_\delta$.}
-\label{fig:intro_AB_examples}
 \end{figure}
+\renewcommand{\thefigure}{\arabic{figure}}
 Обе области при $\delta \to 0$ имеют своим пределом круговой сектор, результат для которого получен в работе \cite{wref13}.
 
 Для симметричной области $A_\delta$ вычислена следующая асимптотика собственных значений:
-\begin{theorem} 
+\renewcommand{\thetheorem}{999}
+\begin{theorem}
 Для собственных функций $\psi_{k, m}(\rho, \phi)$ оператора   $\hat{H}$ справедливы выражения
 \begin{equation}
 \psi_{k, m}(\rho, \phi) = 
@@ -148,7 +155,8 @@ W_{\nu+2, \nu}(u) + W_{\nu, \nu+2}(u)
     Ce_\nu(\rho, q) ce_\nu(\phi, q) ,   &    \text{нечетный $k \geq 1$}\\
     Se_\nu(\rho, q) se_\nu(\phi, q) ,   &    \text{четный $k \geq 2$}\\
 \end{array}
-\right.\label{eq:fun}
+\right.
+\tag{2.9}
 \end{equation}
 с параметрами
 \[
@@ -159,7 +167,8 @@ $$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\pi k \sin 2\phi_
 Соответствующие собственные значения $E_{k, m}$ выражаются через величины $\varkappa^2_{k, m}$ по формуле $E_{k, m} =  \frac{\hbar^2 \varkappa^2_{k, m}}{2M}$, при этом для последних  справедливы равенства
 \begin{equation}
 \varkappa^2_{k, m} = \dfrac{\alpha_{\nu_0, m}^2}{r_0^2} +
-\delta^2 \dfrac{\alpha_{\nu_0, m}^3}{2 r_0^4}\dfrac{\varkappa_1 }{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} } + o(\delta^2),\label{eq:val}
+\delta^2 \dfrac{\alpha_{\nu_0, m}^3}{2 r_0^4}\dfrac{\varkappa_1 }{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} } + o(\delta^2),
+\tag{2.10}
 \end{equation}
 где
 \begin{equation*}
@@ -180,16 +189,18 @@ $$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\pi k \sin 2\phi_
 \begin{align}
    & \varkappa_{1, m}^2 = \frac{\alpha_{1, m}^2}{r_0^2} - \delta^2 \frac{\alpha_{1, m}^3}{16r_0^4} 
     \frac{J_3(\alpha_{1, m})}{\left.\frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}} 
-    + o(\delta^2), \label{eq:valS1}
+    + o(\delta^2), 
+    \tag{2.18}
     \end{align}
 
 Для несимметричной области $B_\delta$  аналогичная асимптотика подчиняется следующей формуле:
+\renewcommand{\thetheorem}{999}
 \begin{theorem}
 В области  $B_\delta$ для собственных функций $\psi_{k, m}(\rho, \phi)$ оператора $\hat{H}$ справедливы выражения
 
 \begin{align}
 &\psi_{k, m}(\rho, \phi) = 
-    Se_\nu(\rho, q) \biggl( ce_\nu(\phi_0, q) se_\nu(\phi, q) -ce_\nu(\phi, q) se_\nu(\phi_0, q) \biggr) ,  \label{eq:funB}
+    Se_\nu(\rho, q) \biggl( ce_\nu(\phi_0, q) se_\nu(\phi, q) -ce_\nu(\phi, q) se_\nu(\phi_0, q) \biggr) ,  \tag{2.19}
 \end{align}
 с параметрами
 \begin{equation*}    
@@ -207,7 +218,8 @@ $$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\pi k \sin 2\phi_
 \notag \\ 
 &{}- \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m})}{4\nu_0 (\nu_0+1)} 
 - \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m})
-    \biggr) + o(\delta^2).\label{eq:valB}
+    \biggr) + o(\delta^2).
+    \tag{2.20}
 \end{align}
 Здесь $\alpha_{\nu_0,m}$ -- $m$-й нуль функции Бесселя первого рода $J_{\nu_0}(x)$.
 \end{theorem}
@@ -216,7 +228,8 @@ $$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\pi k \sin 2\phi_
 \begin{align}
      \varkappa_{1, m}^2& = \frac{\alpha_{1, m}^2}{r_0^2} - \delta^2 \frac{3\alpha_{1, m}^3}{16r_0^4} 
     \frac{J_3(\alpha_{1, m})}{\left.\frac{\partial J_1 (u)}{\partial u}\right|_{u=\alpha_{1, m}}} 
-    + o(\delta^2).  \label{eq:valS2}
+    + o(\delta^2).  
+    \tag{2.21}
 \end{align}
 
 В завершение главы приведена постоянная наблюдаемая величина для квантовой свободной частицы на софокусных столах.
@@ -239,16 +252,19 @@ $$\nu_0 = \frac{\pi k}{2\phi_0}\text{\ \  и\  \  }\nu_1=\frac{\pi k \sin 2\phi_
 \begin{figure}[!htb]
 \minipage{0.32\textwidth}
 \includegraphics[width=\linewidth]{images/ch4/section1/example1.pdf}
+    \renewcommand{\thefigure}{3.1}
     \caption{Иллюстрация к пункту 1.}
     \label{fig:intro_example1}
 \endminipage\hfill
 \minipage{0.32\textwidth}
 \includegraphics[width=\linewidth]{images/ch4/section1/example2.pdf}
+    \renewcommand{\thefigure}{3.2}
     \caption{Иллюстрация к пункту 2.}
     \label{fig:intro_example2}
 \endminipage\hfill
 \minipage{0.32\textwidth}
 \includegraphics[width=\linewidth]{images/ch4/section1/example3.pdf}
+    \renewcommand{\thefigure}{3.3}
     \caption{Иллюстрация к пункту 4.}
     \label{fig:intro_example3}
 \endminipage\hfill
@@ -261,6 +277,7 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 Для бильярдов на софокусных столах, подчиняющихся этому закону, приводится выражение для постоянной движения.
 А именно, если преломление по закону $(\ast)$ происходит на дугах непересекающихся квадрик $Q_1, \ldots, Q_k$, тогда справедливо следующее утверждение:
 
+\renewcommand{\thetheorem}{999}
 \begin{theorem}
 Пусть внутренность эллипса разбита попарно непересекающимися дугами софокусных квадрик на области $\Omega_1, \ldots, \Omega_k$. Перенумеруем области так, чтобы общие границы имели только области с соседними номерами. Пусть $\lambda_j$ -- параметр софокусной квадрики, разделяющей $\Omega_j$ и $\Omega_{j+1}$, $j=1, \ldots, k-1$. Здесь и далее показатель преломления для области $\Omega_j$ обозначается через $n_j$.
 Определим функцию $\Xi(x, y, v_x, v_y)$ по формуле: 
@@ -282,11 +299,13 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 \begin{figure}[!htb]
 \minipage{0.45\textwidth}
    \includegraphics[width=1\textwidth]{images/ch4/section1/multiple ellipses.pdf}
+   \renewcommand{\thefigure}{3.4}
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
     \label{fig:intro_example4}
 \endminipage\hfill
 \minipage{0.45\textwidth}
     \includegraphics[width=0.9\textwidth]{images/ch4/section1/multiple hyperbolas.pdf}   
+       \renewcommand{\thefigure}{3.5}
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
     \label{fig:intro_example5}
 \endminipage\hfill
@@ -300,6 +319,7 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 \begin{figure}[!htb]
 \centering
      \includegraphics[width=0.35\textwidth]{images/ch4/section1/img2.pdf}
+        \renewcommand{\thefigure}{3.6}
 \caption{Взаимное расположение областей $\Omega_1,\ldots,\Omega_4$.}
     \label{fig:intro_example6}
 \end{figure}
@@ -350,6 +370,7 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.3]{images/ch4/section2/domain_problemA.pdf}
+   \renewcommand{\thefigure}{4.1}
     \caption{Область $\Omega$ для задачи А.}
     \label{fig:intro_problemA}
 \end{figure}
@@ -360,12 +381,14 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 \begin{equation}
 \alpha_{out} = \alpha_{in} \left(\frac{n_{in}}{n_{out}}\right)^2 + \lambda_1 \frac{n_{out}^2 - n_{in}^2}{n_{out}^2}.
 \label{eq:L_line}
+\tag{4.2}
 \end{equation}
 Отметим, что прямая $L$ проходит через точку $(\alpha_{in}, \alpha_{out}) = (\lambda_1, \lambda_1)$.
 Мы введем структурную диаграмму критических значений первого интеграла $\Xi$. 
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.1]{images/ch4/section2/problemA_subdivisions.pdf}
+   \renewcommand{\thefigure}{4.4}
     \caption{Подразбиение областей $D_1, \ldots, D_4$.}
     \label{fig:intro_problemA_subdivisions}
 \end{figure}
@@ -376,7 +399,8 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 В главе доказана следующая теорема:
 %Для удобства занумеруем регулярные области значений интеграла $\Xi$ на рис. \ref{fig:intro_causticTypesDiagram}.
 %В ходе их описания мы узнаем как выглядят соответствующие области $\Omega$. Потом, когда будем описывать бифуркации, 
-\begin{theorem} 
+\renewcommand{\thetheorem}{8}
+\begin{theorem}
 Областям $D_i^j$ в плоскости $(\alpha_{in}, \alpha_{out})$ соответствуют следующие поверхности $\Xi = \const$
 \medskip
 \begin{center}
@@ -409,19 +433,23 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.3]{images/ch4/section3_circular/domain.pdf}
+   \renewcommand{\thefigure}{5.1}
     \caption{Область $\Omega$ представляет собой объединение 2 областей.}
     \label{fig:intro_domain}
 \end{figure}
 Для этой системы в качестве постоянной движения, сохраняющейся в областях $\Omega_1$ и $\Omega_2$ до пересечения дуг $EF$ или $FG$ рассматривается величина $\rho^2 =  \frac{(x v_y - y v_x)^2}{v_x^2 + v_y^2}$. При этом на двух границах раздела сред $EF$ и $FG$ параметр каустики $\rho^2$ преобразуется по-разному:
+\renewcommand{\thestatement}{10}
 \begin{statement}
 Имеют место следующие соотношения для параметров $\rho_1, \rho_2$ в точке преломления:
 \begin{align}
 (\rho_1^2 - r_1^2)n_1^2 = (\rho_2^2 - r_1^2)n_2^2 \qquad & 
 			\text{ при } (x,y) \in EF, 
 			\label{eq:st1_eq1}
+			\tag{5.1}
 			\\
 \rho_1^2 n_1^2 = \rho_2^2 n_2^2 \qquad  & \text{ при } (x,y) \in FG.
 			\label{eq:st1_eq2}
+			\tag{5.2}
 \end{align}
 \label{st:across_EF}
 \end{statement}
@@ -436,6 +464,7 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
     \rho^2(x,y,v_x,v_y) n_2^2, & \text{ если } (x,y) \in \Omega_2.
 \end{array}
 \right.
+\tag{5.3}
 \label{eq:XiDefinition}
 \end{equation}
 Эта функция постоянна в каждой точке фрагмента бильярдной траектории $T_k$, но на разных фрагментах значения могут различаться. 
@@ -445,12 +474,14 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 \minipage{0.5\textwidth}
 \centering
 \includegraphics[width=5cm]{images/ch4/section3_circular/n1gtn2.png}
+   \renewcommand{\thefigure}{5.2}
     \caption{Направление роста $\Xi$ при $n_1 > n_2$.}
     \label{fig:n1gtn2_Xi_growth}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
 \includegraphics[width=5cm]{images/ch4/section3_circular/n1ltn2.png}
+   \renewcommand{\thefigure}{5.3}
     \caption{Направление роста $\Xi$ при $n_1 < n_2$.}
     \label{fig:n1ltn2_Xi_growth}
 \endminipage\hfill
@@ -458,6 +489,7 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 
 Рассмотрим значения интеграла $\Xi$ для двух последовательных фрагментов $T_k, T_{k+1}$. Выясним, как они связаны, или, что то же самое, как меняется интеграл $\Xi$ при преломлении на дуге $EF$. 
 
+\renewcommand{\thestatement}{11}
 \begin{statement}
 Значения $\Xi_k$ и $\Xi_{k+1}$  интеграла $\Xi$, соответствующие фрагментам траектории $T_k$ и $T_{k+1}$, различаются на величину $r_1^2(n_1^2-n_2^2)$.
 \end{statement}
@@ -466,12 +498,14 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 \Xi \mapsto P(\Xi) = (\rho_1^2, \rho_2^2) = \left( \frac{\Xi}{n_1^2}, \frac{\Xi}{n_2^2} \right).
 % = \left( \left. \rho^2 \right|_{\Omega_1} ,  \left. \rho^2 \right|_{\Omega_2}  \right).
 \label{eq:XiMap}
+\tag{5.4}
 \end{equation}
 Тогда для фиксированных параметров $n_1, n_2$ отображением $P$ значения величины $\Xi$ отображаются на прямую $L \subset \mathbb{R}^2$. 
 Параметризуем прямую $L: \xi \mapsto P(\xi) = (\xi \cos \theta, \xi \sin \theta)$. На ней можно выделить точку $L_1$, которая разделяет прямую на две части относительно параметра $\xi$ на прямой $L$ на две части: $\{ \xi < L_1\}$ и $\{ \xi > L_1\}$. Объединяя эти части по всевозможным прямым $L$, получим области в $\mathbb{R}^2$, изображенные на рис. \ref{fig:pt10:_lineDomains_simple}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.07]{images/ch4/section3_circular/line_domains_simple.pdf}
+   \renewcommand{\thefigure}{5.4}
     \caption{Области $\left\{\xi< L_1\right\}$ и $\left\{\xi > L_1\right\}$.}
     \label{fig:pt10:_lineDomains_simple}
 \end{figure}
@@ -483,6 +517,7 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=10cm]{images/ch4/section3_circular/B1_lattice_straight.pdf}
+   \renewcommand{\thefigure}{5.7}
     \caption{}
     \label{fig:pt10:_B1_lattice_straight}
 \end{figure}
@@ -494,17 +529,21 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=7cm]{images/ch4/section3_circular/B1Prime_lattice.pdf}
+   \renewcommand{\thefigure}{5.9}
     \caption{Прямая, соответствующая прямой $\rho_1^2 = r_2^2$.}
     \label{fig:pt10:_B1Prime_lattice}
 \end{figure}
 Для неособых поверхностей доказаны следующие теоремы:
+
 \textit{При $n_1^2<n_2^2$}
-\begin{theorem}
+\renewcommand{\thetheorem}{9}
+\begin{theorem}{9}
 В области $\left\{\xi < L_1\right\}$ поверхности $S_\Xi$ являются сферами с $2m$ ручками, если $P(\Xi) \in C_m$ и сферами с $2m-1$ ручками, если $P(\Xi) \in C_m'$ и $m \leq \left\lfloor \frac{r_2^2}{r_2^2-r_1^2} \right\rfloor$. 
 \label{th:pt10:th1}
 \end{theorem}
 \textit{При $n_1^2 > n_2^2$}
-\begin{theorem}
+\renewcommand{\thetheorem}{10}
+\begin{theorem}{10}
 В области $\left\{\xi < L_1\right\}$ поверхности $S_\Xi$ являются сферами с $2m+1$ ручками, если $P(\Xi) \in C_m$ и сферами с $2m$ ручками, если $P(\Xi) \in C_m'$ и $m \leq \left\lfloor \frac{r_2^2}{r_2^2-r_1^2} \right\rfloor$. 
 \label{th:pt10:th2}
 \end{theorem}
@@ -514,11 +553,13 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=6cm]{images/ch4/section3_circular/sect3_xiL1_subdivision.pdf}
+   \renewcommand{\thefigure}{5.28}
     \caption{Разбиение области $\left\{\xi > L_1\right\}$.}
     \label{fig:pt10:_xiL1_subdivision}
 \end{figure}
 Доказано следующее:
-\begin{theorem}
+\renewcommand{\thetheorem}{999}
+\begin{theorem}{отсутствует в диссере}
 Поверхность уровня $\Xi = \const$ является сферой с двумя ручками для случаев
 \begin{itemize}[beginpenalty=10000]
 \item $r_2^2 > \rho_1^2 > \rho_2^2 > r_1^2$
@@ -544,3 +585,10 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 Отдельно автор сердечно благодарит заведующего кафедрой дифференциальной геометрии и приложений механико-математического факультета МГУ академика А.~Т.~Фоменко за интерес к работе и постоянную поддержку на протяжении всего времени  обучения автора на кафедре.
 
 
+
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thestatement}{\arabic{statement}}
+\renewcommand{\thetheorem}{{\arabic{theorem}}}
+\setcounter{figure}{0}
+\setcounter{statement}{0}
+\setcounter{theorem}{0}
