@@ -298,12 +298,14 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 Два возможных варианта таких разбиений показаны на рис. \ref{fig:intro_example4} и \ref{fig:intro_example5}. 
 \begin{figure}[!htb]
 \minipage{0.45\textwidth}
-   \includegraphics[width=1\textwidth]{images/ch4/section1/multiple ellipses.pdf}
+\centering
+   \includegraphics[width=0.9\textwidth]{images/ch4/section1/multiple ellipses.pdf}
    \renewcommand{\thefigure}{3.4}
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
     \label{fig:intro_example4}
 \endminipage\hfill
 \minipage{0.45\textwidth}
+\centering
     \includegraphics[width=0.9\textwidth]{images/ch4/section1/multiple hyperbolas.pdf}   
        \renewcommand{\thefigure}{3.5}
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
@@ -369,7 +371,7 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 \underline{\textbf{Четвертая глава}} посвящена рассмотрению задачи А: описать слоение изоэнергетического многообразия на поверхности уровня первого интеграла $\Xi$ для подчиняющейся закону $(\ast)$ бильярдной системы в области $\Omega = \Omega_{in} \cup \Omega_{out}$ (см. рис. \ref{fig:intro_problemA}).
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.3]{images/ch4/section2/domain_problemA.pdf}
+\includegraphics[width=0.4\textwidth]{images/ch4/section2/domain_problemA.pdf}
    \renewcommand{\thefigure}{4.1}
     \caption{Область $\Omega$ для задачи А.}
     \label{fig:intro_problemA}
@@ -387,7 +389,7 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 Мы введем структурную диаграмму критических значений первого интеграла $\Xi$. 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.1]{images/ch4/section2/problemA_subdivisions.pdf}
+\includegraphics[width=0.7\textwidth]{images/ch4/section2/problemA_subdivisions.pdf}
    \renewcommand{\thefigure}{4.4}
     \caption{Подразбиение областей $D_1, \ldots, D_4$.}
     \label{fig:intro_problemA_subdivisions}
@@ -402,29 +404,30 @@ $$\Lambda(x, y, v_x, v_y) =  \dfrac{a^2 v_y^2 + b^2v_x^2 - (x v_y-y v_x)^2}{v_x^
 \renewcommand{\thetheorem}{10}
 \begin{theorem}
 Областям $D_i^j$ в плоскости $(\alpha_{in}, \alpha_{out})$ соответствуют следующие поверхности $\Xi = \const$
-\medskip
 \begin{center}
 \begin{tabular}{|c|c|c|}
-\hline 
+\hline
+%\endhead
 $D_1^1$  	& 	$\alpha_{in} \in (\lambda_1, b^2), \ \alpha_{out} \in (b^2, a^2)$			& сфера с 5 ручками; \\ \hline 
 $D_1^2$  	& 	$\alpha_{in} \in (b^2, a^2), \ \alpha_{out} \in (\alpha_{in}, a^2)$				& сфера с 5 ручками; \\ \hline 
 $D_1^3$  	& 	$\alpha_{in} \in (b^2, a^2), \ \alpha_{out} \in (b^2, \alpha_{in})$				& сфера с 5 ручками; \\ \hline 
 $D_1^4$ 	& 	$\alpha_{in} \in (\lambda_1, b^2), \ \alpha_{out} \in (\alpha_{in}, b^2)$	& 2 дизъюнктных тора; \\ \hline 
 $D_1^5$  	& 	$\alpha_{in} \in (\lambda_1, b^2), \ \alpha_{out} \in (\lambda_1, \alpha_{in})$	& 2 дизъюнктных тора; \\ \hline 
-$D_1^6$  	& 	$\alpha_{in} \in (b^2, a^2), \ \alpha_{out} \in (\lambda_1, b^2)$			& сфера с 5 ручками; \\ \hline 
-\hline
+$D_1^6$  	& 	$\alpha_{in} \in (b^2, a^2), \ \alpha_{out} \in (\lambda_1, b^2)$			& сфера с 5 ручками; \\             
+\midrule  
 $D_2$  	& 	$(\alpha_{out} \in (0, \lambda_1), \ \alpha_{in} < \lambda_1)$ или & \\
-		&  $(\alpha_{in} \in (0, \lambda_1), \ \alpha_{out} < \lambda_1)$				& 2 дизъюнктных тора; \\ \hline
- \hline
+		&  $(\alpha_{in} \in (0, \lambda_1), \ \alpha_{out} < \lambda_1)$				& 2 дизъюнктных тора; \\ 
+\midrule 
 $D_3^1$  	& 	$\alpha_{in} \in (\lambda_1, b^2), \ \alpha_{out} > a^2$				& 2 дизъюнктных тора; \\ \hline 
-$D_3^2$  	& 	$\alpha_{in} \in (b^2, a^2), \ \alpha_{out} > a^2 $					& 1 тор; \\ \hline 
-\hline 
+$D_3^2$  	& 	$\alpha_{in} \in (b^2, a^2), \ \alpha_{out} > a^2 $					& 1 тор; \\             
+\midrule 
 $D_4^1$  	& 	$\alpha_{in} > a^2, \ \alpha_{out} \in (b^2, a^2)$						& 2 дизъюнктных тора; \\ \hline 
 $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 дизъюнктных тора; \\ \hline 
 \end{tabular}
 \end{center}
 \label{st:intron1_n2_surfaces}
 \end{theorem} 
+
 В завершение приведены особые поверхности, соответствующие пересечению прямой $L$ и выделенных на рис. \ref{fig:intro_problemA_subdivisions} сегментов координатных линий $\alpha_{in}, \alpha_{out} = b^2, a^2$. Приведенные 13 бифуркаций включают в себя <<двойные перестройки>>, соответствующие пересечению прямой $L$ с точками  $(b^2, a^2)$ и $(a^2, b^2)$. Для нетривиальных особых поверхностей приведены иллюстрации.
 
 
@@ -432,7 +435,7 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 \underline{\textbf{Пятая глава}} посвящена рассмотрению задачи Б: описать слоения изоэнергитического многообразия на поверхности уровня первого интеграла $\Xi$ для подчиняющейся закону $(\ast)$ бильярдной системы в области $\Omega = \Omega_1 \cup \Omega_2$ (см. рис. \ref{fig:intro_domain}). Показатели преломлений $n_1$ для $\Omega_1$ и $n_2$ для $\Omega_2$ предполагаем фиксированными.
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.3]{images/ch4/section3_circular/domain.pdf}
+\includegraphics[width=0.2\textwidth]{images/ch4/section3_circular/domain.pdf}
    \renewcommand{\thefigure}{5.1}
     \caption{Область $\Omega$ представляет собой объединение 2 областей.}
     \label{fig:intro_domain}
@@ -473,16 +476,16 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 \begin{figure}[!htb]
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=5cm]{images/ch4/section3_circular/n1gtn2.png}
+\includegraphics[width=5.5cm]{images/ch4/section3_circular/n1gtn2.png}
    \renewcommand{\thefigure}{5.2}
-    \caption{Направление роста $\Xi$ при $n_1 > n_2$.}
+    \caption{Направление роста $\Xi$ \\ при $n_1 > n_2$.}
     \label{fig:n1gtn2_Xi_growth}
 \endminipage\hfill
 \minipage{0.5\textwidth}
 \centering
-\includegraphics[width=5cm]{images/ch4/section3_circular/n1ltn2.png}
+\includegraphics[width=5.5cm]{images/ch4/section3_circular/n1ltn2.png}
    \renewcommand{\thefigure}{5.3}
-    \caption{Направление роста $\Xi$ при $n_1 < n_2$.}
+    \caption{Направление роста $\Xi$ \\ при $n_1 < n_2$.}
     \label{fig:n1ltn2_Xi_growth}
 \endminipage\hfill
 \end{figure}
@@ -504,7 +507,7 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 Параметризуем прямую $L: \xi \mapsto P(\xi) = (\xi \cos \theta, \xi \sin \theta)$. На ней можно выделить точку $L_1$, которая разделяет прямую на две части относительно параметра $\xi$ на прямой $L$ на две части: $\{ \xi < L_1\}$ и $\{ \xi > L_1\}$. Объединяя эти части по всевозможным прямым $L$, получим области в $\mathbb{R}^2$, изображенные на рис. \ref{fig:pt10:_lineDomains_simple}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.07]{images/ch4/section3_circular/line_domains_simple.pdf}
+\includegraphics[width=0.5\textwidth]{images/ch4/section3_circular/line_domains_simple.pdf}
    \renewcommand{\thefigure}{5.4}
     \caption{Области $\left\{\xi< L_1\right\}$ и $\left\{\xi > L_1\right\}$.}
     \label{fig:pt10:_lineDomains_simple}
@@ -516,7 +519,7 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 Для области $\{\xi < L_1\}$, соответствующей <<ветвящемуся интегралу>>, получена бифуркационная диаграмма (см. рис. \ref{fig:pt10:_B1_lattice_straight}), на которой фрагмент $L \cap \{\xi < L_1\}$ выглядит как горизонтальная прямая. 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=10cm]{images/ch4/section3_circular/B1_lattice_straight.pdf}
+\includegraphics[width=0.9\textwidth]{images/ch4/section3_circular/B1_lattice_straight.pdf}
    \renewcommand{\thefigure}{5.7}
     \caption{}
     \label{fig:pt10:_B1_lattice_straight}
@@ -528,23 +531,22 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 Приводится классификация заметаемых областей для фрагментов бильярдных траекторий $T_m$ в зависимости от расположения соответствующей точки $P(\Xi_m)$ на диаграмме (см. рис. \ref{fig:pt10:_B1Prime_lattice}).
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=7cm]{images/ch4/section3_circular/B1Prime_lattice.pdf}
+\includegraphics[width=0.7\textwidth]{images/ch4/section3_circular/B1Prime_lattice.pdf}
    \renewcommand{\thefigure}{5.9}
     \caption{Прямая, соответствующая прямой $\rho_1^2 = r_2^2$.}
     \label{fig:pt10:_B1Prime_lattice}
 \end{figure}
 Для неособых поверхностей доказаны следующие теоремы:
 
-\textit{При $n_1^2<n_2^2$}
 \renewcommand{\thetheorem}{11}
 \begin{theorem}
-В области $\left\{\xi < L_1\right\}$ поверхности $S_\Xi$ являются сферами с $2m$ ручками, если $P(\Xi) \in C_m$ и сферами с $2m-1$ ручками, если $P(\Xi) \in C_m'$ и $m \leq \left\lfloor \frac{r_2^2}{r_2^2-r_1^2} \right\rfloor$. 
+Пусть $n_1^2<n_2^2$. В области $\left\{\xi < L_1\right\}$ поверхности $S_\Xi$ являются сферами с $2m$ ручками, если $P(\Xi) \in C_m$ и сферами с $2m-1$ ручками, если $P(\Xi) \in C_m'$ и $m \leq \left\lfloor \frac{r_2^2}{r_2^2-r_1^2} \right\rfloor$. 
 \label{th:pt10:th1}
 \end{theorem}
-\textit{При $n_1^2 > n_2^2$}
+
 \renewcommand{\thetheorem}{12}
 \begin{theorem}
-В области $\left\{\xi < L_1\right\}$ поверхности $S_\Xi$ являются сферами с $2m+1$ ручками, если $P(\Xi) \in C_m$ и сферами с $2m$ ручками, если $P(\Xi) \in C_m'$ и $m \leq \left\lfloor \frac{r_2^2}{r_2^2-r_1^2} \right\rfloor$. 
+Пусть $n_1^2 > n_2^2$. В области $\left\{\xi < L_1\right\}$ поверхности $S_\Xi$ являются сферами с $2m+1$ ручками, если $P(\Xi) \in C_m$ и сферами с $2m$ ручками, если $P(\Xi) \in C_m'$ и $m \leq \left\lfloor \frac{r_2^2}{r_2^2-r_1^2} \right\rfloor$. 
 \label{th:pt10:th2}
 \end{theorem}
 
@@ -552,7 +554,7 @@ $D_4^2$  	& 	$\alpha_{in} > a^2, \alpha_{out} \in (\lambda_1, b^2)$				& 2 ди�
 Структура слоения определяется тем, как прямая $L \cap  \{\xi > L_1\}$ пересекает четыре области, изображенные на рис. \ref{fig:pt10:_xiL1_subdivision}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=6cm]{images/ch4/section3_circular/sect3_xiL1_subdivision.pdf}
+\includegraphics[width=0.5\textwidth]{images/ch4/section3_circular/sect3_xiL1_subdivision.pdf}
    \renewcommand{\thefigure}{5.28}
     \caption{Разбиение области $\left\{\xi > L_1\right\}$.}
     \label{fig:pt10:_xiL1_subdivision}

@@ -302,11 +302,13 @@ $$a^2-x^2=\frac{a^2-\lambda_0}{b^2-\lambda_0}y^2+\lambda_0 \ \text{ и }\  b^2-y
 Два возможных варианта таких разбиений показаны на рис. \ref{fig:pt8:_example4} и \ref{fig:pt8:_example5}.
 \begin{figure}[!htb]
 \minipage{0.45\textwidth}
-   \includegraphics[width=1\textwidth]{images/ch4/section1/multiple ellipses.pdf}
+\centering
+   \includegraphics[width=0.9\textwidth]{images/ch4/section1/multiple ellipses.pdf}
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
     \label{fig:pt8:_example4}
 \endminipage\hfill
 \minipage{0.45\textwidth}
+\centering
     \includegraphics[width=0.9\textwidth]{images/ch4/section1/multiple hyperbolas.pdf}   
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_k$.}
     \label{fig:pt8:_example5}
@@ -371,9 +373,13 @@ $$a^2-x^2=\frac{a^2-\lambda_0}{b^2-\lambda_0}y^2+\lambda_0 \ \text{ и }\  b^2-y
 \end{figure}
 Рассмотрим области, изображенные на рис. \ref{fig:pt8:_example7}. 
 Легко вычислить коэффициенты $\gamma_{A_1}$ и $\gamma_{A_2}$ в точках $A_1, A_2$ (т.е. скачки дополнительного интеграла при обходе против часовой стрелки вокруг соответствующей точки):
-$$\gamma_{A_1} = \lambda_2(n_1^2 - n_4^2) + \lambda_1(n_4^2-n_3^2) + \lambda_2(n_3^2-n_2^2) + \lambda_1(n_2^2-n_4^2), $$
+\[
+\begin{array}{c}
+\gamma_{A_1} = \lambda_2(n_1^2 - n_4^2) + \lambda_1(n_4^2-n_3^2) + \lambda_2(n_3^2-n_2^2) + \lambda_1(n_2^2-n_4^2), \\
 % = (\lambda_2 - \lambda_1) ( n_1^2 - n_2^2 + n_3^2 - n_4^2),$$
-$$\gamma_{A_2} = \lambda_1(n_1^2 - n_2^2) + \lambda_2(n_2^2-n_3^2) + \lambda_1(n_3^2-n_4^2) + \lambda_2(n_4^2-n_1^2). $$
+\gamma_{A_2} = \lambda_1(n_1^2 - n_2^2) + \lambda_2(n_2^2-n_3^2) + \lambda_1(n_3^2-n_4^2) + \lambda_2(n_4^2-n_1^2). 
+\end{array}
+\]
 % = (\lambda_1 - \lambda_2) ( n_1^2 - n_2^2 + n_3^2 - n_4^2).$$
 Как видно, в этом случае $$\gamma_{A_1} = -\gamma_{A_2}.$$
 Поэтому дополнительный интеграл $\Xi(x, y, v_x, v_y)$, сохраняющийся на траекториях бильярда, может быть задан по модулю $\gamma_{A_1}$ формулой $\Xi = \widetilde{\Xi} \mod \gamma_{A_1}$, где 
@@ -395,15 +401,19 @@ $$\gamma_{A_2} = \lambda_1(n_1^2 - n_2^2) + \lambda_2(n_2^2-n_3^2) + \lambda_1(n
 Рассмотрим области, изображенные на рис. \ref{fig:pt8:_example8}. 
 \begin{figure}[!htb]
 \centering
-   \includegraphics[width=0.35\textwidth]{images/ch4/section1/img4.pdf}   
+   \includegraphics[width=0.3\textwidth]{images/ch4/section1/img4.pdf}   
     \caption{Взаимное расположение областей $\Omega_1, \ldots, \Omega_6$.}
     \label{fig:pt8:_example8}
 \end{figure}
 
 
 Легко видеть, что коэффициенты $\gamma_{A_1}, \gamma_{A_2}$ в точках $A_1$, $A_2$, соответственно, задаются формулами:
-$$\gamma_{A_1} = (\lambda_3 - \lambda_1)(n_2^2 - n_5^2 + n_6^2 - n_3^2),$$
-$$\gamma_{A_2} = (\lambda_3 - \lambda_2)(n_1^2 - n_4^2 + n_5^2 - n_2^2).$$
+\[
+\begin{array}{c}
+\gamma_{A_1} = (\lambda_3 - \lambda_1)(n_2^2 - n_5^2 + n_6^2 - n_3^2), \\
+\gamma_{A_2} = (\lambda_3 - \lambda_2)(n_1^2 - n_4^2 + n_5^2 - n_2^2).
+\end{array}
+\]
 
 В зависимости от значений параметров отношение $\dfrac{\gamma_{A_1}}{\gamma_{A_2}}$ может быть как рациональным, так и иррациональным.
 
@@ -417,7 +427,7 @@ $$\gamma_{A_2} = (\lambda_3 - \lambda_2)(n_1^2 - n_4^2 + n_5^2 - n_2^2).$$
 
 \begin{figure}[!htb]
 \centering
-   \includegraphics[width=0.25\textwidth]{images/ch4/section1/imgB.pdf}   
+   \includegraphics[width=0.17\textwidth]{images/ch4/section1/imgB.pdf}   
     \caption{Взаимное расположение областей $\Omega_1, \Omega_2$.}
     \label{fig:pt8:_example9}
 \end{figure}
