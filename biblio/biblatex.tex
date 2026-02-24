@@ -14,7 +14,7 @@ autolang=other,% многоязычная библиография
 clearlang=true,% внутренний сброс поля language, если он совпадает с языком из babel/polyglossia
 defernumbers=true,% нумерация проставляется после двух компиляций, зато позволяет выцеплять библиографию по ключевым словам и нумеровать не из большего списка
 sortcites=true,% сортировать номера затекстовых ссылок при цитировании (если в квадратных скобках несколько ссылок, то отображаться будут отсортированно, а не абы как)
-doi=false,% Показывать или нет ссылки на DOI
+doi=true,% Показывать или нет ссылки на DOI
 isbn=false,% Показывать или нет ISBN, ISSN, ISRN
 ]{biblatex}[2016/09/17]
 \ltx@iffilelater{biblatex-gost.def}{2017/05/03}%
@@ -193,6 +193,10 @@ sorting=none,% настройка сортировки списка литера
             \step[fieldset=keywords,fieldvalue={,biblioauthorvak},append=true]
         }
         \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+            \step[fieldsource=authormsu,final=true]
+            \step[fieldset=keywords,fieldvalue={,biblioauthormsu},append=true]
+        }
+        \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
             \step[fieldsource=authorscopus,final=true]
             \step[fieldset=keywords,fieldvalue={,biblioauthorscopus},append=true]
         }
@@ -332,7 +336,7 @@ sorting=none,% настройка сортировки списка литера
 \fi
 
 \defbibfilter{vakscopuswos}{%
-    keyword=biblioauthorvak or keyword=biblioauthorscopus or keyword=biblioauthorwos
+    keyword=biblioauthorvak or keyword=biblioauthorscopus or keyword=biblioauthorwos or keyword=biblioauthormsu
 }
 
 \defbibfilter{scopuswos}{%
@@ -617,16 +621,17 @@ sorting=none,% настройка сортировки списка литера
 \newcommand*{\insertbiblioauthorgrouped}{
     \section*{\bibtitleauthor}
     \ifsynopsis
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorvak,    title=\bibtitleauthorvak,resetnumbers=true] % Работы автора из списка ВАК (сброс нумерации)
+    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthormsu,    title=\bibtitleauthormsu,resetnumbers=true] % Работы автора из списка ВАК (сброс нумерации)
     \else
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorvak,    title=\bibtitleauthorvak,resetnumbers=false] % Работы автора из списка ВАК (сквозная нумерация)
+    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthormsu,    title=\bibtitleauthormsu,resetnumbers=false] % Работы автора из списка ВАК (сквозная нумерация)
     \fi
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorwos,    title=\bibtitleauthorwos,resetnumbers=false]% Работы автора, индексируемые Web of Science
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorscopus, title=\bibtitleauthorscopus,resetnumbers=false]% Работы автора, индексируемые Scopus
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorpatent, title=\bibtitleauthorpatent,resetnumbers=false]% Патенты
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorprogram,title=\bibtitleauthorprogram,resetnumbers=false]% Программы для ЭВМ
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorconf,   title=\bibtitleauthorconf,resetnumbers=false]% Тезисы конференций
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorother,  title=\bibtitleauthorother,resetnumbers=false]% Прочие работы автора
+%    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthormsu,    title=\bibtitleauthormsu,resetnumbers=false]% Работы автора, индексируемые Web of Science
+%    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorwos,    title=\bibtitleauthorwos,resetnumbers=false]% Работы автора, индексируемые Web of Science
+%    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorscopus, title=\bibtitleauthorscopus,resetnumbers=false]% Работы автора, индексируемые Scopus
+%    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorpatent, title=\bibtitleauthorpatent,resetnumbers=false]% Патенты
+%    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorprogram,title=\bibtitleauthorprogram,resetnumbers=false]% Программы для ЭВМ
+%    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorconf,   title=\bibtitleauthorconf,resetnumbers=false]% Тезисы конференций
+%    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorother,  title=\bibtitleauthorother,resetnumbers=false]% Прочие работы автора
 }
 
 \newcommand*{\insertbiblioexternal}{
