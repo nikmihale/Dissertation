@@ -1,61 +1,53 @@
-\begin{frame}
-\center\LARGE Квантовая задача
+\section{Квантовый бильярд на софокусных столах}
+\begin{frame}[plain, noframenumbering]
+    \begin{center}
+        \Huge
+	Часть II. \\ Квантовый бильярд на софокусных столах
+    \end{center}
 \end{frame}
 
 
-\begin{frame}\frametitle{Области}
+\begin{frame}\frametitle{Области $A_\delta$ и $B_\delta$}
 
-\begin{minipage}{\linewidth}
+\begin{figure}
 %\begin{center}
-\begin{minipage}{0.31\linewidth}
+\begin{minipage}{0.45\linewidth}
+\centering
 \includegraphics[width=0.95\linewidth]{right3.pdf}
-
-\small Область $A_\delta$, $\phi_0<\pi/2$
+\caption{$A_\delta$, $\phi_0<\pi/2$}
 \end{minipage}
-%\end{center}
-%\begin{center}
-\begin{minipage}{0.31\linewidth}
+\begin{minipage}{0.45\linewidth}
+\centering
 \includegraphics[width=0.95\linewidth]{left3.pdf}
-
-\small Область $A_\delta$, $\phi_0>\pi/2$
+\caption{$A_\delta$, $\phi_0>\pi/2$}
 \end{minipage}
-%\end{center}
-%\begin{center}
-\begin{minipage}{0.31\linewidth}
-\includegraphics[width=0.95\linewidth]{up3.pdf}
-
-\small Область $B_\delta$, $\phi_0<\phi_1<\pi/2$
+\end{figure}
+\begin{figure}
+\begin{minipage}{0.4\linewidth}
+\centering
+\includegraphics[width=\linewidth]{up3.pdf}
+\caption{$B_\delta$, $\phi_0<\phi_1<\pi/2$}
 \end{minipage}
-%\end{center}
-\bigskip
-\bigskip\bigskip
-
-\centerline{  Границы областей выделены жирным.}
-\centerline{Пунктирами изображены асимптоты гипербол.}
-\centerline{ $\phi_0$ и $\phi_1$ -- это углы между соответствующими асимптотами и осью $x$.}
-\centerline{Общие фокусы граничных квадрик в точках $(\pm \delta, 0)$.}
+\begin{minipage}{0.45\linewidth}
+\centering
+$\phi_0$ и $\phi_1$ --  углы между  асимптотами (пунктирные) и осью $x$.\\
+Общие фокусы граничных квадрик в точках $(\pm \delta, 0)$.
 \end{minipage}
+\end{figure}
 
 \end{frame}
 
-\begin{frame}
-\begin{mytheorem}[Gongora-T. A., Jose, J.V., Schaffner, S., Tiesinga, P.: {\em Quantum and classical solutions for a free particle in wedge billiards}. Physics Letters A 274(3--4), 117\_122 (2000) 
-]
-Собственные функции  $\psi_{k,m}(r,\phi)$ и соответствующие уровни энергии $E_{k,m}$ для свободной частицы в круговом секторе размера  $\phi_0$
-определены формулами 
-\begin{align*}
-&\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, k}r}{r_0}\right)\sin{\lambda\phi}\notag \\  
-&E_{k,m} = \frac{\hbar^2 \alpha_{\lambda, k}^2}{2M r_0^2},
- \qquad k, m \in \mathbb{N},
-\end{align*}
-где
-$\lambda = \frac{\pi m}{\phi_0}$ и $\alpha_{\lambda, k}$ это
-$k$-ый нуль функции Бесселя  $J_\lambda(x)$  первого рода.
-\end{mytheorem}
+\begin{frame}[plain, noframenumbering]
+\frametitle{Цели раздела диссертационной работы}
+\begin{itemize}
+%[beginpenalty=10000] % https://tex.stackexchange.com/a/476052/104425
+  \item Вычислить асимптотическое поведение уровней энергии свободной квантовой частицы в двух областях, ограниченных дугами гипербол и внешнего эллипса, которые при стремлении фокального расстояния к нулю принимают форму кругового сектора при стремлении фокального расстояния к нулю, и нахождение спектра наблюдаемой, соответствующей дополнительному интегралу классической системы.
+\end{itemize}
 \end{frame}
 
 
 \begin{frame}
+\frametitle{Симметричная область $A_\delta$} 
 \begin{mytheorem}[A]\label{th:A}
 В области $A_\delta$ собственными функциями $\psi_{k, m}(\rho, \phi)$ оператора $\hat{H}$ являются
 \begin{equation*}
@@ -85,6 +77,7 @@ $\nu_1=\dfrac{\pi k \sin 2\phi_0}{\pi^2 k^2 - 4\phi_0^2}.$
 \end{frame} 
 
 \begin{frame}
+\frametitle{Симметричная область $A_\delta$} 
 \begin{mytheorem}[A (продолжение)]
 
 где
@@ -112,6 +105,7 @@ $\nu_1=\dfrac{\pi k \sin 2\phi_0}{\pi^2 k^2 - 4\phi_0^2}.$
 
 
 \begin{frame}
+\frametitle{Несимметричная область $B_\delta$}
 \begin{mytheorem}[B]\label{th:B}
 В области  $B_\delta$ собственными функциями  $\psi_{k, m}(\rho, \phi)$ и собственными значениями  $\varkappa^2_{k, m}$ оператора  $\hat{H}$ являются
 \begin{align*}
@@ -139,6 +133,7 @@ $\varkappa_{k, m}^2 = ...$
 
 
 \begin{frame}
+\frametitle{Несимметричная область $B_\delta$}
 \begin{mytheorem}[B (продолжение)]
 
 \begin{align*}
@@ -154,9 +149,24 @@ $\varkappa_{k, m}^2 = ...$
 
 \end{frame} 
 
+\begin{frame}
+Полученная асимптотика согласуется с результатом для кругового сектора:
+
+\begin{mytheorem}[Gongora-T. A., Jose, J.V., Schaffner, S., Tiesinga, P.]
+Собственные функции  $\psi_{k,m}(r,\phi)$ и соответствующие уровни энергии $E_{k,m}$ для свободной частицы в круговом секторе размера  $\phi_0$
+определены формулами 
+\begin{align*}
+&\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, k}r}{r_0}\right)\sin{\lambda\phi}\notag \\  
+&E_{k,m} = \frac{\hbar^2 \alpha_{\lambda, k}^2}{2M r_0^2},
+ \qquad k, m \in \mathbb{N},
+\end{align*}
+где
+$\lambda = \frac{\pi m}{\phi_0}$ и $\alpha_{\lambda, k}$ это
+$k$-ый нуль функции Бесселя  $J_\lambda(x)$  первого рода.
+\end{mytheorem}
+\end{frame}
+
 \begin{frame} 
-
-
 Интегрируемость классического бильярда в областях $A_\delta$ и $B_\delta$ следует из существования сохраняющейся величины, а именно, произведения моментов относительно обоих фокусов, который не зависит от полной энергии. 
 
 
