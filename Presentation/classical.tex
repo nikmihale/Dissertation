@@ -9,19 +9,19 @@
 \begin{frame}
 \frametitle{История вопроса}
 \begin{itemize}
-\item[1.] G. D. Birkhoff, Dynamical systems. 1927.
-\item[2.] Козлов В. В., Трещeв Д. В., Генетическое введение в динамику систем с ударами. 1991. 
-\item[3.] V. Dragovic, M. Radnovic, Bifurcations of Liouville tori in elliptical billiards. 2009.
-\item[4.] Фокичева, В. В. Описание особенностей системы ’биллиард в эллипсе’. 2012.
-\item[5.] Фокичева, В. В. Описание особенностей системы бильярда в областях, ограниченных
+%\item[1.] G. D. Birkhoff, Dynamical systems. 1927.
+%\item[2.] Козлов В. В., Трещeв Д. В., Генетическое введение в динамику систем с ударами. 1991. 
+\item[1.] V. Dragovic, M. Radnovic, Bifurcations of Liouville tori in elliptical billiards. 2009.
+\item[2.] Фокичева, В. В. Описание особенностей системы ’биллиард в эллипсе’. 2012.
+\item[3.] Фокичева, В. В. Описание особенностей системы бильярда в областях, ограниченных
 софокусными эллипсами или гиперболами. 2014.
 %\item[6.] Фокичева, В. В. Классификация биллиардных движений в областях, ограниченных
 %софокусными параболами. 2014.
-\item[6.] Kozlov, V. Some integrable extensions of Jacobi’s Problem of geodesics on an ellipsoid. 1995.
-\item[7.] В. В. Ведюшкина (Фокичева), А. Т. Фоменко. Интегрируемые геодезические потоки
-на ориентируемых двумерных поверхностях и топологические биллиарды. 2019.
-\item[8.] A. T. Fomenko, V. V. Vedyushkina, V. N. Zav’yalov. Liouville foliations of topological billiards with slipping. 2021.
-\item[9.] А. Т. Фоменко, В. В. Ведюшкина. Эволюционные силовые биллиарды. 2022.
+\item[4.] Kozlov, V. Some integrable extensions of Jacobi’s Problem of geodesics on an ellipsoid. 1995.
+%\item[7.] В. В. Ведюшкина (Фокичева), А. Т. Фоменко. Интегрируемые геодезические потоки
+%на ориентируемых двумерных поверхностях и топологические биллиарды. 2019.
+%\item[8.] A. T. Fomenko, V. V. Vedyushkina, V. N. Zav’yalov. Liouville foliations of topological billiards with slipping. 2021.
+%\item[9.] А. Т. Фоменко, В. В. Ведюшкина. Эволюционные силовые биллиарды. 2022.
 \end{itemize}
 \end{frame}
 
@@ -71,8 +71,8 @@
 \frametitle{Цели раздела диссертационной работы}
 \begin{itemize}
 %[beginpenalty=10000] % https://tex.stackexchange.com/a/476052/104425
-  \item Доказать интегрируемость классического бильярда на софокусных столах, разделенных софокусными квадриками на области, заполненные изотропными средами с различными показателями `оптической плотности' при условии, что на границе раздела сред выполняется косинусный закон преломления.
- \item Исследовать слоения изоэнергетического многообразия на поверхности постоянного уровня дополнительного интеграла для двух `оптических систем' с косинусным законом преломления, т.е. для софокусных столов, разделенных софокусными квадриками на области, заполненные изотропными средами с различными показателями `оптической плотности'  при условии, что на границе раздела сред выполняется косинусный закон преломления.
+  \item Доказать интегрируемость классического бильярда с косинусным законом преломления на границе раздела сред на софокусных столах.
+ \item Для двух таких «оптических систем» исследовать слоения изоэнергетического многообразия на поверхности постоянного уровня дополнительного интеграла.
 \end{itemize}
 \end{frame}
 
@@ -204,46 +204,43 @@ $\gamma_A = (\lambda_1 - \lambda_2) ( n_1^2 - n_2^2 + n_3^2 - n_4^2).$ \par
 \end{frame}
 
 
-\begin{frame}
-\frametitle{Интеграл с ветвлением (2 точки ветвления)}
-
-\begin{figure}[htbp]
-\begin{minipage}[htbp]{0.45\textwidth}
-\centering
-\includegraphics[width=0.75\textwidth]{part11/img3.pdf}
-%\caption{Взаимное расположение областей $\Omega_1,\ldots,\Omega_4$}
-%$$\gamma_{A_1} = -\gamma_{A_2}.$$
-
-\end{minipage}
-\begin{minipage}[htbp]{0.45\textwidth}
-\begin{figure}[!h]
-    \centering
-     \includegraphics[width=0.7\textwidth]{part11/img4.pdf}
-\end{figure}
-%Индексы  ветвления в точках $A_1, A_2$:
-%$$\gamma_{A_1} \neq -\gamma_{A_2}.$$
-\end{minipage}
-\end{figure}
-\centering Индексы  ветвления в точках $A_1, A_2$:
-\begin{figure}[htbp]
-\begin{minipage}[htbp]{0.45\textwidth}
-\centering
+%\begin{frame}
+%\frametitle{Интеграл с ветвлением (2 точки ветвления)}
+%\begin{figure}[htbp]
+%\begin{minipage}[htbp]{0.45\textwidth}
+%\centering
 %\includegraphics[width=0.75\textwidth]{part11/img3.pdf}
-%\caption{Взаимное расположение областей $\Omega_1,\ldots,\Omega_4$}
-$$\gamma_{A_1} = -\gamma_{A_2}.$$
-
-\end{minipage}
-\begin{minipage}[htbp]{0.45\textwidth}
-\begin{figure}[!h]
-    \centering
+%%\caption{Взаимное расположение областей $\Omega_1,\ldots,\Omega_4$}
+%%$$\gamma_{A_1} = -\gamma_{A_2}.$$
+%\end{minipage}
+%\begin{minipage}[htbp]{0.45\textwidth}
+%\begin{figure}[!h]
+%    \centering
 %     \includegraphics[width=0.7\textwidth]{part11/img4.pdf}
-\end{figure}
-$$\gamma_{A_1} \neq -\gamma_{A_2}.$$
-\end{minipage}
-\end{figure}
-В зависимости от значений параметров отношение $\dfrac{\gamma_{A_1}}{\gamma_{A_2}}$ может быть как рациональным, так и иррациональным.
-
-\end{frame}
+%\end{figure}
+%%Индексы  ветвления в точках $A_1, A_2$:
+%%$$\gamma_{A_1} \neq -\gamma_{A_2}.$$
+%\end{minipage}
+%\end{figure}
+%\centering Индексы  ветвления в точках $A_1, A_2$:
+%\begin{figure}[htbp]
+%\begin{minipage}[htbp]{0.45\textwidth}
+%\centering
+%%\includegraphics[width=0.75\textwidth]{part11/img3.pdf}
+%%\caption{Взаимное расположение областей $\Omega_1,\ldots,\Omega_4$}
+%$$\gamma_{A_1} = -\gamma_{A_2}.$$
+%
+%\end{minipage}
+%\begin{minipage}[htbp]{0.45\textwidth}
+%\begin{figure}[!h]
+%    \centering
+%%     \includegraphics[width=0.7\textwidth]{part11/img4.pdf}
+%\end{figure}
+%$$\gamma_{A_1} \neq -\gamma_{A_2}.$$
+%\end{minipage}
+%\end{figure}
+%В зависимости от значений параметров отношение $\dfrac{\gamma_{A_1}}{\gamma_{A_2}}$ может быть как рациональным, так и иррациональным.
+%\end{frame}
 
 %\begin{frame}
 %\frametitle{Интеграл с ветвлением (2 точки ветвления)}
@@ -331,18 +328,32 @@ $$\gamma_{A_1} \neq -\gamma_{A_2}.$$
 
 Значению интеграла $\Xi$ поставим в соответствие точку плоскости $\mathbb{R}^2$ по формуле
 \begin{equation*}
-\Xi \mapsto \alpha(\Xi) = (\alpha_{in}, \alpha_{out} ) = \left( \frac{\Xi}{n_{in}^2}, \frac{\Xi - \lambda_1 (n_{in}^2 - n_{out}^2)}{n_{out}^2} \right) = \left( \left. \Lambda \right|_{\Omega_{in}}, \left. \Lambda \right|_{\Omega_{out}} \right).
+%\Xi \mapsto \alpha(\Xi) = (\alpha_{in}, \alpha_{out} ) = \left( \frac{\Xi}{n_{in}^2}, \frac{\Xi - \lambda_1 (n_{in}^2 - n_{out}^2)}{n_{out}^2} \right) = \left( \left. \Lambda \right|_{\Omega_{in}}, \left. \Lambda \right|_{\Omega_{out}} \right).
+\Xi \mapsto \alpha(\Xi) = (\alpha_{in}, \alpha_{out} ) = \left( \left. \Lambda \right|_{\Omega_{in}}, \left. \Lambda \right|_{\Omega_{out}} \right).
 \label{XiToLine}
 \end{equation*}
 
-Геометрический смысл: по горизонтали откладывается параметр каустики для внутренней части системы, а по вертикали --- во внешнем кольце.
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=7cm]{section2/long red line bifurcations.png}
-    \caption{Область значений $\Xi$ --- отрезок на красной прямой.}
-%    \label{fig:sect2_diagramPlusIrregular}
-\end{figure}
+%Геометрический смысл: по горизонтали откладывается параметр каустики для внутренней части системы, а по вертикали --- во внешнем кольце.
+    Тип бильярдной траектории определяется диаграммой
+    
+    	Траектория касается эллипса ($E$), гиперболы ($H$) или не посещает часть стола ($\varnothing$).
 
+\begin{columns}[T]
+    \column{0.4\textwidth}
+    \centering
+	\begin{figure}[!htb]
+	\includegraphics[width=1.4\textwidth]{section2/problemAbifurcations.pdf}
+%    \caption{Возможные типы каустик в $\Omega_{in}$ и $\Omega_{out}$. Жирным выделены особые значения для $\alpha_{in}$, $\alpha_{out}$.}
+%    \label{fig:sect2_problemAbifurcations}
+	\end{figure}
+
+    \column{0.6\textwidth}
+    \centering
+    	\begin{figure}[!htb]
+\includegraphics[width=7cm]{section2/long red line bifurcations.png}
+%    \caption{Область значений $\Xi$ --- отрезок на красной прямой.}
+        	\end{figure}
+	\end{columns}
 \end{frame}
 
 %\begin{frame}\frametitle{Бифуркационная диаграмма (нестандартная). $Im(\Xi) = L$}
@@ -364,26 +375,26 @@ $$\gamma_{A_1} \neq -\gamma_{A_2}.$$
 %\end{frame}
 
 
-\begin{frame}\frametitle{Диаграмма. Разбиение $\mathbb{R}^2$.}
-
-\begin{columns}[T]
-    \column{0.5\textwidth}
-    \centering
-    Тип бильярдной траектории определяется диаграммой
-	\begin{figure}[!htb]
-	\includegraphics[width=1.2\textwidth]{section2/problemAbifurcations.pdf}
-%    \caption{Возможные типы каустик в $\Omega_{in}$ и $\Omega_{out}$. Жирным выделены особые значения для $\alpha_{in}$, $\alpha_{out}$.}
-%    \label{fig:sect2_problemAbifurcations}
-	\end{figure}
-    \column{0.5\textwidth}
-    \centering
-       Определим для областей \\ обозначения
-    	\begin{figure}[!htb]
-        \includegraphics[width=1.2\textwidth]{section2/problemA_subdivisions.pdf}
-        	\end{figure}
-	\end{columns}
-Траектория касается эллипса ($E$), гиперболы ($H$) или не посещает часть стола ($\varnothing$).
-\end{frame}
+%\begin{frame}\frametitle{Диаграмма. Разбиение $\mathbb{R}^2$.}
+%
+%\begin{columns}[T]
+%    \column{0.5\textwidth}
+%    \centering
+%    Тип бильярдной траектории определяется диаграммой
+%	\begin{figure}[!htb]
+%	\includegraphics[width=1.2\textwidth]{section2/problemAbifurcations.pdf}
+%%    \caption{Возможные типы каустик в $\Omega_{in}$ и $\Omega_{out}$. Жирным выделены особые значения для $\alpha_{in}$, $\alpha_{out}$.}
+%%    \label{fig:sect2_problemAbifurcations}
+%	\end{figure}
+%    \column{0.5\textwidth}
+%    \centering
+%       Определим для областей \\ обозначения
+%    	\begin{figure}[!htb]
+%        \includegraphics[width=1.2\textwidth]{section2/problemA_subdivisions.pdf}
+%        	\end{figure}
+%	\end{columns}
+%Траектория касается эллипса ($E$), гиперболы ($H$) или не посещает часть стола ($\varnothing$).
+%\end{frame}
 
 
 

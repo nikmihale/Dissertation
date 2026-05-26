@@ -1,52 +1,32 @@
-\setbeamertemplate{title page}
-{
-    \ifnumequal{\value{logotitle}}{1}{
-        \IfFileExists{images/logo.pdf}{
-            \begin{minipage}[c]{0.15\textwidth}
-                \begin{flushleft}
-                    \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
-                \end{flushleft}
-            \end{minipage}%
-            \hfill
-            \begin{minipage}[c]{0.8\linewidth}
-                \centering
-                \usebeamerfont{institute}\insertinstitute\par
-            \end{minipage}
-        }{
-            \centering
-            \usebeamerfont{institute}\insertinstitute\par
-        }
-    }{
-        \centering
-        \usebeamerfont{institute}\insertinstitute\par
-    }
+\setbeamertemplate{title page}{
     \centering
+    \begin{beamercolorbox}[sep=8pt, center]{title}
+        \usebeamerfont{title}\inserttitle
+    \end{beamercolorbox}
+    \par\vspace{1.5em}
+    {\large\usebeamerfont{author}\insertauthor}\par
+    \vspace{1em}
+    \usebeamerfont{institute}\insertinstitute\par
     \vfill
-    \usebeamerfont{subtitle}\insertsubtitle\par
-    \bigskip
-    \usebeamerfont{title}\inserttitle\par
+    \raggedleft
+    Научный руководитель: \\
+    к.ф.-м.н., доцент~\supervisorFio\par
+    \vspace{0.3em}
+    Официальные оппоненты: \\
+    д.ф.-м.н.,~профессор РАН~\opponentOneFio \\
+    д.ф.-м.н.,~профессор~\opponentTwoFio \\
+    д.ф.-м.н.~\opponentThreeFio\par
     \vfill
-    \usebeamerfont{author}\insertauthor\par
-    \vfill
-%    \usebeamerfont{date}\insertdate\par
-    \usebeamerfont{date}{29 мая 2026 г.}\par
+    \centering
+    \usebeamerfont{date}\insertdate\par
+    \vspace{0.5em}
 }
 
-%\title{\small{Название презентации}}
 \title{\thesisTitle}
-\author{%
-    \texorpdfstring{%
-        \emph{Соискатель:}~\thesisAuthorShort\\%
-        \emph{Научный руководитель:}~\supervisorRegaliaShort~\supervisorFioShort\\%
-        %
-    }{\thesisAuthor}%
+\author{\thesisAuthorLastName~\thesisAuthorOtherNames}
+\institute{%
+    Диссертация на соискание учёной степени \\
+    \thesisDegree \\[0.25em]
+    \thesisSpecialtyNumber\ \thesisSpecialtyTitle%
 }
-\date{\texorpdfstring{\thesisCity, \thesisYear}{}}
-\institute{\texorpdfstring{\thesisOrganization}{}}
-\IfFileExists{images/logo.pdf}{
-    \titlegraphic{\includegraphics[width=\textwidth]{images/logo}}
-    \ifnumequal{\value{logoother}}{1}{
-        \logo{\includegraphics[width=0.15\textwidth]{images/logo}}
-    }{}
-}{}
-\subtitle{Представление на соискание учёной степени \thesisDegree\ по специальности \thesisSpecialtyNumber\ \thesisSpecialtyTitle}
+\date{29 мая 2026 г.}
