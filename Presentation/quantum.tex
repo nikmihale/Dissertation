@@ -2,29 +2,56 @@
 \begin{frame}[plain, noframenumbering]
     \begin{center}
         \Huge
-	Часть I. \\ Квантовый бильярд на софокусных столах
+	Часть I. \\ Квантовый бильярд в ограниченных софокусными квадриками областях
     \end{center}
 \end{frame}
 
 
-\begin{frame}\frametitle{История вопроса}
-\begin{itemize}
-\item[1.] P. Dirac, The Fundamental Equations of Quantum Mechanics, 1925. \\  The Principles of Quantum Mechanics, 1930.
-\item[2.] J. W. Strutt (Lord Rayleigh), The Theory of Sound, 1877–1878
-\item[3.] H. Weyl, Über die asymptotische Verteilung der Eigenwerte, 1911. \\
-Das asymptotische Verteilungsgesetz der Eigenwerte linearer partieller Differentialgleichungen 1912.
-\item[4.] É. Mathieu, Mémoire sur le mouvement vibratoire d'une membrane de forme elliptique, 1868.
-\item[5.] G. Floquet, Sur les équations différentielles linéaires à coefficients périodiques, 1883.
-\item[6.] N. W. McLachlan, Theory and Application of Mathieu Functions, 1947.
-\end{itemize}
-\begin{remark}[Уравнения Матьё]
-\begin{align*}
-\Phi''(\phi) + (\zeta-2q \cos 2\phi) \Phi(\phi) = 0 && \text{(угловое)} \\
-R''(\rho) - (\zeta-2q \cosh 2\rho) R(\rho) = 0 && \text{(радиальное)}
-\end{align*}
-\end{remark}
+\begin{frame}
+\frametitle{Круговой сектор}
+Стандартное уравнение Шрёдингера: 
+$$ -\dfrac{\hbar^2}{2m} \left( \dfrac{\partial^2}{\partial x^2} + \dfrac{\partial^2}{\partial y^2} \right) \psi(x, y) = E \psi (x,y)$$
+
+\begin{figure}
+%\begin{center}
+\begin{minipage}{0.65\linewidth}
+В полярной системе координат расщепляется:
+\begin{equation*}
+    \left\{
+    \begin{aligned}
+        &\frac{d^2\Phi}{d\varphi^2} + m^2\,\Phi = 0, \\
+        &r^2\frac{d^2 R}{dr^2} + r\frac{dR}{dr}
+         + \left(\varkappa^2 r^2 - m^2\right)R = 0,
+    \end{aligned}
+    \right.
+\end{equation*}
+где $\varkappa^2 = \frac{2\mu E}{\hbar^2}$
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\centering
+\includegraphics[width=\linewidth]{sector.pdf}
+%\caption{$B_\delta$, $\varphi_0<\varphi_1<\pi/2$}
+\end{minipage}
+\end{figure}
+Решения: $R = J_m(\varkappa r)$,  $\Phi = \alpha \cos m \varphi + \beta \sin m \varphi$.
 \end{frame}
 
+
+\begin{frame}
+\frametitle{Круговой сектор}
+\begin{mytheorem}[Gongora-T.~A., Jose~J.V., Schaffner~S., Tiesinga~P.]
+Собственные функции  $\psi_{k,m}(r,\varphi)$ и соответствующие уровни энергии $E_{k,m}$ для свободной частицы в круговом секторе размера  $\varphi_0$
+определены формулами 
+\begin{align*}
+&\psi_{k, m}(r, \varphi) = J_\lambda\left(\frac{\alpha_{\lambda, k}r}{r_0}\right)\sin{\lambda\varphi}\notag \\  
+&E_{k,m} = \frac{\hbar^2 \alpha_{\lambda, k}^2}{2\mu r_0^2},
+ \qquad k, m \in \mathbb{N},
+\end{align*}
+где
+$\lambda = \frac{\pi m}{\varphi_0}$ и $\alpha_{\lambda, k}$ --
+$k$-ый нуль функции Бесселя  $J_\lambda(x)$  первого рода.
+\end{mytheorem}
+\end{frame}
 
 \begin{frame}\frametitle{Области $A_\delta$ и $B_\delta$}
 
@@ -33,12 +60,12 @@ R''(\rho) - (\zeta-2q \cosh 2\rho) R(\rho) = 0 && \text{(радиальное)}
 \begin{minipage}{0.45\linewidth}
 \centering
 \includegraphics[width=0.95\linewidth]{right3.pdf}
-\caption{$A_\delta$, $\phi_0<\pi/2$}
+\caption{$A_\delta$, $\varphi_0<\pi/2$}
 \end{minipage}
 \begin{minipage}{0.45\linewidth}
 \centering
 \includegraphics[width=\linewidth]{up3.pdf}
-\caption{$B_\delta$, $\phi_0<\phi_1<\pi/2$}
+\caption{$B_\delta$, $\varphi_0<\varphi_1<\pi/2$}
 \end{minipage}
 \end{figure}
 \begin{figure}
@@ -49,12 +76,34 @@ $\dfrac{x^2}{a^2-\lambda} + \dfrac{y^2}{b^2-\lambda} =1$
 \end{minipage}
 \begin{minipage}{0.49\linewidth}
 \centering
-$\phi_0$ и $\phi_1$ --  углы между  осью $x$ и асимптотами (пунктирные).\\
+$\varphi_0$ и $\varphi_1$ --  углы между  осью $x$ и асимптотами (пунктирные).\\
 Общие фокусы граничных квадрик в точках $(\pm \delta, 0)$.
 \end{minipage}
 \end{figure}
-
+\centering
+Обе области стягиваются к круговому сектору при $\delta \to 0$.
 \end{frame}
+
+
+\begin{frame}\frametitle{История вопроса}
+В эллиптических координатах $(x,y) = (\delta \cos \varphi \cosh \rho, \delta \sin \varphi \sinh \rho)$ уравнение Шрёдингера расщепляется в систему уравнений Матьё:
+\begin{equation*}
+    \left\{
+    \begin{aligned}
+&F''(\varphi) + (\zeta-2q \cos 2\varphi) F(\varphi) = 0 && \text{(угловое)} \\
+&R''(\rho) - (\zeta-2q \cosh 2\rho) R(\rho) = 0 && \text{(радиальное)}
+    \end{aligned}
+    \right.
+\end{equation*}
+Здесь  $q = \dfrac{\mu E \delta^2}{2\hbar^2}$.
+\begin{itemize}
+%\item[1.] J. W. Strutt (Lord Rayleigh), The Theory of Sound, 1877–1878
+\item[1.] É. Mathieu, Mémoire sur le mouvement vibratoire d'une membrane de forme elliptique, 1868.
+\item[2.] G. Floquet, Sur les équations différentielles linéaires à coefficients périodiques, 1883.
+\item[3.] N. W. McLachlan, Theory and Application of Mathieu Functions, 1947. (например)
+\end{itemize}
+\end{frame}
+
 
 \begin{frame}[plain, noframenumbering]
 \frametitle{Цели раздела диссертационной работы}
@@ -64,19 +113,30 @@ $\phi_0$ и $\phi_1$ --  углы между  осью $x$ и асимптота
   \item Найти спектр наблюдаемой, соответствующей дополнительному интегралу классической системы.
 
 \end{itemize}
+\begin{remark}
+В классическом случае постоянная движения $A$ = произведение угловых моментов относительно фокусов:
+$ L_{\pm \delta} = (x \pm \delta)v_y - y v_x$, тогда 
+
+$$A = L_{-\delta} L_\delta = L_\delta L_{-\delta} = (x v_y - y v_x)^2 - \delta^2 v_y^2.$$ 
+
+Для квантовой задачи нужны операторы угловых моментов относительно фокусов.
+ $\widehat{ L_{\pm \delta} }= (x \pm \delta)\frac{\partial}{\partial y} - y\frac{\partial}{\partial x}$, тогда 
+$$\widehat{A} = -\frac{1}{2}(\widehat{L_\delta} \widehat{L_{-\delta}} + \widehat{L_{-\delta}} \widehat{L_\delta} + \const \nabla ^2)$$
+\end{remark}
+
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Симметричная область $A_\delta$} 
-\begin{mytheorem}[A]\label{th:A}
-В области $A_\delta$ собственными функциями $\psi_{k, m}(\rho, \phi)$ оператора $\hat{H}$ являются
+\begin{mytheorem}\label{th:A}
+В области $A_\delta$ собственными функциями $\psi_{k, m}(\rho, \varphi)$ оператора $\hat{H}$ являются
 \begin{equation*}
-\psi_{k, m}(\rho, \phi) = 
+\psi_{k, m}(\rho, \varphi) = 
 \left[
 \begin{array}{ll}
-    Ce_\nu(\rho, q) ce_\nu(\phi, q) ,   &    \text{ для нечётных $k \geq 1$}\\
-    Se_\nu(\rho, q) se_\nu(\phi, q) ,   &    \text{ для чётных $k \geq 2$}\\
+    Ce_\nu(\rho, q) ce_\nu(\varphi, q) ,   &    \text{ для нечётных $k \geq 1$}\\
+    Se_\nu(\rho, q) se_\nu(\varphi, q) ,   &    \text{ для чётных $k \geq 2$}\\
 \end{array}
 \right.
 \end{equation*}
@@ -84,9 +144,9 @@ $\phi_0$ и $\phi_1$ --  углы между  осью $x$ и асимптота
 $\nu = \nu_{k,m} = \nu_0+ \delta^2 \frac{\alpha_{\nu_0, m}^2}{4 r_0^2}  \nu_1 + o(\delta^2), \qquad q=q_{k,m} = \dfrac{\varkappa_{k,m}^2 \delta^2}{4},$
 
 где
-$\nu_0 = \dfrac{\pi k}{2\phi_0}$,
+$\nu_0 = \dfrac{\pi k}{2\varphi_0}$,
 %\text{\ \  and\  \  }
-$\nu_1=\dfrac{\pi k \sin 2\phi_0}{\pi^2 k^2 - 4\phi_0^2}.$
+$\nu_1=\dfrac{\pi k \sin 2\varphi_0}{\pi^2 k^2 - 4\varphi_0^2}.$
 
 Соответствующими собственными значениями   $\varkappa^2_{k, m}$ являются
 \begin{equation*}
@@ -99,7 +159,7 @@ $\nu_1=\dfrac{\pi k \sin 2\phi_0}{\pi^2 k^2 - 4\phi_0^2}.$
 
 \begin{frame}
 \frametitle{Симметричная область $A_\delta$} 
-\begin{mytheorem}[A (продолжение)]
+\begin{mytheorem}[продолжение]
 
 где
 \begin{equation*}
@@ -118,97 +178,84 @@ $\nu_1=\dfrac{\pi k \sin 2\phi_0}{\pi^2 k^2 - 4\phi_0^2}.$
 \end{equation*}
 
 Здесь и далее $\alpha_{\nu_0,m}$ обозначает  $m$-ый нуль функции Бесселя  $J_{\nu_0}(x)$ первого рода.
-
-
 \end{mytheorem}
+
+Аналогичные асимптотики получены для  области $B_\delta$.
 \end{frame} 
  
 
 
-\begin{frame}
-\frametitle{Несимметричная область $B_\delta$}
-\begin{mytheorem}[B]\label{th:B}
-В области  $B_\delta$ собственными функциями  $\psi_{k, m}(\rho, \phi)$ и собственными значениями  $\varkappa^2_{k, m}$ оператора  $\hat{H}$ являются
-\begin{align*}
-&\psi_{k, m}(\rho, \phi) = 
-    Se_\nu(\rho, q) \bigl( ce_\nu(\phi_0, q) se_\nu(\phi, q) %{}\notag \\
-    %&\qquad\qquad\qquad{}
-    -ce_\nu(\phi, q) se_\nu(\phi_0, q) \bigr) ,  
-\end{align*}
-с параметрами 
-\begin{equation*}    
-\nu = \nu_{k,m} = \nu_0 +\delta^2 \frac{\alpha_{\nu_0, m}^2}{4 r_0^2} \nu_1 + o(\delta^2), \quad q=q_{k,m} = \frac{\varkappa_{k,m}^2 \delta^2}{4},
-\end{equation*}
-где
-\begin{align*}
-& \nu_0 = \frac{\pi k}{\phi_1-\phi_0},\text{\ \ и \ \ }
-\nu_1= \frac{\pi k (\sin 2\phi_1 - \sin 2 \phi_0)}{\pi^2k^2-(\phi_1-\phi_0)^2} .
-\end{align*}
+%\begin{frame}
+%\frametitle{Несимметричная область $B_\delta$}
+%\begin{mytheorem}[B]\label{th:B}
+%В области  $B_\delta$ собственными функциями  $\psi_{k, m}(\rho, \varphi)$ и собственными значениями  $\varkappa^2_{k, m}$ оператора  $\hat{H}$ являются
+%\begin{align*}
+%&\psi_{k, m}(\rho, \varphi) = 
+%    Se_\nu(\rho, q) \bigl( ce_\nu(\varphi_0, q) se_\nu(\varphi, q) %{}\notag \\
+%    %&\qquad\qquad\qquad{}
+%    -ce_\nu(\varphi, q) se_\nu(\varphi_0, q) \bigr) ,  
+%\end{align*}
+%с параметрами 
+%\begin{equation*}    
+%\nu = \nu_{k,m} = \nu_0 +\delta^2 \frac{\alpha_{\nu_0, m}^2}{4 r_0^2} \nu_1 + o(\delta^2), \quad q=q_{k,m} = \frac{\varkappa_{k,m}^2 \delta^2}{4},
+%\end{equation*}
+%где
+%\begin{align*}
+%& \nu_0 = \frac{\pi k}{\varphi_1-\varphi_0},\text{\ \ и \ \ }
+%\nu_1= \frac{\pi k (\sin 2\varphi_1 - \sin 2 \varphi_0)}{\pi^2k^2-(\varphi_1-\varphi_0)^2} .
+%\end{align*}
+%
+%Соответствующими собственными значениями являются ($\alpha_{\nu_0,m}$ обозначает $m$-ый нуль функции Бесселя $J_{\nu_0}(x)$ первого рода).
+%$\varkappa_{k, m}^2 = ...$
+%
+%\end{mytheorem}
+%
+%\end{frame}  
+%
+%
+%\begin{frame}
+%\frametitle{Несимметричная область $B_\delta$}
+%\begin{mytheorem}[B (продолжение)]
+%
+%\begin{align*}
+%\varkappa_{k, m}^2 ={}& \frac{\alpha_{\nu_0, m}^2}{r_0^2} +  \delta^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^4}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} }  
+% \biggl(\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} -
+%\notag \\ 
+%&{}- \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m})}{4\nu_0 (\nu_0+1)} 
+%- \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m})
+%    \biggr) + o(\delta^2).
+%\end{align*}
+%
+%\end{mytheorem}
+%
+%\end{frame} 
 
-Соответствующими собственными значениями являются ($\alpha_{\nu_0,m}$ обозначает $m$-ый нуль функции Бесселя $J_{\nu_0}(x)$ первого рода).
-$\varkappa_{k, m}^2 = ...$
-
-\end{mytheorem}
-
-\end{frame}  
-
-
-\begin{frame}
-\frametitle{Несимметричная область $B_\delta$}
-\begin{mytheorem}[B (продолжение)]
-
-\begin{align*}
-\varkappa_{k, m}^2 ={}& \frac{\alpha_{\nu_0, m}^2}{r_0^2} +  \delta^2 \frac{\alpha_{\nu_0, m}^3}{2 r_0^4}\frac{1}{ \left.\frac{\partial J_{\nu_0}(u)}{\partial u}\right|_{u=\alpha_{\nu_0, m}} }  
- \biggl(\frac{(\nu_0 - 2)J_{\nu_0-2}(\alpha_{\nu_0, m})   }{4\nu_0 (\nu_0-1)} -
-\notag \\ 
-&{}- \frac{(\nu_0 + 2)J_{\nu_0+2}(\alpha_{\nu_0, m})}{4\nu_0 (\nu_0+1)} 
-- \nu_1 \left.\frac{\partial J_\nu}{\partial \nu}\right|_{\nu = \nu_0}(\alpha_{\nu_0, m})
-    \biggr) + o(\delta^2).
-\end{align*}
-
-\end{mytheorem}
-
-\end{frame} 
-
-\begin{frame}
-Полученная асимптотика воспроизводит результат для кругового сектора:
-
-\begin{mytheorem}[Gongora-T.~A., Jose~J.V., Schaffner~S., Tiesinga~P.]
-Собственные функции  $\psi_{k,m}(r,\phi)$ и соответствующие уровни энергии $E_{k,m}$ для свободной частицы в круговом секторе размера  $\phi_0$
-определены формулами 
-\begin{align*}
-&\psi_{k, m}(r, \phi) = J_\lambda\left(\frac{\alpha_{\lambda, k}r}{r_0}\right)\sin{\lambda\phi}\notag \\  
-&E_{k,m} = \frac{\hbar^2 \alpha_{\lambda, k}^2}{2M r_0^2},
- \qquad k, m \in \mathbb{N},
-\end{align*}
-где
-$\lambda = \frac{\pi m}{\phi_0}$ и $\alpha_{\lambda, k}$ это
-$k$-ый нуль функции Бесселя  $J_\lambda(x)$  первого рода.
-\end{mytheorem}
-\end{frame}
 
 \begin{frame} 
-Для классического бильярда в областях $A_\delta$ и $B_\delta$ сохраняется произведение моментов относительно обоих фокусов, которое не зависит от полной энергии. 
+%Для классического бильярда в областях $A_\delta$ и $B_\delta$ сохраняется произведение моментов относительно обоих фокусов, которое не зависит от полной энергии. 
 
-Соответствующая величина для квантовых бильярдов в областях
- $A_\delta$ и $B_\delta$ может быть определена как
-\begin{equation*}
-\hat A = -\frac{1}{2}(L_\delta L_{-\delta} + L_{-\delta} L_\delta + \delta^2 \nabla ^2), \text{ где } \hat L_{\pm \delta} = (x \pm \delta)\frac{\partial}{\partial y} - y\frac{\partial}{\partial x}
-\end{equation*}
---- операторы угловых моментов относительно $(x,y) = (\mp \delta, 0)$.
+%Соответствующая величина для квантовых бильярдов в областях
+% $A_\delta$ и $B_\delta$ может быть определена как
+Положим 
+%$$
+$$
+\widehat{A} = -\frac{1}{2}(\widehat{L_\delta} \widehat{L_{-\delta}} + \widehat{L_{-\delta}} \widehat{L_\delta}+ \delta^2 \nabla ^2),
+$$
+%  где  $\hat L_{\pm \delta} = (x \pm \delta)\frac{\partial}{\partial y} - y\frac{\partial}{\partial x}$
+%--- операторы угловых моментов относительно фокусов.
 
-В координатах $(x, y) = (\delta \cosh \rho \cos \phi,  \delta \sinh \rho \sin \phi)$, уравнение $(\Delta + \varkappa^2) \psi = 0 $ расщепляется:
-\begin{equation*}
-\Phi''(\phi) + (\zeta-2q \cos 2\phi) \Phi(\phi) = 0, \quad
-R''(\rho) - (\zeta-2q \cosh 2\rho) R(\rho) = 0
-\end{equation*}
+В координатах $(x, y) = (\delta \cosh \rho \cos \varphi,  \delta \sinh \rho \sin \varphi)$, уравнение $(\nabla^2 + \varkappa^2) \psi = 0 $ расщепляется ($q = \dfrac{\delta^2 \varkappa^2}{4}$):
+\begin{align*}
+F''(\varphi) + (\zeta-2q \cos 2\varphi) F(\varphi) = 0, \quad \text{ решение }  F(\zeta, q, \varphi) \\
+R''(\rho) - (\zeta-2q \cosh 2\rho) R(\rho) = 0, \quad \text{ решение }  R(\zeta, q, \rho)
+\end{align*}
 
 \begin{mytheorem}[C]
 \label{th:L}
 (a) $\hat A$ коммутирует с  $\hat H$.
 
-(b) Пусть   $\psi(\phi, \rho) = \Phi(\zeta, q, \phi) R(\zeta, q, \rho)$ --- собственная функция оператора $\hat H$. %the operator $\nabla^2$. %, ïðè÷åì $<\psi, \psi>=1$.
-%Ïîëîæèì $\Phi_1(a, q, \phi), \Phi_2(a, q, \phi)$ -- íåçàâèñèìûå ðåøåíèÿ óðàâíåíèÿ $\frac{\partial^2}{\partial \phi^2}\Phi + (a - 2q\cos{2\phi})\Phi = 0$, $R_1(a, q, \rho), R_2(a, q, \rho)$ -- íåçàâèñèìûå ðåøåíèÿ óðàâíåíèÿ $\frac{\partial^2}{\partial \rho^2}R - (a - 2q\cosh{2\rho})R = 0$. 
+(b) Пусть   $\psi(\varphi, \rho) = F(\zeta, q, \varphi) R(\zeta, q, \rho)$ --- собственная функция оператора $\hat H$. %the operator $\nabla^2$. %, ïðè÷åì $<\psi, \psi>=1$.
+%Ïîëîæèì $\varphi_1(a, q, \varphi), \varphi_2(a, q, \varphi)$ -- íåçàâèñèìûå ðåøåíèÿ óðàâíåíèÿ $\frac{\partial^2}{\partial \varphi^2}\varphi + (a - 2q\cos{2\varphi})\varphi = 0$, $R_1(a, q, \rho), R_2(a, q, \rho)$ -- íåçàâèñèìûå ðåøåíèÿ óðàâíåíèÿ $\frac{\partial^2}{\partial \rho^2}R - (a - 2q\cosh{2\rho})R = 0$. 
 Тогда
 $\hat A \psi = \zeta \psi$
 \end{mytheorem}
